@@ -1,0 +1,38 @@
+.left{
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+
+.box-menu{
+	padding: 10px;
+	width: 100%;
+	background-color: #e8e8e8;
+	border-radius: 5px;
+	margin-bottom: 60px;
+}
+
+
+.btn-100{
+	width: 100%;
+	margin-bottom: 3px;
+}
+
+.box-formulario{
+	padding: 30px;
+	width: 100%;
+	background-color: #e8e8e8;
+	border-radius: 5px;
+	margin-bottom: 60px;
+}
+
+.box-title{
+	padding: 10px;
+	width: 100%;
+	background-color: #e8e8e8;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
