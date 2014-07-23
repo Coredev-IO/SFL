@@ -5,7 +5,7 @@
 	$accion = $_GET['accion'];
     $email = $_GET['email'];
     $fin= $_GET['fin'];
-    
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -22,6 +22,7 @@
 <script type="text/javascript" src="controller.js"></script>
 <script type="text/javascript" src="css/jquery.js"></script>
 <script type="text/javascript" src="css/menu.js"></script>
+<script type="text/javascript" src="resources/js/api.js"></script>
 
 <?php
 	require_once('sfl_functions.php');
@@ -48,11 +49,11 @@
   </tr>
   <tr>
     <td>
-    
+
 <?php
 	require_once('sfl_menu_02.php');
 ?>
-    
+
     </td>
   </tr>
   <tr>
@@ -82,74 +83,88 @@
         </tr>
       </table>
 
-<table width="500" border="0" cellspacing="0" cellpadding="0" align="center">
-  <tr>
-    <td width="100%" class="padd_02" valign="top">
-      
-  <form name="new_cv" action="sfl_cv_01_.php" method="post" enctype="multipart/form-data">
-    
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="bg_09 txt03">
-      
-  <!--accion-->
 
-      <?php if ($accion == 1) { ?>
-      <tr>
-        <td colspan="2"><span class="txt08"><b>( * ) Alg&uacute;n campo obligatorio se encuentra vaci&oacute o contraseñas no coinciden;.</b></span></td>
-        </tr>
-      <?php } ?>
-      
-      <?php if ($accion == 2) { ?>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div id="api"></div>
 
-     <tr>
-      <td colspan="2"><span class="txt08"><b>El email que desea dar de alta ya se encuentra en la base de datos.</b></span></td>
-      </tr>
-     <?php } ?>
-           
-       <tr></tr>
-      <td colspan="2">&nbsp;</td>
-     <tr></tr>
-      <td  align="center"colspan="2"><span   class="menu02"><b>Para poder registrar tus datos, se requiere dar de alta una cuenta.</b></span></td>
-      </tr><td colspan="2">&nbsp;</td>
-      
-     <!--Campos-->
- <th colspan="2"><span class="txt08 "><b> <?php echo $fin?> </b></span></th>
-      <tr>
-        <td><b>Correo electrónico: *</td>
-        <td><br><input type="text" name="email" size="50" maxlength="40" <?php if ($email != "") { ?>value="<?php echo $email; ?>"<?php } ?> class="form-control">
-      </tr>
-      <tr>
-        <td><b>Contrase&ntilde;a: *</td>
-        <td><br><input type="password" name="passw" size="10" maxlength="20" class="form-control"/></td>
-      </tr>
-      <tr>
-        <td><b>Confirmar contraseña *</td>
-        <td><br><input type="password" name="conf_passw" size="10" maxlength="20" class="form-control" /></td>
-      </tr>
-      <tr>
-      <tr>
-        <td colspan="2">&nbsp;</td>
-   
-      </tr>
-
-        <td colspan="2" align="center">
-                  <input type="submit" name="submit" value="Continuar" class="btn btn-primary" />&nbsp;
-                  <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default">
-                  <input type="hidden" name="id_aduana" value="<?php echo $id_cuenta; ?>">
-       </td>
+          </div>
+          <div class="col-md-6">
 
 
-         </form>
-        </table>
-        <td>
-            </td>
-        </tr>
+                  <table width="500" border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tr>
+                      <td width="100%" class="padd_02" valign="top">
 
-    </td>
-  </tr>
-  <tr>
-    <td class="padd_02" valign="top">&nbsp;</td>
-  </tr>
-</table>
+                    <form name="new_cv" action="sfl_cv_01_.php" method="post" enctype="multipart/form-data">
+
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="bg_09 txt03">
+
+                    <!--accion-->
+
+                        <?php if ($accion == 1) { ?>
+                        <tr>
+                          <td colspan="2"><span class="txt08"><b>( * ) Alg&uacute;n campo obligatorio se encuentra vaci&oacute o contraseï¿½as no coinciden;.</b></span></td>
+                          </tr>
+                        <?php } ?>
+
+                        <?php if ($accion == 2) { ?>
+
+                       <tr>
+                        <td colspan="2"><span class="txt08"><b>El email que desea dar de alta ya se encuentra en la base de datos.</b></span></td>
+                        </tr>
+                       <?php } ?>
+
+                         <tr></tr>
+                        <td colspan="2">&nbsp;</td>
+                       <tr></tr>
+                        <td  align="center"colspan="2"><span   class="menu02"><b>Para poder registrar tus datos, se requiere dar de alta una cuenta.</b></span></td>
+                        </tr><td colspan="2">&nbsp;</td>
+
+                       <!--Campos-->
+                   <th colspan="2"><span class="txt08 "><b> <?php echo $fin?> </b></span></th>
+                        <tr>
+                          <td><b>Correo electrï¿½nico: *</td>
+                          <td><br><input type="text" name="email" size="50" maxlength="40" <?php if ($email != "") { ?>value="<?php echo $email; ?>"<?php } ?> class="form-control">
+                        </tr>
+                        <tr>
+                          <td><b>Contrase&ntilde;a: *</td>
+                          <td><br><input type="password" name="passw" size="10" maxlength="20" class="form-control"/></td>
+                        </tr>
+                        <tr>
+                          <td><b>Confirmar contraseï¿½a *</td>
+                          <td><br><input type="password" name="conf_passw" size="10" maxlength="20" class="form-control" /></td>
+                        </tr>
+                        <tr>
+                        <tr>
+                          <td colspan="2">&nbsp;</td>
+
+                        </tr>
+
+                          <td colspan="2" align="center">
+                                    <input type="submit" name="submit" value="Continuar" class="btn btn-primary" />&nbsp;
+                                    <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default">
+                                    <input type="hidden" name="id_aduana" value="<?php echo $id_cuenta; ?>">
+                         </td>
+
+
+                           </form>
+                          </table>
+                          <td>
+                              </td>
+                          </tr>
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="padd_02" valign="top">&nbsp;</td>
+                    </tr>
+                  </table>
+
+          </div>
+        </div>
+      </div>
 
 
 <?php
