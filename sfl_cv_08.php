@@ -111,10 +111,77 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
   </tr>
 </table>
 
+
+
+
+
+
+
+<div class="container">
+  <hr>
+  <div class="row">
+    <div class="col-md-3">
+    <div class="box-menu">
+      <a href="sfl_cv_02.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-user'></i> Datos Personales</a>
+      <a href="sfl_cv_02a.php" type="button" class="btn btn-default btn-100"disabled><i class='fa fa-map-marker'></i> Direcci&oacute;n</a>
+      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Contacto</a>
+      <a href="sfl_cv_04.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-home'></i> Referencias</a>
+      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento y Experiencia</a>
+      <a href="sfl_cv_06.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cog'></i> Industria</a>
+      <a href="sfl_cv_06a.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-child'></i> Posici&oacute;n</a>
+      <a href="sfl_cv_06b.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-cubes'></i> L&iacute;neas</a>
+      <a href="sfl_cv_06c.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cab'></i> &Aacute;reas de Expericia I</a>
+      <a href="sfl_cv_07.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-car'></i> &Aacute;reas de Expericia II</a>
+      <a href="sfl_cv_08.php" type="button" class="btn btn-primary btn-100" ><i class='fa fa-graduation-cap'></i> Histotial Acad&eacute;mico</a>
+      <a href="sfl_cv_08a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-institution'></i> Otros Estudios/Certificaciones</a>
+      <a href="sfl_cv_08b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-file-word-o'></i> Habilidades tecnol&oacute;gicas</a>
+      <a href="sfl_cv_09.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-briefcase'></i> Historial Laboral</a>
+      <a href="sfl_cv_10.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-facebook-square'></i> Intereses</a>
+    </div>
+   
+     </div>
+
+    <div class="col-md-9">
+      <div class="box-title ">HISTORIAL ACADÉMICO</div>
+
+
+
+      <!-- Errores-->
+          <?php if ($accion == 1) { ?>
+                      
+            <div class="alert alert-danger alert-dismissible" role="alert">
+              <span class="txt08"><b>( * ) Alg&uacute;n campo obligatorio se encuentra vaci&oacute;.</b></span>
+            </div>
+                             
+          <?php } ?>
+          <?php if ($accion_up == 5) { ?>
+        
+            <div class="alert alert-info alert-dismissible" role="alert">
+              <span><b>( * ) Actualice sus datos  y de Clic en Continuar.</b></span>
+            </div>
+                              
+          <?php } ?>
+      <div class="box-formulario">
+        <form class="form-horizontal" role="form" name="new_cv" action="sfl_cv_08_.php" method="post" enctype="multipart/form-data" >
+          <!-- Termina Errores -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <table width="700" border="0" cellspacing="1" cellpadding="0" align="center" class="bg_09 txt03">
   <tr></tr>
-    <form name="new_cv" action="sfl_cv_08_.php" method="post" enctype="multipart/form-data">
-      <th  colspan="3" align="left" class="txt09">HISTORIAL ACADÉMICO </th>
       <?php if ($accion == 1) { ?>
         <tr>
         <td colspan="2"><span class="txt08"><b>( * ) Algun campo esta vacio .</b></span></td>
@@ -127,36 +194,39 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
         </tr>
       <?php } ?>
        <tr>
-	   <td colspan="5">&nbsp;</td><tr></tr>
         <th>Nivel</th>  <th>INSTITUCION</th> <th>STATUS</th><th>De:(Año)</th><th>A:(Año)</th>
        </tr>
       <tr><td colspan="5">&nbsp;</td><tr></tr>
-        <td width="100">Primaria <br><br>  </td>
-    	    <td><input onkeypress="return event.keyCode!=13" type="text" name="primaria" size="30" maxlength="30"  <?php if ($primaria != "") { ?>value="<?php echo $primaria; ?>"<?php } ?>  class="form03" /></td>
-        <td><select name="status_pri" class="form03">
+        <td width="100"><label for="primaria" class="col-sm-4 control-label"> Primaria:</label><br><br><br>  </td>
+    	    <td><input onkeypress="return event.keyCode!=13" type="text" name="primaria" size="30" maxlength="30" placeholder="Primaria" autofocus <?php if ($primaria != "") { ?>value="<?php echo $primaria; ?>"<?php } ?>  class="form-control" /></td>
+        <td><select name="status_pri" class="form-control">
          	 <option  <?php if ($status_pri!= "") { ?>value="<?php echo $status_pri; ?>"<?php } ?> > <?php echo $status_pri; ?>  &nbsp;.:</option>
 		     <option value="Trunco">Trunco</option>
              <option value="Constancia">Constancia</option>
             </select></td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="de_pri" size="5" maxlength="4" class="form03"   <?php if ($de_pri != "") { ?>value="<?php echo $de_pri; ?>"<?php } ?>/></td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="a_pri" size="5" maxlength="4" class="form03"   <?php if ($a_pri!= "") { ?>value="<?php echo $a_pri; ?>"<?php } ?>/></td>
+        <td><input onkeypress="return event.keyCode!=13" type="text" name="de_pri" size="5" maxlength="4" class="form-control"   <?php if ($de_pri != "") { ?>value="<?php echo $de_pri; ?>"<?php } ?>/></td>
+        <td><input onkeypress="return event.keyCode!=13" type="text" name="a_pri" size="5" maxlength="4" class="form-control"   <?php if ($a_pri!= "") { ?>value="<?php echo $a_pri; ?>"<?php } ?>/></td>
         <tr>
-        <td>secundaria <br><br>  </td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="secu" size="30" maxlength="30" class="form03" <?php if ($secu != "") { ?>value="<?php echo $secu; ?>"<?php } ?> /></td>
-        <td><select name="status_secu" class="form03">
+
+
+        <td><label for="Secundaria" class="col-sm-4 control-label"> Secundaria:</label> <br><br><br>  </td>
+        <td><input onkeypress="return event.keyCode!=13" type="text" name="secu" size="30" maxlength="30" class="form-control" placeholder="Secundaria" <?php if ($secu != "") { ?>value="<?php echo $secu; ?>"<?php } ?> /></td>
+        <td><select name="status_secu" class="form-control">
             <option  <?php if ($status_secu!= "") { ?>value="<?php echo $status_secu; ?>"<?php } ?> > <?php echo $status_secu; ?>  &nbsp;.:</option>
             <option value="Trunco">Trunco</option>
             <option value="Constancia">Constancia</option>
          </select></td>
-       <td><input onkeypress="return event.keyCode!=13" type="text" name="de_secu" size="5" maxlength="4" class="form03" <?php if ($de_secu != "") { ?>value="<?php echo $de_secu; ?>"<?php } ?> /></td>
-      <td><input onkeypress="return event.keyCode!=13" type="text" name="a_secu" size="5" maxlength="4" class="form03" <?php if ($a_secu != "") { ?>value="<?php echo $a_secu; ?>"<?php } ?> /></td>
+       <td><input onkeypress="return event.keyCode!=13" type="text" name="de_secu" size="5" maxlength="4" class="form-control" <?php if ($de_secu != "") { ?>value="<?php echo $de_secu; ?>"<?php } ?> /></td>
+      <td><input onkeypress="return event.keyCode!=13" type="text" name="a_secu" size="5" maxlength="4" class="form-control" <?php if ($a_secu != "") { ?>value="<?php echo $a_secu; ?>"<?php } ?> /></td>
       </tr>
       <tr></tr>
       <tr>
       <tr>
-      <td>Preparatoria <br><br>  </td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="prepa" size="30" maxlength="30" class="form03" <?php if ($prepa != "") { ?>value="<?php echo $prepa; ?>"<?php } ?>  /></td>
-        <td><select name="status_prepa" class="form03">
+
+
+      <td><label for="Preparatoria" class="col-sm-4 control-label"> Preparatoria:</label> <br><br><br>  </td>
+        <td><input onkeypress="return event.keyCode!=13" type="text" name="prepa" size="30" maxlength="30" class="form-control" placeholder="Preparatoria" <?php if ($prepa != "") { ?>value="<?php echo $prepa; ?>"<?php } ?>  /></td>
+        <td><select name="status_prepa" class="form-control">
             <option  <?php if ($status_prepa!= "") { ?>value="<?php echo $status_prepa; ?>"<?php } ?> > <?php echo $status_prepa; ?>  &nbsp;.:</option>
             <option value="Trunco">Trunco</option>
 			<option value="Pasante">Pasante</option>
@@ -164,16 +234,18 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
             <option value="Constancia">Constancia</option>
             <option value="Estudiante">Estudiante</option>
         </select></td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="de_prepa" size="5" maxlength="4" class="form03" <?php if ($de_prepa != "") { ?>value="<?php echo $de_prepa; ?>"<?php } ?> /></td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="a_prepa" size="5" maxlength="4" class="form03" <?php if ($a_prepa != "") { ?>value="<?php echo $a_prepa; ?>"<?php } ?> /> </td>
+        <td><input onkeypress="return event.keyCode!=13" type="text" name="de_prepa" size="5" maxlength="4" class="form-control" <?php if ($de_prepa != "") { ?>value="<?php echo $de_prepa; ?>"<?php } ?> /></td>
+        <td><input onkeypress="return event.keyCode!=13" type="text" name="a_prepa" size="5" maxlength="4" class="form-control" <?php if ($a_prepa != "") { ?>value="<?php echo $a_prepa; ?>"<?php } ?> /> </td>
 
       </tr>
       <tr>
           <tr>
-        <td>Licenciatura / Ingenieria <br><br> </td>
 
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="lic" size="30" maxlength="30" class="form03" <?php if ($lic!= "") { ?>value="<?php echo $lic; ?>"<?php } ?> /></td>
-        <td><select name="status_lic" class="form03">
+
+        <td><label for="Secundaria" class="col-sm-4 control-label">Licenciatura/Ingenieria:</label><br><br> </td>
+
+        <td><input onkeypress="return event.keyCode!=13" type="text" name="lic" size="30" maxlength="30" class="form-control" placeholder="Licenciatura / Ingenieria " <?php if ($lic!= "") { ?>value="<?php echo $lic; ?>"<?php } ?> /></td>
+        <td><select name="status_lic" class="form-control">
             <option  <?php if ($status_lic!= "") { ?>value="<?php echo $status_lic; ?>"<?php } ?> > <?php echo $status_lic; ?>  &nbsp;.:</option>
             <option value="Pasante">Pasante</option>
             <option value="Titulado">Titulado</option>
@@ -182,16 +254,18 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
             <option value="Estudiante">Estudiante</option>
         </select></td>
 
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="de_lic" size="5" maxlength="4" class="form03" <?php if ($de_lic != "") { ?>value="<?php echo $de_lic; ?>"<?php } ?> /></td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="a_lic" size="5" maxlength="4" class="form03" <?php if ($a_lic != "") { ?>value="<?php echo $a_lic; ?>"<?php } ?> /></td>
+        <td><input onkeypress="return event.keyCode!=13" type="text" name="de_lic" size="5" maxlength="4" class="form-control" <?php if ($de_lic != "") { ?>value="<?php echo $de_lic; ?>"<?php } ?> /></td>
+        <td><input onkeypress="return event.keyCode!=13" type="text" name="a_lic" size="5" maxlength="4" class="form-control" <?php if ($a_lic != "") { ?>value="<?php echo $a_lic; ?>"<?php } ?> /></td>
 
       </tr>
       <tr>
          <tr>
-        <td>Maestria <br><br> </td>
 
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="maestria" size="30" maxlength="30" class="form03" <?php if ($maestria != "") { ?>value="<?php echo $maestria; ?>"<?php } ?> /></td>
-        <td><select name="status_maestria" class="form03">
+
+        <td><label for="Maestria" class="col-sm-4 control-label"> Maestria:</label> <br><br><br> </td>
+
+        <td><input onkeypress="return event.keyCode!=13" type="text" name="maestria" size="30" maxlength="30" class="form-control" placeholder="Maestria" <?php if ($maestria != "") { ?>value="<?php echo $maestria; ?>"<?php } ?> /></td>
+        <td><select name="status_maestria" class="form-control">
              <option  <?php if ($status_maestria!= "") { ?>value="<?php echo $status_maestria; ?>"<?php } ?> > <?php echo $status_maestria; ?>  &nbsp;.:</option>
    
             <option value="Pasante">Pasante</option>
@@ -200,15 +274,17 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
             <option value="Constancia">Constancia</option>
             <option value="Estudiante">Estudiante</option>
         </select></td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="de_maestria" size="5" maxlength="4" class="form03"  <?php if ($de_maestria != "") { ?>value="<?php echo $de_maestria; ?>"<?php } ?> /></td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="a_maestria" size="5" maxlength="4" class="form03" <?php if ($a_maestria != "") { ?>value="<?php echo $a_maestria; ?>"<?php } ?> /></td>
+        <td><input onkeypress="return event.keyCode!=13" type="text" name="de_maestria" size="5" maxlength="4" class="form-control"  <?php if ($de_maestria != "") { ?>value="<?php echo $de_maestria; ?>"<?php } ?> /></td>
+        <td><input onkeypress="return event.keyCode!=13" type="text" name="a_maestria" size="5" maxlength="4" class="form-control" <?php if ($a_maestria != "") { ?>value="<?php echo $a_maestria; ?>"<?php } ?> /></td>
       </tr>
       <tr>
          <tr>
-        <td>Doctorado <br><br> </td>
 
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="doc" size="30" maxlength="30" class="form03"  <?php if ($doc != "") { ?>value="<?php echo $doc; ?>"<?php } ?> /></td>
-        <td><select name="status_doc" class="form03">
+
+        <td><label for="Doctorado" class="col-sm-4 control-label"> Doctorado:</label>  <br><br><br> </td>
+
+        <td><input onkeypress="return event.keyCode!=13" type="text" name="doc" size="30" maxlength="30" class="form-control" placeholder="Doctorado" <?php if ($doc != "") { ?>value="<?php echo $doc; ?>"<?php } ?> /></td>
+        <td><select name="status_doc" class="form-control">
             <option  <?php if ($status_doc!= "") { ?>value="<?php echo $status_doc; ?>"<?php } ?> > <?php echo $status_doc; ?>  &nbsp;.:</option>
             <option value="Pasante">Pasante</option>
             <option value="Titulado">Titulado</option>
@@ -217,8 +293,8 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
             <option value="Estudiante">Estudiante</option>
         </select></td>
 
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="de_doc" size="5" maxlength="4" class="form03"  <?php if ($de_doc != "") { ?>value="<?php echo $de_doc; ?>"<?php } ?>/></td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="a_doc" size="5" maxlength="4" class="form03"  <?php if ($a_doc != "") { ?>value="<?php echo $a_doc; ?>"<?php } ?> /></td>
+        <td><input onkeypress="return event.keyCode!=13" type="text" name="de_doc" size="5" maxlength="4" class="form-control"  <?php if ($de_doc != "") { ?>value="<?php echo $de_doc; ?>"<?php } ?>/></td>
+        <td><input onkeypress="return event.keyCode!=13" type="text" name="a_doc" size="5" maxlength="4" class="form-control"  <?php if ($a_doc != "") { ?>value="<?php echo $a_doc; ?>"<?php } ?> /></td>
       </tr>
       <tr>
       <tr>
@@ -230,9 +306,9 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
   
       <tr></tr><td colspan="5"></td><tr></tr>
   		     <td colspan="5" align="center">
-                  <input type="button" name="Regresar" value="Regresar" class="form03" onClick="javascript:window.history.back()">&nbsp;
-                  <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="form03">
-		    	  <input type="submit" name="submit" value="Continuar" class="form03" >&nbsp;&nbsp;
+                  <input type="button" name="Regresar" value="Regresar" class="btn btn-default" onClick="javascript:window.history.back()">&nbsp;
+                  <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default">
+		    	  <input type="submit" name="submit" value="Continuar" class="btn btn-primary" >&nbsp;&nbsp;
                   <input type="hidden" name="id_cuenta" value="<?php echo $id_cuenta; ?>">
 				  <input type="hidden" name="id_estudios" value="<?php echo $id_estudios; ?>">
 			</td>

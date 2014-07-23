@@ -51,8 +51,67 @@
   </tr>
 </table>
 
+
+<div class="container">
+  <hr>
+  <div class="row">
+    <div class="col-md-3">
+    <div class="box-menu">
+      <a href="sfl_cv_02.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-user'></i> Datos Personales</a>
+      <a href="sfl_cv_02a.php" type="button" class="btn btn-default btn-100"disabled><i class='fa fa-map-marker'></i> Direcci&oacute;n</a>
+      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Contacto</a>
+      <a href="sfl_cv_04.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-home'></i> Referencias</a>
+      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento y Experiencia</a>
+      <a href="sfl_cv_06.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cog'></i> Industria</a>
+      <a href="sfl_cv_06a.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-child'></i> Posici&oacute;n</a>
+      <a href="sfl_cv_06b.php" type="button" class="btn btn-primary btn-100" ><i class='fa fa-cubes'></i> L&iacute;neas</a>
+      <a href="sfl_cv_06c.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cab'></i> &Aacute;reas de Expericia I</a>
+      <a href="sfl_cv_07.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-car'></i> &Aacute;reas de Expericia II</a>
+      <a href="sfl_cv_08.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-graduation-cap'></i> Histotial Acad&eacute;mico</a>
+      <a href="sfl_cv_08a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-institution'></i> Otros Estudios/Certificaciones</a>
+      <a href="sfl_cv_08b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-file-word-o'></i> Habilidades tecnol&oacute;gicas</a>
+      <a href="sfl_cv_09.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-briefcase'></i> Historial Laboral</a>
+      <a href="sfl_cv_10.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-facebook-square'></i> Intereses</a>
+    </div>
+   
+     </div>
+
+    <div class="col-md-9">
+      <div class="box-title letra1">Lineas</div>
+
+
+
+      <!-- Errores-->
+          <?php if ($accion == 1) { ?>
+                      
+            <div class="alert alert-danger alert-dismissible" role="alert">
+              <span class="txt08"><b>( * ) Alg&uacute;n campo obligatorio se encuentra vaci&oacute;.</b></span>
+            </div>
+                             
+          <?php } ?>
+          <?php if ($accion_up == 5) { ?>
+        
+            <div class="alert alert-info alert-dismissible" role="alert">
+              <span><b>( * ) Actualice sus datos  y de Clic en Continuar.</b></span>
+            </div>
+                              
+          <?php } ?>
+      <div class="box-formulario">
+        <form class="form-horizontal" role="form" name="new_cv" action="sfl_cv_06b_.php" method="post" enctype="multipart/form-data" >
+          <!-- Termina Errores -->
+
+
+
+
+
+
+
+
+
+
+
+
 <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
- <th align="left" class="txt09">Lineas </th><tr></tr>
   
 	  <?php if ($accion == 5) { ?>
       <tr>
@@ -73,7 +132,7 @@
                     $query_line = mysql_query("SELECT * FROM cat_line ORDER BY line ASC");
                     $qry_line = mysql_fetch_assoc($query_line);
       ?>
-   	      <select name="id_cat_line"  size="10" style="width: 300px" class="">
+   	      <select name="id_cat_line"  size="10" style="width: 300px" class="form-control">
           <?php if ($id_cat_line != "") {
                     $query_line_s = mysql_query("SELECT * FROM cat_line where id_cat_line ='" . $id_cat_line . "'  ");
     				$qry_line_s = mysql_fetch_assoc($query_line_s);?>
@@ -94,7 +153,7 @@
                                             }
                     ?>
            </select> </td>
-		   <td>  <input type="submit" name="agregar" value="Agregar" class="form03" >        
+		   <td>  <input type="submit" name="agregar" value="Agregar" class="btn btn-default" >        
 </td>
    
 			 <?php
@@ -104,9 +163,9 @@
      ?> 
         <!-- query a BD referencia -->
              <td> <table width="200" border="0" cellspacing="1" cellpadding="4" align="center" class="bg_09 txt03"> 
-                <td height="20" class="txt06a" align="center" valign="middle">.:.&nbsp;</td>
+                <td height="20" class="txt06a" align="center" valign="middle">&nbsp;</td>
                 <td class="txt06a" valign="middle" >Experiencia</td>
-                <td class="txt06a" valign="middle" align="center">.:.</td>
+                <td class="txt06a" valign="middle" align="center"></td>
               
 <?php
 	if ($exist_indus > 0) {
@@ -130,8 +189,8 @@
 					$qry_app= mysql_fetch_assoc($query_app);
 					 
 	               ?>
-				  <?php echo $qry_cat['line']; ?><br>*** 
-				  <?php echo $qry_app['time_expe_line'];?>***
+				  <?php echo $qry_cat['line']; ?><br>
+				  <?php echo $qry_app['time_expe_line'];?>
 				  
 				  <br><select style="width: 200px"name="time_expe_line" class="form03" onChange="MM_jumpMenu('parent',this,0)"><br>
              <option value="">Seleccione el tiempo en linea;.:</option>
@@ -168,8 +227,8 @@
           </table>
               <tr></tr><td colspan="3">&nbsp;</td><tr></tr><td colspan="3 "align="center"> 
                  
-				  <input type="button" name="Regresar" value="Regresar" class="form03" onClick="javascript:window.history.back()">&nbsp;
-			      <input type="button" name="continuar" value="Continuar" class="form03"  onClick="location='sfl_cv_06c.php?id_cuenta=<?php echo $id_cuenta; ?>'">&nbsp;          
+				  <input type="button" name="Regresar" value="Regresar" class="btn btn-default" onClick="javascript:window.history.back()">&nbsp;
+			      <input type="button" name="continuar" value="Continuar" class="btn btn-primary"  onClick="location='sfl_cv_06c.php?id_cuenta=<?php echo $id_cuenta; ?>'">&nbsp;          
       			  <input type="hidden" name="id_cuenta" value="<?php echo $id_cuenta; ?>">
 				 
              </td>

@@ -83,11 +83,36 @@
   </tr>
 </table>
 
-<table width="600" border="0" cellspacing="1" cellpadding="0" align="center" class="bg_09 txt03">
-<th align="left" class="txt09">REFERENCIAS</th>
 
- <form name="refe" method="post" action="sfl_cv_04_.php" enctype="multipart/form-data">
 
+<div class="container">
+  <hr>
+  <div class="row">
+    <div class="col-md-3">
+    <div class="box-menu">
+      <a href="sfl_cv_02.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-user'></i> Datos Personales</a>
+      <a href="sfl_cv_02a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-map-marker'></i> Direcci&oacute;n</a>
+      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Contacto</a>
+      <a href="sfl_cv_04.php" type="button" class="btn btn-primary btn-100" ><i class='fa fa-home'></i> Referencias</a>
+      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento y Experiencia</a>
+      <a href="sfl_cv_06.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cog'></i> Industria</a>
+      <a href="sfl_cv_06a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-child'></i> Posici&oacute;n</a>
+      <a href="sfl_cv_06b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cubes'></i> L&iacute;neas</a>
+      <a href="sfl_cv_06c.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cab'></i> &Aacute;reas de Expericia I</a>
+      <a href="sfl_cv_07.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-car'></i> &Aacute;reas de Expericia II</a>
+      <a href="sfl_cv_08.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-graduation-cap'></i> Histotial Acad&eacute;mico</a>
+      <a href="sfl_cv_08a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-institution'></i> Otros Estudios/Certificaciones</a>
+      <a href="sfl_cv_08b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-file-word-o'></i> Habilidades tecnol&oacute;gicas</a>
+      <a href="sfl_cv_09.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-briefcase'></i> Historial Laboral</a>
+      <a href="sfl_cv_10.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-facebook-square'></i> Intereses</a>
+    </div>
+   
+     </div>
+
+    <div class="col-md-9">
+      <div class="box-title">Referencias</div>
+
+<!--  -->
 <?php if ($accion == 1) { ?>
 
   <tr>
@@ -118,33 +143,88 @@
 		<td colspan="2">&nbsp;</td>
         </tr>
       <?php } ?>
+<!--  -->
 
-    <tr><td width="150">Nombre: *</td>
-    <td><input onkeypress="return event.keyCode!=13" type="text" name="ref_nom" size="50" maxlength="100"  <?php if ($ref_nom != "") { ?>value="<?php echo $ref_nom; ?>"<?php } ?> class="form03" ></td>
+<div class="box-formulario">
+ <form name="refe" role="form" class="form-horizontal" method="post" action="sfl_cv_04_.php" enctype="multipart/form-data">
 
-    </tr>
-    <tr><td>Domicilio: </td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="ref_dom" size="50" maxlength="100"  <?php if ($ref_dom != "") { ?>value="<?php echo $ref_dom; ?>"<?php } ?> class="form03" ></td>
 
-    </tr>
-    <tr><td>Teléfono: *</td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="ref_tel" size="18" maxlength="15"  <?php if ($ref_tel != "") { ?>value="<?php echo $ref_tel; ?>"<?php } ?> class="form03" ></td>
 
-    </tr>
-     <tr><td>Ocupación: </td>
-       <td><input onkeypress="return event.keyCode!=13" type="text" name="ref_ocu" size="25" maxlength="30"  <?php if ($ref_ocu != "") { ?>value="<?php echo $ref_ocu; ?>"<?php } ?> class="form03" ></td>
+      <div class="form-group">
+            <label for="ref_nom" class="col-sm-4 control-label">Nombre :* </label>
+              <div class="col-sm-8">
+                
 
-    </tr>
-    <tr><td>Tiempo de conocerlo: *</td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="time_con" size="3" maxlength="2"  <?php if ($time_con != "") { ?>value="<?php echo $time_con; ?>"<?php } ?> class="form03" >&nbsp Años</td>
-    </tr>
-    <tr>
-        <td>&nbsp;</td>
-        <td><input type="submit"  name="submit"  value="&nbsp;&nbsp;<?php if (!$id_ref) { ?>+Nueva Referencia<?php }else{ ?>Actualizar Referencia <?php } ?>&nbsp;&nbsp;" class="form03"></td>
+              <input onkeypress="return event.keyCode!=13"  type="text" name="ref_nom" size="50" maxlength="100"  <?php if ($ref_nom != "") { ?>value="<?php echo $ref_nom; ?>"<?php } ?> class="form-control" placeholder='Nombre ' autofocus>
+
+            </div>
+          </div>
+
+      
+      <div class="form-group">
+            <label for="ref_dom" class="col-sm-4 control-label">Domicilio : </label>
+              <div class="col-sm-8">
+                
+
+              <input onkeypress="return event.keyCode!=13"  type="text" name="ref_dom" size="50" maxlength="100"  <?php if ($ref_dom != "") { ?>value="<?php echo $ref_dom; ?>"<?php } ?> class="form-control" placeholder='Domicilio '>
+
+            </div>
+          </div>
+
+      <div class="form-group">
+            <label for="ref_tel" class="col-sm-4 control-label">Telefono :* </label>
+              <div class="col-sm-8">
+                
+
+              <input onkeypress="return event.keyCode!=13"  type="text" name="ref_tel" size="18" maxlength="15"  <?php if ($ref_tel != "") { ?>value="<?php echo $ref_tel; ?>"<?php } ?> class="form-control" placeholder='Telefono ' >
+
+            </div>
+          </div>
+          
+
+    <div class="form-group">
+            <label for="ref_ocu" class="col-sm-4 control-label">Ocupacion : </label>
+              <div class="col-sm-8">
+                
+
+              <input onkeypress="return event.keyCode!=13"  type="text" name="ref_ocu" size="25" maxlength="30"  <?php if ($ref_ocu != "") { ?>value="<?php echo $ref_ocu; ?>"<?php } ?> class="form-control" placeholder='Ocupacion ' >
+
+            </div>
+          </div>
+
+      <div class="form-group">
+            <label for="time_con" class="col-sm-4 control-label">Tiempo de conocerlos :* </label>
+              <div class="col-sm-8">
+                
+
+              <input onkeypress="return event.keyCode!=13"  type="text" name="time_con" size="3" maxlength="2"  <?php if ($time_con != "") { ?>value="<?php echo $time_con; ?>"<?php } ?> class="form-control" placeholder='Años ' >
+
+            </div>
+          </div>            
+
+
+
+
+<!-- HACER UN TOOLTIP EN LA IMAGEN DE AYUDA CON LA LEYENDA DEL LABEL -->
+<div class="form-group">
+      <label for="ref_ocu" class="col-sm-4 control-label">**Ingresa al menos una referencia para poder continuar** : </label>
+      <div class="col-sm-8">
+        <input type="submit" name="submit" value="&nbsp;&nbsp;<?php if (!$id_ref) { ?>+Nueva Referencia<?php }else{ ?>Actualizar Referencia <?php } ?>&nbsp;&nbsp;" class="btn btn-default right" onClick="javascript:window.history.back()">&nbsp;
+        <img class="right" src="images/ayuda.png" alt="ayuda", height="25px" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+      </div>
+      
+</div> 
+
+
+
+
+
+
+
     <tr>
         <td colspan="2">&nbsp;</td>
 		 <?php if ($accion_up == 6)  {?>           
-		 <td class="txt08">**Ingresa al menos una referencia para poder continuar** </td>
+		 
         </tr>
 		  <?php }?>			
 	 <?php
@@ -156,11 +236,11 @@
         <!-- query a BD referencia-->
               <table width="600" align="center" border="0" cellspacing="1" cellpadding="4" class="bg_09 txt03">
                 <tr>
-                <td height="20" class="txt06a" align="right" valign="middle">.:&nbsp;</td>
+                <td height="20" class="txt06a" align="right" valign="middle">&nbsp;</td>
                 <td class="txt06a" valign="middle">Nombre</td>
                 <td class="txt06a" valign="middle" >Domicilio</td>
                 <td class="txt06a" valign="middle" >telefono</td>
-                <td class="txt06a" valign="middle" align="center">.:.</td>
+                <td class="txt06a" valign="middle" align="center"></td>
               </tr>
 
 <?php
@@ -196,11 +276,16 @@
 <?php
 	}
 ?>
+           
              <tr></tr> <tr></tr><td colspan="5">&nbsp;</td><tr></tr><td colspan="5" align="center">       
-				  <input type="button" name="Regresar" value="Regresar" class="form03" onClick="javascript:window.history.back()">&nbsp;
-			      <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="form03">
-                <?php if (($accion == 2) or ($accion == 3 )or ($accion_up == 5 ))  {?>           
-			       <input type="button" name="continuar" value="Continuar" class="form03"  onClick="location='sfl_cv_05.php?id_cuenta=<?php echo $id_cuenta; ?>& accion=<?php echo $accion?>'">&nbsp;    
+				  <input type="button" name="Regresar" value="Regresar" class="btn btn-primary" onClick="javascript:window.history.back()">&nbsp;
+
+
+			      <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default">
+                <?php if (($accion == 2) or ($accion == 3 )or ($accion_up == 5 ))  {?>  
+
+
+			       <input type="button" name="continuar" value="Continuar" class="btn btn-primary"  onClick="location='sfl_cv_05.php?id_cuenta=<?php echo $id_cuenta; ?>& accion=<?php echo $accion?>'">&nbsp;    
                                                           	 
 			    <?php }?>			
 				  <input type="hidden" name="id_cuenta" value="<?php echo $id_cuenta; ?>">
@@ -214,6 +299,9 @@
   <tr>
     <td class="padd_02" valign="top">&nbsp;</td>
   </tr>
+
+
+
 </table>
 <?php
 	//require_once('sfl_footer.php');

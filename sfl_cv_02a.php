@@ -158,7 +158,7 @@
           <?php } ?>
       <div class="box-formulario">
         <form class="form-horizontal" role="form" name="new_cv" action="sfl_cv_02a_.php" method="post" enctype="multipart/form-data" >
-          
+          <!-- Termina Errores -->
 
           
           <div class="form-group">
@@ -168,7 +168,7 @@
               $query_estado = mysql_query("SELECT * FROM cat_estados ORDER BY id_estado ASC");
               $qry_estado = mysql_fetch_assoc($query_estado);
               ?>
-              <select name="id_estado"  onChange="MM_jumpMenu('parent',this,0)" class="">
+              <select name="id_estado"  onChange="MM_jumpMenu('parent',this,0)" class="form03">
 
                    <?php if ($id_estado != "") {
 
@@ -209,7 +209,7 @@
                     $query_mun = mysql_query("SELECT * FROM cat_mun_del WHERE id_estado ='" . $id_estado . "' ORDER BY id_del_mun ASC");
                     $qry_mun = mysql_fetch_assoc($query_mun);
                     ?>
-                <select name="id_del_mun"   class="">
+                <select name="id_del_mun"   class="form03">
 
                   <?php if ($id_del_mun != "") {
 
@@ -251,7 +251,7 @@
                     $query_zonas = mysql_query("SELECT * FROM cat_zonas ORDER BY id_cat_zonas ASC");
                     $qry_zonas = mysql_fetch_assoc($query_zonas);
         ?>
-        <select name="id_cat_zonas"  class="" >
+        <select name="id_cat_zonas"  class="form03" >
 
        <?php if ($id_cat_zonas != "") {
                            $query_zonas_s = mysql_query("SELECT * FROM cat_zonas WHERE id_cat_zonas ='" . $id_cat_zonas . "'");

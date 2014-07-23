@@ -53,10 +53,65 @@
   </tr>
 </table>
 
-<table width="600"  class="bg_09 txt03"  border="0" cellspacing="1" cellpadding="0" align="center">
- <th class="txt09" align="left">Industria</th>
 
-  <form name="new_cv" action="sfl_cv_06_.php" method="POST" enctype="multipart/form-data">
+<div class="container">
+  <hr>
+  <div class="row">
+    <div class="col-md-3">
+    <div class="box-menu">
+      <a href="sfl_cv_02.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-user'></i> Datos Personales</a>
+      <a href="sfl_cv_02a.php" type="button" class="btn btn-default btn-100"disabled><i class='fa fa-map-marker'></i> Direcci&oacute;n</a>
+      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Contacto</a>
+      <a href="sfl_cv_04.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-home'></i> Referencias</a>
+      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento y Experiencia</a>
+      <a href="sfl_cv_06.php" type="button" class="btn btn-primary btn-100" ><i class='fa fa-cog'></i> Industria</a>
+      <a href="sfl_cv_06a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-child'></i> Posici&oacute;n</a>
+      <a href="sfl_cv_06b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cubes'></i> L&iacute;neas</a>
+      <a href="sfl_cv_06c.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cab'></i> &Aacute;reas de Expericia I</a>
+      <a href="sfl_cv_07.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-car'></i> &Aacute;reas de Expericia II</a>
+      <a href="sfl_cv_08.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-graduation-cap'></i> Histotial Acad&eacute;mico</a>
+      <a href="sfl_cv_08a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-institution'></i> Otros Estudios/Certificaciones</a>
+      <a href="sfl_cv_08b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-file-word-o'></i> Habilidades tecnol&oacute;gicas</a>
+      <a href="sfl_cv_09.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-briefcase'></i> Historial Laboral</a>
+      <a href="sfl_cv_10.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-facebook-square'></i> Intereses</a>
+    </div>
+   
+     </div>
+
+    <div class="col-md-9">
+      <div class="box-title letra1">Industria</div>
+
+
+
+      <!-- Errores-->
+          <?php if ($accion == 1) { ?>
+                      
+            <div class="alert alert-danger alert-dismissible" role="alert">
+              <span class="txt08"><b>( * ) Alg&uacute;n campo obligatorio se encuentra vaci&oacute;.</b></span>
+            </div>
+                             
+          <?php } ?>
+          <?php if ($accion_up == 5) { ?>
+        
+            <div class="alert alert-info alert-dismissible" role="alert">
+              <span><b>( * ) Actualice sus datos  y de Clic en Continuar.</b></span>
+            </div>
+                              
+          <?php } ?>
+      <div class="box-formulario">
+        <form class="form-horizontal" role="form" name="new_cv" action="sfl_cv_06_.php" method="post" enctype="multipart/form-data" >
+          <!-- Termina Errores -->
+
+          
+
+
+
+
+
+
+<table width="600"  class="bg_09 txt03"  border="0" cellspacing="1" cellpadding="0" align="center">
+
+
 	  <?php if ($accion == 5) { ?>
       <tr>
         <td colspan="2"><span  class="menu02" ><b><br><br>( * ) Actualice sus datos  y de Clic en Continuar.</b></span></td>
@@ -72,7 +127,7 @@
                     $query_industria = mysql_query("SELECT * FROM cat_industria ORDER BY id_cat_industria ASC");
                     $qry_industria = mysql_fetch_assoc($query_industria);
       ?>
-   	      <select name="industria"  size="6" style="width: 200px" onChange="MM_jumpMenu('parent',this,0)" class="">
+   	      <select name="industria" class="form-control"  size="6" style="width: 200px" onChange="MM_jumpMenu('parent',this,0)" class="">
           <?php if ($id_cat_industria != "") {
 
                            $query_industria_s = mysql_query("SELECT * FROM cat_industria where id_cat_industria ='" . $id_cat_industria . "'  ");
@@ -105,9 +160,9 @@
      ?> 
         <!-- query a BD referencia -->
              <td> <table width="200" border="0" cellspacing="1" cellpadding="4" align="center" class="bg_09 txt03"> 
-                <td height="20" class="txt06a" align="center" valign="middle">.:&nbsp;</td>
+                <td height="20" class="txt06a" align="center" valign="middle">&nbsp;</td>
                 <td class="txt06a" valign="middle" >Experiencia</td>
-                <td class="txt06a" valign="middle" align="center">.:.</td>
+                <td class="txt06a" valign="middle" align="center"></td>
               
 <?php
 	if ($exist_indus > 0) {
@@ -148,10 +203,10 @@
 	   
             <tr></tr><td colspan="2">&nbsp;</td> <tr></tr> <td  colspan="2 "align="center">
                  
-				  <input type="button" name="Regresar" value="Regresar" class="form03" onClick="javascript:window.history.back()">&nbsp;
+				  <input type="button" name="Regresar" value="Regresar" class="btn btn-default" onClick="javascript:window.history.back()">&nbsp;
 			      
 				 <?php if ( $cat_industria != "") {?>           
-			       <input type="button" name="continuar" value="Continuar" class="form03"  onClick="location='sfl_cv_06a.php?id_cuenta=<?php echo $id_cuenta; ?>'">&nbsp;          
+			       <input type="button" name="continuar" value="Continuar" class="btn btn-primary"  onClick="location='sfl_cv_06a.php?id_cuenta=<?php echo $id_cuenta; ?>'">&nbsp;          
                 <?php }?>			
 		 		  
 				  <input type="hidden" name="id_cuenta" value="<?php echo $id_cuenta; ?>">

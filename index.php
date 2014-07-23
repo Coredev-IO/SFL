@@ -220,6 +220,8 @@ function MM_swapImage() { //v3.0
 <?php
 	require_once('sfl_footer.php');
 ?>
-<p></p>
+
+
+
 </body>
 </html>

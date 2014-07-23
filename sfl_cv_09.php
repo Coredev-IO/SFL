@@ -84,9 +84,44 @@ if ($id_laboral != "") {
      </tr>
 </table>
 
+
+<div class="container">
+  <hr>
+  <div class="row">
+    <div class="col-md-3">
+    <div class="box-menu">
+      <a href="sfl_cv_02.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-user'></i> Datos Personales</a>
+      <a href="sfl_cv_02a.php" type="button" class="btn btn-default btn-100"disabled><i class='fa fa-map-marker'></i> Direcci&oacute;n</a>
+      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Contacto</a>
+      <a href="sfl_cv_04.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-home'></i> Referencias</a>
+      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento y Experiencia</a>
+      <a href="sfl_cv_06.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cog'></i> Industria</a>
+      <a href="sfl_cv_06a.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-child'></i> Posici&oacute;n</a>
+      <a href="sfl_cv_06b.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-cubes'></i> L&iacute;neas</a>
+      <a href="sfl_cv_06c.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cab'></i> &Aacute;reas de Expericia I</a>
+      <a href="sfl_cv_07.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-car'></i> &Aacute;reas de Expericia II</a>
+      <a href="sfl_cv_08.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-graduation-cap'></i> Histotial Acad&eacute;mico</a>
+      <a href="sfl_cv_08a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-institution'></i> Otros Estudios/Certificaciones</a>
+      <a href="sfl_cv_08b.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-file-word-o'></i> Habilidades tecnol&oacute;gicas</a>
+      <a href="sfl_cv_09.php" type="button" class="btn btn-primary btn-100" ><i class='fa fa-briefcase'></i> Historial Laboral</a>
+      <a href="sfl_cv_10.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-facebook-square'></i> Intereses</a>
+    </div>
+   
+     </div>
+
+    <div class="col-md-9">
+      <div class="box-title ">HISTORIAL LABORAL </div>
+       <div class="box-formulario">
+
+
+
+
+
+
+
 <table width="700" border="0" cellspacing="1" cellpadding="0" align="center" class="bg_09 txt03">
     <tr></tr>
-	<th  colspan="2" align="left" class="txt09">HISTORIAL LABORAL</th><tr><tr>
+<!-- 	<th  colspan="2" align="left" class="txt09">HISTORIAL LABORAL</th><tr><tr> -->
     <form name="new_cv" action="sfl_cv_09_.php" method="post" enctype="multipart/form-data">
       <?php if ($accion == 1) { ?>
       <tr>
@@ -103,89 +138,128 @@ if ($id_laboral != "") {
        <?php  } ?>
         <tr>
         
-          <td>Empresa **</td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="empresa" size="50" maxlength="50" class="form03" <?php if ($empresa != "") { ?>value="<?php echo $empresa; ?>"<?php } ?> /></td>
+          <td><b>Empresa **</td>
+        <td><input onkeypress="return event.keyCode!=13" type="text" name="empresa" size="50" maxlength="50" class="form-control" <?php if ($empresa != "") { ?>value="<?php echo $empresa; ?>"<?php } ?> /></td>
         <tr></tr>
-        <td>Tipo de Contratación **</td>
-        <td><select name="tipo" class="form03" >
+
+
+        <td><b>Tipo de Contratación **</td>
+        <td><br><select name="tipo" class="form-control" >
             <option  <?php if ($tipo != "") { ?>value="<?php echo $tipo; ?>"<?php } ?>value=""><?php echo $tipo ?>&nbsp;.:</option>
             <option value="Directo">Directo</option>
             <option value="Tercerizado">Tercerizado</option>
             </select></td>
        </tr>
        <tr>
-            <td> Area</td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="area" size="35" maxlength="35" class="form03" <?php if ($area != "") { ?>value="<?php echo $area; ?>"<?php } ?> /></td>
+
+
+            <td> <b>Area</td>
+        <td><br><input onkeypress="return event.keyCode!=13" type="text" name="area" size="35" maxlength="35" class="form-control" <?php if ($area != "") { ?>value="<?php echo $area; ?>"<?php } ?> /></td>
         <tr>
         </tr>
-          <td> Giro </td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="giro" size="35" maxlength="35" class="form03" <?php if ($giro != "") { ?>value="<?php echo $giro; ?>"<?php } ?> /></td>
+
+
+
+          <td> <b>Giro </td>
+        <td><br><input onkeypress="return event.keyCode!=13" type="text" name="giro" size="35" maxlength="35" class="form-control" <?php if ($giro != "") { ?>value="<?php echo $giro; ?>"<?php } ?> /></td>
         <tr>
         </tr>
-          <td> Puesto ** </td>
-        <td><input onkeypress="return event.keyCode!=13"  type="text" name="puesto" size="35" maxlength="35" class="form03"  <?php if ($puesto != "") { ?>value="<?php echo $puesto; ?>"<?php }?>/></td>
+
+
+          <td> <b>Puesto ** </td>
+        <td><br><input onkeypress="return event.keyCode!=13"  type="text" name="puesto" size="35" maxlength="35" class="form-control"  <?php if ($puesto != "") { ?>value="<?php echo $puesto; ?>"<?php }?>/></td>
         <tr>
         </tr>
-          <td> Sueldo   </td>
-        <td>$<input onkeypress="return event.keyCode!=13" type="text" name="sueldo" size="10" maxlength="9" class="form03"  <?php if ($sueldo != "") { ?>value="<?php echo $sueldo; ?>"<?php }?> /></td>
+
+
+          <td> <b>Sueldo   </td>
+        <td><br>$<input onkeypress="return event.keyCode!=13" type="text" name="sueldo" size="10" maxlength="9" class="form-control"  <?php if ($sueldo != "") { ?>value="<?php echo $sueldo; ?>"<?php }?> /></td>
         <tr>
         </tr>
-        <td> Funciones </td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="funciones" size="35" maxlength="35" class="form03"  <?php if ($funciones != "") { ?>value="<?php echo $funciones; ?>"<?php }?>/></td>
+
+
+        <td> <b>Funciones </td>
+        <td><br><input onkeypress="return event.keyCode!=13" type="text" name="funciones" size="35" maxlength="35" class="form-control"  <?php if ($funciones != "") { ?>value="<?php echo $funciones; ?>"<?php }?>/></td>
         <tr>
         </tr>
-       <td> Principales Logros </td>
-        <td><textarea  onkeypress="return event.keyCode!=13"  name="logros" rows="5" cols="70" class="form03"/><?php if ($logros != "") {  echo $logros; }?> </textarea></td>
+
+
+
+       <td> <b>Principales Logros </td>
+        <td><br><textarea  onkeypress="return event.keyCode!=13"  name="logros" rows="5" cols="70" class="form-control"/><?php if ($logros != "") {  echo $logros; }?> </textarea></td>
         <tr>
         </tr>
-          <td> Nombre de Jefe Directo </td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="jefe" size="35" maxlength="35" class="form03" <?php if ($jefe != "") { ?>value="<?php echo $jefe; ?>"<?php }?> /></td>
+
+
+          <td> <b>Nombre de Jefe Directo </td>
+        <td><br><input onkeypress="return event.keyCode!=13" type="text" name="jefe" size="35" maxlength="35" class="form-control" <?php if ($jefe != "") { ?>value="<?php echo $jefe; ?>"<?php }?> /></td>
         <tr>
         </tr>
-         <td> Puesto del Jefe Directo </td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="puesto_jefe" size="35" maxlength="35" class="form03"<?php if ($puesto_jefe != "") { ?>value="<?php echo $puesto_jefe; ?>"<?php }?> /></td>
+
+
+         <td><b> Puesto del Jefe Directo </td>
+        <td><br><input onkeypress="return event.keyCode!=13" type="text" name="puesto_jefe" size="35" maxlength="35" class="form-control"<?php if ($puesto_jefe != "") { ?>value="<?php echo $puesto_jefe; ?>"<?php }?> /></td>
         <tr>
         </tr>
-       <td> E-mail </td> 
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="e_mail" size="35" maxlength="35" class="form03" <?php if ($e_mail != "") { ?>value="<?php echo $e_mail; ?>"<?php }?> /></td>
+
+
+
+       <td><b> E-mail </td> 
+        <td><br><input onkeypress="return event.keyCode!=13" type="text" name="e_mail" size="35" maxlength="35" class="form-control" <?php if ($e_mail != "") { ?>value="<?php echo $e_mail; ?>"<?php }?> /></td>
         <tr>
         </tr>
-         <td> Teléfono </td>
-        <td><input onkeypress="return event.keyCode!=13" type="text" name="telefono" size="35" maxlength="35" class="form03" <?php if ($telefono != "") { ?>value="<?php echo $telefono; ?>"<?php }?> /></td>
+
+
+
+         <td><b> Teléfono </td>
+        <td><br><input onkeypress="return event.keyCode!=13" type="text" name="telefono" size="35" maxlength="35" class="form-control" <?php if ($telefono != "") { ?>value="<?php echo $telefono; ?>"<?php }?> /></td>
         <tr>
         </tr>
-         <td> Periodo de: </td>
+
+
+         <td><b> Periodo de: </td>
         <?php if (!$fecha_i) { ?>
-	    <td>  <input onkeypress="return event.keyCode!=13" name="fecha_i" type="text" size="10" maxlength="10" onKeyUp = "this.value=formateafecha(this.value);" class="form05a"> [ dd/mm/aaaa ]</td>
+	    <td> <br> <input onkeypress="return event.keyCode!=13" name="fecha_i" type="text" size="10" maxlength="10" onKeyUp = "this.value=formateafecha(this.value);" class="form-control"> [ dd/mm/aaaa ]</td>
         <?php }else{ ?>
 	    <td><input onkeypress="return event.keyCode!=13" name="fecha_i" type="text" size="10" maxlength="10" value="<?php echo $fecha_i; ?>" class="form05a"> [ dd/mm/aaaa ]</td>
         <?php } ?>
-        <tr></tr> <td> Periodo a: </td>
+
+
+
+        <tr></tr> <td><b> Periodo a: </td>
 		 <?php if (!$fecha_i) { ?>
-	    <td>  <input onkeypress="return event.keyCode!=13" name="fecha_f" type="text" size="10" maxlength="10" onKeyUp = "this.value=formateafecha(this.value);" class="form05a"> [ dd/mm/aaaa ]</td>
+	    <td> <br> <input onkeypress="return event.keyCode!=13" name="fecha_f" type="text" size="10" maxlength="10" onKeyUp = "this.value=formateafecha(this.value);" class="form-control"> [ dd/mm/aaaa ]</td>
         <?php }else{ ?>
 	    <td><input onkeypress="return event.keyCode!=13" name="fecha_f" type="text" size="10" maxlength="10" value="<?php echo $fecha_f; ?>" class="form05a"> [ dd/mm/aaaa ]</td>
         <?php } ?>
          <tr>
         </tr>
-        <td> Actualmente Trabajando</td>
-         <td>
+
+
+
+        <td> <b>Actualmente Trabajando</td>
+         <td><br>
 		 
 		  <?php if ($actual_job == "si") { $a = "checked"; $b="";}else{ $a=""; $b="checked";}  ?>
          <input type="radio" name="actual_job" <?php echo"$a";?> value="si"> si <br>
          <input type="radio" name="actual_job"  <?php echo"$b";?> value="no"> no<br>
          </td>
         </tr>
-        <td> Autorizo pedir Referencias</td>
+
+
+        <td> <b> Autorizo pedir Referencias</td>
          <td>
 		 <?php if ($autorizo_ref == "si") { $c = "checked"; $d="";}else{ $c= ""; $d= "checked";}  ?>
          <input type="radio" name="autorizo_ref"  <?php echo"$c";?>  value="si"> si <br>
          <input type="radio" name="autorizo_ref"  <?php echo"$d";?> value="no"> no <br>
          </td> <tr>
           <td>Motivo de separación </td>
-          <td><input onkeypress="return event.keyCode!=13" type="text" name="separacion" size="35" maxlength="35" class="form03" <?php if ($separacion != "") { ?>value="<?php echo $separacion; ?>"<?php }?> /></td> <tr></tr>
-		  <td align="center"><input type="submit" name="submit" value="&nbsp;&nbsp;<?php if (!$id_laboral) { ?>** Agregar ** <?php }else{ ?>** Actualizar Datos **<?php } ?>&nbsp;&nbsp;" class="form03"></td>
-         <td  class="menu02"> <?php if (!$accion) {?>           
+          <td><br><input onkeypress="return event.keyCode!=13" type="text" name="separacion" size="35" maxlength="35" class="form-control" <?php if ($separacion != "") { ?>value="<?php echo $separacion; ?>"<?php }?> /></td> <tr></tr>
+		  <td align="center"><br><input type="submit" name="submit" value="&nbsp;&nbsp;<?php if (!$id_laboral) { ?>** Agregar ** <?php }else{ ?>** Actualizar Datos **<?php } ?>&nbsp;&nbsp;" class="btn btn-default"></td>
+         <td  class="menu02"> <?php if (!$accion) {?>   
+
+
+
 			**Registre  al menos un referencia para poder continuar
 			               <?php }?>		 
         </td><tr>
@@ -234,11 +308,11 @@ if ($id_laboral != "") {
               ?>
       <table width="700" border="0" cellspacing="1" cellpadding="4" class="bg_09 txt03" align="center" >
            <td align="center">
-		  <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="form03">
-          <input type="button" name="Regresar" value="Regresar" class="form03" onClick="javascript:window.history.back()">&nbsp;
+		  <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default">
+          <input type="button" name="Regresar" value="Regresar" class="btn btn-default" onClick="javascript:window.history.back()">&nbsp;
           <input type="hidden" name="id_laboral" value="<?php echo $id_laboral; ?>">
    	   <?php if (($accion == 2) or ($accion == 3) or ($accion_up == 5 ))  {?>           
-			       <input type="button" name="continuar" value="Continuar" class="form03"  onClick="location='sfl_cv_10.php?id_cuenta=<?php echo $id_cuenta; ?>'">&nbsp;
+			       <input type="button" name="continuar" value="Continuar" class="btn btn-primary"  onClick="location='sfl_cv_10.php?id_cuenta=<?php echo $id_cuenta; ?>'">&nbsp;
        <?php }?>
 		 <input type="hidden" name="id_cuenta" value="<?php echo $id_cuenta; ?>">
          </td>

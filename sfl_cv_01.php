@@ -112,18 +112,18 @@
       </tr><td colspan="2">&nbsp;</td>
       
      <!--Campos-->
- <th colspan="2"><span class="txt08"><b> <?php echo $fin?> </b></span></th>
+ <th colspan="2"><span class="txt08 "><b> <?php echo $fin?> </b></span></th>
       <tr>
-        <td>Correo electrónico: *</td>
-        <td><input type="text" name="email" size="50" maxlength="40" <?php if ($email != "") { ?>value="<?php echo $email; ?>"<?php } ?> class="form03">
+        <td><b>Correo electrónico: *</td>
+        <td><br><input type="text" name="email" size="50" maxlength="40" <?php if ($email != "") { ?>value="<?php echo $email; ?>"<?php } ?> class="form-control">
       </tr>
       <tr>
-        <td>Contrase&ntilde;a: *</td>
-        <td><input type="password" name="passw" size="10" maxlength="20" class="form03"/></td>
+        <td><b>Contrase&ntilde;a: *</td>
+        <td><br><input type="password" name="passw" size="10" maxlength="20" class="form-control"/></td>
       </tr>
       <tr>
-        <td>Confirmar contraseña *</td>
-        <td><input type="password" name="conf_passw" size="10" maxlength="20" class="form03" /></td>
+        <td><b>Confirmar contraseña *</td>
+        <td><br><input type="password" name="conf_passw" size="10" maxlength="20" class="form-control" /></td>
       </tr>
       <tr>
       <tr>
@@ -132,8 +132,8 @@
       </tr>
 
         <td colspan="2" align="center">
-                  <input type="submit" name="submit" value="Continuar" class="form03" />&nbsp;
-                  <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="form03">
+                  <input type="submit" name="submit" value="Continuar" class="btn btn-primary" />&nbsp;
+                  <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default">
                   <input type="hidden" name="id_aduana" value="<?php echo $id_cuenta; ?>">
        </td>
 
