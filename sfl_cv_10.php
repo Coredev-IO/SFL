@@ -56,14 +56,14 @@
 <body onload="MM_preloadImages('images/sfl_redes_01a.png','images/sfl_redes_02a.png','images/sfl_redes_03a.png','images/sfl_slide_menu_01a.jpg','images/sfl_slide_menu_02a.jpg','images/sfl_slide_menu_03a.jpg','images/sfl_slide_menu_04a.jpg','images/sfl_slide_menu_05a.jpg','images/sfl_slide_menu_06a.jpg','images/sfl_slide_menu_07a.jpg')">
 
 <?php
-	require_once('sfl_head_cv.php');
+	// require_once('sfl_head_cv.php');
 ?>
 
 <?php
-	require_once('sfl_menu_01cv.php');
+	// require_once('sfl_menu_01cv.php');
 ?>
 
-<table width="900" border="0" cellspacing="0" cellpadding="0" align="center">
+<!-- <table width="900" border="0" cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td><img src="images/sfl_head_int_15.jpg" width="900" height="180" border="0"></td>
   </tr>
@@ -82,7 +82,7 @@
   <tr>
     <td height="10"><img src="images/spacer.gif" width="1" height="20" border="0"></td>
   </tr>
-</table>
+</table> -->
 
 
 
@@ -119,7 +119,7 @@
 
 
 
-<table width="700" border="0" cellspacing="1" cellpadding="0" align="center"  class="bg_09 txt03">
+<table width="700" border="0" cellspacing="1" cellpadding="0" align="center"  class=" txt03">
   <tr></tr>
 
   <form name="new_cv" action="files/sfl_cv_10_.php" method="post" enctype="multipart/form-data">
@@ -133,11 +133,11 @@
   
          <tr>
             <th align="left"  class="txt09"> </th>
-            <tr><td><b>Puesto de Interés  *</td>
+            <tr><td><b>Puesto de Interés *</td>
     
 	    <td><input onkeypress="return event.keyCode!=13" type="text" name="puesto" size="50" maxlength="45" class="form-control" placeholder="Puesto de interes" autofocus  <?php if ($puesto != "") { ?>value="<?php echo $puesto; ?>"<?php } ?> /></td>
          <tr>
-            <td><b>Sueldo Deseado   *</td>
+            <td><b>Sueldo Deseado *</td>
         <td><br>$<input onkeypress="return event.keyCode!=13" type="text" name="sueldo" size="10" maxlength="9" class="form-control" placeholder="Sueldo Deseado"  <?php if ($sueldo != "") { ?>value="<?php echo $sueldo; ?>"<?php } ?> /></td>
          <tr>
             <td><b>Area de interés  *</td>
@@ -145,7 +145,7 @@
          <tr>
             <td><b>Disponibilidad de tiempo  *</td>
          <td><br><select name="dis_time" class="form-control">
-            <option <?php if ($dis_time != "") { ?>value="<?php echo $dis_time; ?>"<?php } ?>value=""><?php echo $dis_time; ?>&nbsp;.:</option>
+            <option <?php if ($dis_time != "") { ?>value="<?php echo $dis_time; ?>"<?php } ?>value=""><?php echo $dis_time; ?>&nbsp;</option>
             <option value="Medio Tiempo">Medio Tiempo</option>
             <option value="Tiempo Completo">Tiempo Completo</option>
              </select></td>
@@ -171,7 +171,7 @@
         <td>&nbsp;</td>
         <td>
 		
-         
+          <br>
           <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default">
           <input type="button" name="Regresar" value="Regresar" class="btn btn-default" onClick="javascript:window.history.back()">&nbsp;
            <input type="submit" name="continuar" value="Finalizar" class="btn btn-primary" >&nbsp;

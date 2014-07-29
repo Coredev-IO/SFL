@@ -32,15 +32,18 @@
 
 <body onload="MM_preloadImages('images/sfl_redes_01a.png','images/sfl_redes_02a.png','images/sfl_redes_03a.png','images/sfl_slide_menu_01a.jpg','images/sfl_slide_menu_02a.jpg','images/sfl_slide_menu_03a.jpg','images/sfl_slide_menu_04a.jpg','images/sfl_slide_menu_05a.jpg','images/sfl_slide_menu_06a.jpg','images/sfl_slide_menu_07a.jpg')">
 
-<?php
-	require_once('sfl_head.php');
+<!-- <?php
+  // require_once('sfl_head.php');
 ?>
+ -->
 
-<?php
-	require_once('sfl_menu_01.php');
-?>
 
-<table width="900" border="0" cellspacing="0" cellpadding="0" align="center">
+<!-- <?php
+  // require_once('sfl_menu_01.php');
+?> -->
+
+
+<!-- table width="900" border="0" cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td><img src="images/sfl_head_int_15.jpg" width="900" height="180" border="0"></td>
   </tr>
@@ -49,12 +52,14 @@
   </tr>
   <tr>
     <td>
+ -->
 
-<?php
-	require_once('sfl_menu_02.php');
-?>
+ <!-- <?php
+  // require_once('sfl_menu_02.php');
+?> -->
 
-    </td>
+
+    <!-- </td>
   </tr>
   <tr>
     <td height="10"><img src="images/spacer.gif" width="1" height="20" border="0"></td>
@@ -81,8 +86,8 @@
         <tr>
           <td height="40" colspan="3" class="txt03">&nbsp;</td>
         </tr>
-      </table>
-
+      </table> -->
+<!-- 
 
       <div class="container">
         <div class="row">
@@ -90,22 +95,24 @@
             <div id="api"></div>
 
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6"> -->
+
+                  <table> <br> <br> <br> <br> <br> <br> <br> <br> </table>
 
 
-                  <table width="500" border="0" cellspacing="0" cellpadding="0" align="center">
+                  <table width="500" border="0" cellspacing="0" cellpadding="0" align="center" class="box-formulario col-md-4">
                     <tr>
                       <td width="100%" class="padd_02" valign="top">
 
-                    <form name="new_cv" action="sfl_cv_01_.php" method="post" enctype="multipart/form-data">
+                    <form name="new_cv" action="sfl_cv_01_.php" method="post" enctype="multipart/form-data" >
 
-                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="bg_09 txt03">
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="box-formulario col-sm-4">
 
                     <!--accion-->
 
                         <?php if ($accion == 1) { ?>
                         <tr>
-                          <td colspan="2"><span class="txt08"><b>( * ) Alg&uacute;n campo obligatorio se encuentra vaci&oacute o contrase�as no coinciden;.</b></span></td>
+                          <td colspan="2"><span class="txt08"><b>( * ) Alg&uacute;n campo obligatorio se encuentra vaci&oacute; o contrase&ntilde;as no coinciden.</b></span></td>
                           </tr>
                         <?php } ?>
 
@@ -119,22 +126,27 @@
                          <tr></tr>
                         <td colspan="2">&nbsp;</td>
                        <tr></tr>
-                        <td  align="center"colspan="2"><span   class="menu02"><b>Para poder registrar tus datos, se requiere dar de alta una cuenta.</b></span></td>
+                        <td  align="center"colspan="2" ><span   class="menu02"><b>Para poder registrar tus datos, se requiere dar de alta una cuenta.</b></span></td>
                         </tr><td colspan="2">&nbsp;</td>
 
                        <!--Campos-->
+
+
+
+
                    <th colspan="2"><span class="txt08 "><b> <?php echo $fin?> </b></span></th>
                         <tr>
-                          <td><b>Correo electr�nico: *</td>
-                          <td><br><input type="text" name="email" size="50" maxlength="40" <?php if ($email != "") { ?>value="<?php echo $email; ?>"<?php } ?> class="form-control">
+
+                          <td><label class="col-sm-4 control-label">Correo electronico:*</td>
+                          <td><div class="col-md-8"> <input type="text" name="email" size="50" maxlength="40" <?php if ($email != "") { ?>value="<?php echo $email; ?>"<?php } ?> class="form-control" placeholder="Correo electronico" autofocus></div>
                         </tr>
                         <tr>
-                          <td><b>Contrase&ntilde;a: *</td>
-                          <td><br><input type="password" name="passw" size="10" maxlength="20" class="form-control"/></td>
+                          <td><label class="col-sm-4 control-label">Contrase&ntilde;a:*</td>
+                          <td><div class="col-md-8"><input type="password" name="passw" size="10" maxlength="20" class="form-control" placeholder="Contrase&ntilde;a"/></div></td>
                         </tr>
                         <tr>
-                          <td><b>Confirmar contrase�a *</td>
-                          <td><br><input type="password" name="conf_passw" size="10" maxlength="20" class="form-control" /></td>
+                          <td><label class="col-sm-4 control-label">Confirmar contrase&ntilde;a*</td>
+                          <td><div class="col-md-8"><input type="password" name="conf_passw" size="10" maxlength="20" class="form-control"placeholder="Confirma Contrase&ntilde;a" /></div></td>
                         </tr>
                         <tr>
                         <tr>
@@ -167,9 +179,10 @@
       </div>
 
 
-<?php
-	require_once('sfl_footer.php');
-?>
+<!-- <?php
+  // require_once('sfl_footer.php');
+?> -->
+
 
 </body>
 </html>

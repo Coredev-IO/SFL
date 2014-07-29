@@ -83,14 +83,14 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
 <body onload="MM_preloadImages('images/sfl_redes_01a.png','images/sfl_redes_02a.png','images/sfl_redes_03a.png','images/sfl_slide_menu_01a.jpg','images/sfl_slide_menu_02a.jpg','images/sfl_slide_menu_03a.jpg','images/sfl_slide_menu_04a.jpg','images/sfl_slide_menu_05a.jpg','images/sfl_slide_menu_06a.jpg','images/sfl_slide_menu_07a.jpg')">
 
 <?php
-	require_once('sfl_head_cv.php');
+	// require_once('sfl_head_cv.php');
 ?>
 
 <?php
-	require_once('sfl_menu_01cv.php');
+	// require_once('sfl_menu_01cv.php');
 ?>
 
-<table width="900" border="0" cellspacing="0" cellpadding="0" align="center">
+<!-- <table width="900" border="0" cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td><img src="images/sfl_head_int_15.jpg" width="900" height="180" border="0"></td>
   </tr>
@@ -109,7 +109,7 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
   <tr>
     <td height="10"><img src="images/spacer.gif" width="1" height="20" border="0"></td>
   </tr>
-</table>
+</table> -->
 
 
 
@@ -180,7 +180,7 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
 
 
 
-<table width="700" border="0" cellspacing="1" cellpadding="0" align="center" class="bg_09 txt03">
+<table width="700" border="0" cellspacing="1" cellpadding="0" align="center" class=" txt03">
   <tr></tr>
       <?php if ($accion == 1) { ?>
         <tr>
@@ -200,7 +200,7 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
         <td width="100"><label for="primaria" class="col-sm-4 control-label"> Primaria:</label><br><br><br>  </td>
     	    <td><input onkeypress="return event.keyCode!=13" type="text" name="primaria" size="30" maxlength="30" placeholder="Primaria" autofocus <?php if ($primaria != "") { ?>value="<?php echo $primaria; ?>"<?php } ?>  class="form-control" /></td>
         <td><select name="status_pri" class="form-control">
-         	 <option  <?php if ($status_pri!= "") { ?>value="<?php echo $status_pri; ?>"<?php } ?> > <?php echo $status_pri; ?>  &nbsp;.:</option>
+         	 <option  <?php if ($status_pri!= "") { ?>value="<?php echo $status_pri; ?>"<?php } ?> > <?php echo $status_pri; ?>  &nbsp;</option>
 		     <option value="Trunco">Trunco</option>
              <option value="Constancia">Constancia</option>
             </select></td>
@@ -212,7 +212,7 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
         <td><label for="Secundaria" class="col-sm-4 control-label"> Secundaria:</label> <br><br><br>  </td>
         <td><input onkeypress="return event.keyCode!=13" type="text" name="secu" size="30" maxlength="30" class="form-control" placeholder="Secundaria" <?php if ($secu != "") { ?>value="<?php echo $secu; ?>"<?php } ?> /></td>
         <td><select name="status_secu" class="form-control">
-            <option  <?php if ($status_secu!= "") { ?>value="<?php echo $status_secu; ?>"<?php } ?> > <?php echo $status_secu; ?>  &nbsp;.:</option>
+            <option  <?php if ($status_secu!= "") { ?>value="<?php echo $status_secu; ?>"<?php } ?> > <?php echo $status_secu; ?>  &nbsp;</option>
             <option value="Trunco">Trunco</option>
             <option value="Constancia">Constancia</option>
          </select></td>
@@ -227,7 +227,7 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
       <td><label for="Preparatoria" class="col-sm-4 control-label"> Preparatoria:</label> <br><br><br>  </td>
         <td><input onkeypress="return event.keyCode!=13" type="text" name="prepa" size="30" maxlength="30" class="form-control" placeholder="Preparatoria" <?php if ($prepa != "") { ?>value="<?php echo $prepa; ?>"<?php } ?>  /></td>
         <td><select name="status_prepa" class="form-control">
-            <option  <?php if ($status_prepa!= "") { ?>value="<?php echo $status_prepa; ?>"<?php } ?> > <?php echo $status_prepa; ?>  &nbsp;.:</option>
+            <option  <?php if ($status_prepa!= "") { ?>value="<?php echo $status_prepa; ?>"<?php } ?> > <?php echo $status_prepa; ?>  &nbsp;</option>
             <option value="Trunco">Trunco</option>
 			<option value="Pasante">Pasante</option>
             <option value="Titulado">Titulado</option>
@@ -246,7 +246,7 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
 
         <td><input onkeypress="return event.keyCode!=13" type="text" name="lic" size="30" maxlength="30" class="form-control" placeholder="Licenciatura / Ingenieria " <?php if ($lic!= "") { ?>value="<?php echo $lic; ?>"<?php } ?> /></td>
         <td><select name="status_lic" class="form-control">
-            <option  <?php if ($status_lic!= "") { ?>value="<?php echo $status_lic; ?>"<?php } ?> > <?php echo $status_lic; ?>  &nbsp;.:</option>
+            <option  <?php if ($status_lic!= "") { ?>value="<?php echo $status_lic; ?>"<?php } ?> > <?php echo $status_lic; ?>  &nbsp;</option>
             <option value="Pasante">Pasante</option>
             <option value="Titulado">Titulado</option>
             <option value="Trunco">Trunco</option>
@@ -266,7 +266,7 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
 
         <td><input onkeypress="return event.keyCode!=13" type="text" name="maestria" size="30" maxlength="30" class="form-control" placeholder="Maestria" <?php if ($maestria != "") { ?>value="<?php echo $maestria; ?>"<?php } ?> /></td>
         <td><select name="status_maestria" class="form-control">
-             <option  <?php if ($status_maestria!= "") { ?>value="<?php echo $status_maestria; ?>"<?php } ?> > <?php echo $status_maestria; ?>  &nbsp;.:</option>
+             <option  <?php if ($status_maestria!= "") { ?>value="<?php echo $status_maestria; ?>"<?php } ?> > <?php echo $status_maestria; ?>  &nbsp;</option>
    
             <option value="Pasante">Pasante</option>
             <option value="Titulado">Titulado</option>
@@ -285,7 +285,7 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
 
         <td><input onkeypress="return event.keyCode!=13" type="text" name="doc" size="30" maxlength="30" class="form-control" placeholder="Doctorado" <?php if ($doc != "") { ?>value="<?php echo $doc; ?>"<?php } ?> /></td>
         <td><select name="status_doc" class="form-control">
-            <option  <?php if ($status_doc!= "") { ?>value="<?php echo $status_doc; ?>"<?php } ?> > <?php echo $status_doc; ?>  &nbsp;.:</option>
+            <option  <?php if ($status_doc!= "") { ?>value="<?php echo $status_doc; ?>"<?php } ?> > <?php echo $status_doc; ?>  &nbsp;</option>
             <option value="Pasante">Pasante</option>
             <option value="Titulado">Titulado</option>
             <option value="Trunco">Trunco</option>

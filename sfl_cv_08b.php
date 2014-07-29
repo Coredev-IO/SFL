@@ -40,14 +40,14 @@
 <body onload="MM_preloadImages('images/sfl_redes_01a.png','images/sfl_redes_02a.png','images/sfl_redes_03a.png','images/sfl_slide_menu_01a.jpg','images/sfl_slide_menu_02a.jpg','images/sfl_slide_menu_03a.jpg','images/sfl_slide_menu_04a.jpg','images/sfl_slide_menu_05a.jpg','images/sfl_slide_menu_06a.jpg','images/sfl_slide_menu_07a.jpg')">
 
 <?php
-	require_once('sfl_head_cv.php');
+	// require_once('sfl_head_cv.php');
 ?>
 
 <?php
-	require_once('sfl_menu_01cv.php');
+	// require_once('sfl_menu_01cv.php');
 ?>
 
-<table width="900" border="0" cellspacing="0" cellpadding="0" align="center">
+<!-- <table width="900" border="0" cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td><img src="images/sfl_head_int_15.jpg" width="900" height="180" border="0"></td>
   </tr>
@@ -66,7 +66,7 @@
   <tr>
     <td height="10"><img src="images/spacer.gif" width="1" height="20" border="0"></td>
   </tr>
-</table>
+</table> -->
 
 <div class="container">
   <hr>
@@ -99,14 +99,14 @@
 
 
 
-<table width="600" border="0" cellspacing="1" cellpadding="0" align="center" class="bg_09 txt03">
+<table width="600" border="0" cellspacing="1" cellpadding="0" align="center" class=" txt03">
   <tr></tr>
     <form name="new_cv" action="sfl_cv_08b_.php" method="post" enctype="multipart/form-data">
   <tr></tr>
           <!-- <th align="left" class="txt09">Habilidades tecnológicas</th><th>Nivel</th><tr> -->
     <td   width="50"><label for="word" class="col-sm-4 control-label"> Word:</label></td><td align="center" >
             <br><select name="word" class="form-control">
-               <option <?php if ($word!= "") { ?>value="<?php echo $word; ?>"<?php } ?>><?php echo $word?> &nbsp;.:</option>
+               <option <?php if ($word!= "") { ?>value="<?php echo $word; ?>"<?php } ?>><?php echo $word?> &nbsp;</option>
             <option value="Basico">Basico</option>
             <option value="Intermedio">Intermedio</option>
             <option value="Avanzado">Avanzado</option>
@@ -115,7 +115,7 @@
     <tr></tr>
     <td ><label for="Powerpoint" class="col-sm-4 control-label"> Powerpoint:</label> </td>
            <td align="center"><br><select name="powerpoint" class="form-control">
-            <option <?php if ($powerpoint!= "") { ?>value="<?php echo $powerpoint; ?>"<?php } ?>><?php echo $powerpoint?> &nbsp;.:</option>
+            <option <?php if ($powerpoint!= "") { ?>value="<?php echo $powerpoint; ?>"<?php } ?>><?php echo $powerpoint?> &nbsp;</option>
             <option value="Basico">Basico</option>
             <option value="Intermedio">Intermedio</option>
             <option value="Avanzado">Avanzado</option>
@@ -124,7 +124,7 @@
        <tr></tr>
     <td ><label for="Access" class="col-sm-4 control-label"> Access:</label> </td>
            <td align="center"><br><select name="acces" class="form-control">
-            <option <?php if ($acces!= "") { ?>value="<?php echo $acces; ?>"<?php } ?>><?php echo $acces?> &nbsp;.:</option>
+            <option <?php if ($acces!= "") { ?>value="<?php echo $acces; ?>"<?php } ?>><?php echo $acces?> &nbsp;</option>
             <option value="Basico">Basico</option>
             <option value="Intermedio">Intermedio</option>
             <option value="Avanzado">Avanzado</option>
@@ -133,7 +133,7 @@
       <tr></tr>
     <td ><label for="Excel" class="col-sm-4 control-label"> Excel:</label> </td>
            <td align="center"><br><select name="excel" class="form-control" >
-            <option <?php if ($excel!= "") { ?>value="<?php echo $excel; ?>"<?php } ?>><?php echo $excel?> &nbsp;.:</option>
+            <option <?php if ($excel!= "") { ?>value="<?php echo $excel; ?>"<?php } ?>><?php echo $excel?> &nbsp;</option>
             <option value="Basico">Basico</option>
             <option value="Intermedio">Intermedio</option>
             <option value="Avanzado">Avanzado</option>
@@ -141,7 +141,7 @@
        </tr>
        <tr>
 	   <td ><label for="otras" class="col-sm-4 control-label"> Otras tecnologías que Domine:</label></td>
-	    <td colspan="5"><textarea  name="otras_tec" rows="5" cols="50" class="form-control"/><?php if ($otras_tec != "") {  echo "$otras_tec"; }?> </textarea></td>
+	    <td colspan="5"><textarea  name="otras_tec" rows="5" cols="50" class="form-control" /><?php if ($otras_tec != "") {  echo "$otras_tec"; }?> </textarea></td>
       <tr></tr>
   		    <td colspan="2">&nbsp;</td><tr></tr> <td  colspan="2"align="center">
                   <input type="button" name="Regresar" value="Regresar" class="btn btn-default" onClick="javascript:window.history.back()">&nbsp;

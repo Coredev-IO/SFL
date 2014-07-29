@@ -37,7 +37,7 @@
             </ul></div>
         </li>
         <!--<li><a href="sfl_factoresclave.php"><span>Factores Clave de &Eacute;xito</span></a></li>-->
-        <li class="last"><a href="sfl_cv_01.php"><span>INT&Eacute;GRATE A NUESTRO EQUIPO</span></a></li>
+        <li class="last"><a href="sfl_Registrate.php"><span>INT&Eacute;GRATE A NUESTRO EQUIPO</span></a></li>
     </ul>
 </div>
 

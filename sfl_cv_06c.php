@@ -21,15 +21,15 @@
 </head>
 <body onload="MM_preloadImages('images/sfl_redes_01a.png','images/sfl_redes_02a.png','images/sfl_redes_03a.png','images/sfl_slide_menu_01a.jpg','images/sfl_slide_menu_02a.jpg','images/sfl_slide_menu_03a.jpg','images/sfl_slide_menu_04a.jpg','images/sfl_slide_menu_05a.jpg','images/sfl_slide_menu_06a.jpg','images/sfl_slide_menu_07a.jpg')">
 <?php
-	require_once('sfl_head_cv.php');
-	require_once('sfl_menu_01cv.php');
+	// require_once('sfl_head_cv.php');
+	// require_once('sfl_menu_01cv.php');
 ?>
-<table width="900" border="0" cellspacing="0" cellpadding="0" align="center"><tr>
+<!-- <table width="900" border="0" cellspacing="0" cellpadding="0" align="center"><tr>
     <td><img src="images/sfl_head_int_15.jpg" width="900" height="180" border="0"></td></tr><tr>
     <td height="10"><img src="images/spacer.gif" width="1" height="10" border="0"></td></tr>
     <tr><td></td></tr><tr>
     <td height="10"><img src="images/spacer.gif" width="1" height="20" border="0"></td></tr>
-</table>
+</table> -->
 
 
 
@@ -94,7 +94,7 @@
 
 	<td width="100%" class="padd_02" valign="top"> </td>
 
-<table width="600" border="0" cellspacing="0" cellpadding="0" align="center" class="bg_09 txt03">
+<table width="600" border="0" cellspacing="0" cellpadding="0" align="center" class=" txt03">
 
 <td colspan="3"><span  class="menu02"><b><br><br> Agregue la opcion de acuerdo a su experiencia </b></span></td><tr></tr>  
 	  <?php if ($accion == 1) { ?>

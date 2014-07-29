@@ -52,14 +52,14 @@
 <body onload="MM_preloadImages('images/sfl_redes_01a.png','images/sfl_redes_02a.png','images/sfl_redes_03a.png','images/sfl_slide_menu_01a.jpg','images/sfl_slide_menu_02a.jpg','images/sfl_slide_menu_03a.jpg','images/sfl_slide_menu_04a.jpg','images/sfl_slide_menu_05a.jpg','images/sfl_slide_menu_06a.jpg','images/sfl_slide_menu_07a.jpg')">
 
 <?php
-	require_once('sfl_head_cv.php');
+	// require_once('sfl_head_cv.php');
 ?>
 
 <?php
-	require_once('sfl_menu_01cv.php');
+	// require_once('sfl_menu_01cv.php');
 ?>
 
-<table width="900" border="0" cellspacing="0" cellpadding="0" align="center">
+<!-- <table width="900" border="0" cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td><img src="images/sfl_head_int_15.jpg" width="900" height="180" border="0"></td>
   </tr>
@@ -78,7 +78,7 @@
   <tr>
     <td height="10"><img src="images/spacer.gif" width="1" height="20" border="0"></td>
   </tr>
-</table>
+</table> -->
 
 
 
@@ -110,21 +110,21 @@
      </div>
 
     <div class="col-md-9">
-      <div class="box-title ">Otros Estudios/Certificaciones  </div>
+      <div class="box-title ">Otros Estudios/Certificaciones </div>
        <div class="box-formulario">
 
 
 
-<table width="600" border="0" cellspacing="1" cellpadding="0" align="center" class="bg_09 txt03">
+<table width="600" border="0" cellspacing="1" cellpadding="0" align="center" class=" txt03">
       <th class="txt09" align="left"></th><tr>
     <form name="new_cv" action="sfl_cv_08a_.php" method="post" enctype="multipart/form-data">
       <?php if ($accion == 1) { ?>
         <tr>
-        <td colspan="2"><span class="txt08"><b>( * ) Algun campo esta vacio .</b></span></td>
+        <td colspan="2"><span class="txt08"><b>(*) Algun campo esta vacio .</b></span></td>
         </tr>
       <?php } ?>
        <tr>
- <td colspan="5"><span  class="menu02"><b>( * ) Ingrese uno o mas  estudios que haya cursado  .</b></span></td><tr></tr>
+ <td colspan="5"><span  class="menu02"><b>( * ) Ingrese uno o mas  estudios que haya cursado.</b></span></td><tr></tr>
  	
  <th>Nombre</th> <th>Status</th><th>De:(Año)</th><th>A:(Año)</th><tr></tr>
 
@@ -132,7 +132,7 @@
         <td width="80"><br><input type="text" name="estudios" <?php if ($estudios !="") { ?>value="<?php echo $estudios;?>"<?php } ?>  size="70" maxlength="60" class="form-control" /></td>
   	  
 	    <td><br><select name="status_est" class="form-control">
-            <option value="<?php echo $status_est;?>"><?php echo $status_est; ?> &nbsp;.:</option>
+            <option value="<?php echo $status_est;?>"><?php echo $status_est; ?> &nbsp;</option>
             <option value="Pasante">Pasante</option>
             <option value="Titulado">Titulado</option>
             <option value="Trunco">Trunco</option>
@@ -152,7 +152,7 @@
      ?>
         <!-- query a BD estudios-->
                 <tr>
-   <td><input type="submit"  name="submit"  value="&nbsp;&nbsp;<?php if (!$id_estudios) { ?>+ Nuevo Estudio<?php }else{ ?>Actualizar Estudio <?php } ?>&nbsp;&nbsp;" class="btn btn-default"></td>
+   <td><br><input type="submit"  name="submit"  value="&nbsp;&nbsp;<?php if (!$id_estudios) { ?>+ Nuevo Estudio<?php }else{ ?>Actualizar Estudio <?php } ?>&nbsp;&nbsp;" class="btn btn-default"></td>
    <tr>
    <td  class="txt06a"valign="middle">Institucion</td>
    <td  class="txt06a" valign="middle" >Estatus</td>
@@ -174,7 +174,7 @@
                   <td class="txt06b"><?php echo $qry_estudios['estudios']; ?></td>
                   <td class="txt06b"><?php echo $qry_estudios['status']; ?></td>
                   <td class="txt06b"><?php echo $qry_estudios['de']?> -  <?php echo $qry_estudios['a']; ?></td>
-                  <td class="txt06b" align="center"><a href="sfl_cv_08a.php?id_estudios=<?php echo $qry_estudios['id_estudios']?>& id_cuenta=<?php echo $id_cuenta?>" class="txt06c">[ editar ]</a></td>
+                  <td class="txt06b" align="center"><a href="sfl_cv_08a.php?id_estudios=<?php echo $qry_estudios['id_estudios']?>& id_cuenta=<?php echo $id_cuenta?>" class="txt06c">[editar]</a></td>
                  <?php
 			$i ++;
 			$x ++;

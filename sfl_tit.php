@@ -4,6 +4,7 @@
 <link type="text/css" href="css/bootstrap.css" rel="stylesheet"/>
 <link type="text/css" href="resources/styles/fa/css/font-awesome.css" rel="stylesheet"/>
 <link type="text/css" href="css/estilos-coredev.css" rel="stylesheet"/>
+<link type="text/css" href="css/animate.css" rel="stylesheet" />
 
 
 

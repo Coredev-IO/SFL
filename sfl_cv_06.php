@@ -28,15 +28,17 @@
 ?>
 </head>
 <body onload="MM_preloadImages('images/sfl_redes_01a.png','images/sfl_redes_02a.png','images/sfl_redes_03a.png','images/sfl_slide_menu_01a.jpg','images/sfl_slide_menu_02a.jpg','images/sfl_slide_menu_03a.jpg','images/sfl_slide_menu_04a.jpg','images/sfl_slide_menu_05a.jpg','images/sfl_slide_menu_06a.jpg','images/sfl_slide_menu_07a.jpg')">
+
+
 <?php
-	require_once('sfl_head_cv.php');
+	// require_once('sfl_head_cv.php');
 ?>
 
 <?php
-	require_once('sfl_menu_01cv.php');
+	// require_once('sfl_menu_01cv.php');
 ?>
 
-<table width="900" border="0" cellspacing="0" cellpadding="0" align="center">
+<!-- <table width="900" border="0" cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td><img src="images/sfl_head_int_15.jpg" width="900" height="180" border="0"></td></tr>
   <tr>
@@ -52,7 +54,7 @@
     <td height="10"><img src="images/spacer.gif" width="1" height="20" border="0"></td>
   </tr>
 </table>
-
+ -->
 
 <div class="container">
   <hr>
@@ -109,7 +111,7 @@
 
 
 
-<table width="600"  class="bg_09 txt03"  border="0" cellspacing="1" cellpadding="0" align="center">
+<table width="600"  class=" txt03"  border="0" cellspacing="1" cellpadding="0" align="center">
 
 
 	  <?php if ($accion == 5) { ?>
@@ -159,7 +161,7 @@
 	$exist_indus = mysql_num_rows($query_indus);
      ?> 
         <!-- query a BD referencia -->
-             <td> <table width="200" border="0" cellspacing="1" cellpadding="4" align="center" class="bg_09 txt03"> 
+             <td> <table width="200" border="0" cellspacing="1" cellpadding="4" align="center" class=" txt03"> 
                 <td height="20" class="txt06a" align="center" valign="middle">&nbsp;</td>
                 <td class="txt06a" valign="middle" >Experiencia</td>
                 <td class="txt06a" valign="middle" align="center"></td>

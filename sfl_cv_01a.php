@@ -31,14 +31,14 @@
 <body onload="MM_preloadImages('images/sfl_redes_01a.png','images/sfl_redes_02a.png','images/sfl_redes_03a.png','images/sfl_slide_menu_01a.jpg','images/sfl_slide_menu_02a.jpg','images/sfl_slide_menu_03a.jpg','images/sfl_slide_menu_04a.jpg','images/sfl_slide_menu_05a.jpg','images/sfl_slide_menu_06a.jpg','images/sfl_slide_menu_07a.jpg')">
 
 <?php
-	require_once('sfl_head_cv.php');
+	// require_once('sfl_head_cv.php');
 ?>
 
 <?php
-	require_once('sfl_menu_01.php');
+	// require_once('sfl_menu_01.php');
 ?>
 
-<table width="900" border="0" cellspacing="0" cellpadding="0" align="center">
+<!-- <table width="900" border="0" cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td><img src="images/sfl_head_int_15.jpg" width="900" height="180" border="0"></td>
   </tr>
@@ -49,7 +49,7 @@
     <td>
     
 <?php
-	require_once('sfl_menu_02.php');
+	// require_once('sfl_menu_02.php');
 ?>
     
     </td>
@@ -57,7 +57,7 @@
   <tr>
     <td height="10"><img src="images/spacer.gif" width="1" height="20" border="0"></td>
   </tr>
-</table>
+</table> -->
 
 <table width="885" border="0" cellspacing="0" cellpadding="0" align="center">
   <tr>
@@ -65,7 +65,7 @@
       
   <form name="new_cv" action="sfl_cv_01a_.php" method="POST" enctype="multipart/form-data">
     
-    <table width="100%" border="0" cellspacing="1" cellpadding="4" class="bg_09 txt03">
+    <table width="100%" border="0" cellspacing="1" cellpadding="4" class=" txt03">
       
   <!--accion-->
 
@@ -95,7 +95,7 @@ Sales Force Leasing Group, S.A. de C.V., sociedad constituida conforme a las Ley
 	   No doy mi consentimiento para la transferencia de mis datos : * </td>
       <tr>
       </tr><br>
-          <table width="100%" border="0" cellspacing="1" cellpadding="4" class="bg_09 txt03">
+          <table width="100%" border="0" cellspacing="1" cellpadding="4" class=" txt03">
             <br>
             <td align=""> <textarea class="form-control" cols="100" rows="10" disabled="disabled" readonly="readonly">
 De igual forma en el momento que lo estime oportuno podrá ejercer sus derechos ARCO (acceso, rectificación, cancelación y oposición) sobre el tratamiento de los datos personales proporcionados, así como revocar el consentimiento otorgado en este documento, por lo cual deberá ponerse en contacto con nosotros a través del correo electrónico "datospersonales@salesforceleasing.com"; el procedimiento y requisitos que deberá contener su solicitud de conformidad con lo dispuesto en la Ley y su Reglamento, son los siguientes: ??(1) Nombre y Domicilio, si no se incluye la dirección se dará por no recibida la solicitud. (2) El documento que acredite su identidad o la personalidad de su representante. (Copia de identificación oficial vigente.) El representante deberá acreditar la identidad del titular, identidad del representante, y sus facultades de representación mediante instrumento público o carta poder firmada ante dos testigos, o declaración en comparecencia personal del titular; (3) La descripción clara y precisa de los datos personales a los que desea acceder, rectificar, cancelar u oponerse; (4) Descripción de otros elementos que faciliten la localización de sus datos personales. (portal Web, Oficinas.) Los documentos deberán ser escaneados y adjuntados al correo electrónico para verificar la veracidad de los mismos. ??Una vez recibida su solicitud para ejercer sus derechos ARCO debidamente integrada y con los requisitos legales vigentes, recibirá contestación de nuestra parte en un plazo no mayor a 20 días hábiles. Si resultara procedente, se hará efectiva dentro de los 15 días hábiles siguientes a que le comunicamos nuestra respuesta. ??En caso de estar inconforme con la respuesta notificada, tendrá un plazo de 20 días hábiles para ponerse en contacto con nosotros, indicando su inconformidad o inquietud, con la finalidad de resolver dicha situación. ??En caso de no responder nuestra contestación en el plazo señalado, Sales Force Leasing Group entiende de buena fe que esta conforme con nuestra respuesta. En nuestro programa de notificación de promociones, ofertas y servicios a través de correo electrónico, sólo Sales Force Leasing Group tiene acceso a la información recabada. Este tipo de publicidad se realiza mediante avisos y mensajes promocionales de correo electrónico, los cuales sólo serán enviados a usted y a aquellos contactos registrados para tal propósito, esta indicación podrá modificarla en cualquier momento. En los correos electrónicos enviados, pueden incluirse ocasionalmente ofertas de terceras partes que sean nuestros socios comerciales. ??En el caso de empleo de cookies, el botón de "ayuda" que se encuentra en la barra de herramientas de la mayoría de los navegadores, le dirá cómo evitar aceptar nuevos cookies, cómo hacer que el navegador le notifique cuando recibe un nuevo cookie o cómo deshabilitar todos los cookies. Los cookies son pequeñas piezas de información que son enviadas por el sitio Web a su navegador y se almacenan en el disco duro de su equipo y se utilizan para determinar sus preferencias cuando se conecta a los servicios de nuestros sitios, así como para rastrear determinados comportamientos o actividades llevadas a cabo por usted dentro de nuestro sitio. ??En algunas secciones de nuestro sitio requerimos que el cliente tenga habilitados los cookies ya que algunas de las funcionalidades requieren de éstas para trabajar. Los cookies nos permiten: a) reconocerlo al momento de entrar a nuestro sitio y ofrecerle de una experiencia personalizada, b) conocer la configuración personal del sitio especificada por usted, por ejemplo, los cookies nos permiten detectar el ancho de banda que usted ha seleccionado al momento de ingresar al home page de nuestro sitio, de tal forma que sabemos qué tipo de información es aconsejable descargar, c) calcular el tamaño de nuestra audiencia y medir algunos parámetros de tráfico, pues cada navegador que obtiene acceso a nuestros sitios adquiere un cookie que se usa para determinar la frecuencia de uso y las secciones de los sitios visitadas, reflejando así sus hábitos y preferencias, información que nos es útil para mejorar el contenido, los titulares y las promociones para los usuarios. Sales Force Leasing Group ha adoptado los niveles de seguridad de protección de datos personales legalmente requeridos por la Ley y su Reglamento, bajo los principios de licitud, calidad, consentimiento, información, finalidad, lealtad, proporcionalidad y responsabilidad. Todo esto bajo estrictas reglas de seguridad, confidencialidad y consistencia de información. ??Hacemos de su conocimiento que sus datos personales y datos personales sensibles serán resguardados bajo estrictas medidas de seguridad administrativas, técnicas y físicas las cuales han sido implementadas con el objeto de proteger sus datos personales contra daño, perdida, alteración, destrucción o el uso o acceso o tratamiento no autorizado. La Web Site de Sales Force Leasing Group conecta con ciertos links de otras páginas Web que pertenecen a terceros sobre los que Sales Force Leasing Group no tiene control alguno. En estos supuestos Sales Force Leasing Group no asume responsabilidad alguna ni compromiso sobre las políticas de privacidad de la información contenidas en esas páginas. ??Esta declaración de Privacidad está sujeta a la Política de Privacidad de Sales Force Leasing Group lo cual constituye un acuerdo legal entre usted y Sales Force Leasing Group. ? Sales Force Leasing Group se reserva el derecho de efectuar en cualquier momento modificaciones o actualizaciones al presente aviso de privacidad, para la atención de novedades legislativas o jurisprudenciales, políticas internas, nuevos requerimientos para la prestación u ofrecimiento de nuestros servicios y prácticas del mercado, cualquier modificación al Aviso de Privacidad estará disponible a través de nuestros portales Web www.salesforceleasing.com y la aplicación móvil; sección "aviso de privacidad". ??Al navegar en cualquiera de los sitios Web de Sales Force Leasing Group, significa que ha leído, entendido y esta de acuerdo con los términos antes expuestos. El presente Aviso de Privacidad ha sido modificado el día 06 de Mayo de 2014. 
@@ -133,10 +133,10 @@ De igual forma en el momento que lo estime oportuno podrá ejercer sus derechos A
   </tr>
 </table>
 
-
+<!-- 
 <?php
-	require_once('sfl_footer.php');
-?>
+	// require_once('sfl_footer.php');
+?> -->
 
 </body>
 </html>

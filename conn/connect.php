@@ -1,5 +1,12 @@
 <?
 
+// $hostname_sfl = "localhost";
+// $database_sfl = "coreotmf_salesforce_aspirantes";
+// $username_sfl = "coreotmf_admin2";
+// $password_sfl = "22120422";
+
+
+
 $hostname_sfl = "localhost";
 $database_sfl = "salesforce_aspirantes";
 $username_sfl = "root";

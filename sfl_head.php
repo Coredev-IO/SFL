@@ -5,7 +5,7 @@
     <form name="acceso_users" action="index.php" method="post">
   
 
-<!--  
+  
     <table width="450" border="0" cellspacing="0" cellpadding="0" align="right">
       <tr>
         <td align="center" class="txt01">Acceso:</td>
@@ -23,7 +23,7 @@
         <td width="22"><a href="#" target="_blank"><img src="images/sfl_redes_03.png" name="redes03" width="22" height="22" border="0" onmouseover="MM_swapImage('redes03','','images/sfl_redes_03a.png',1)" onmouseout="MM_swapImgRestore()"></a></td>
       </tr>
     </table>
--->
+
     </form>
     
     </td>
