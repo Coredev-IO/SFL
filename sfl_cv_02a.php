@@ -180,7 +180,7 @@
 
                      <?php   }else{ ?>
 
-                     <option value="<?php $id_estado?>"><?php $estado?>;.:</option>
+                     <option value="<?php $id_estado?>"><?php $estado?></option>
 
                      <?php
                    }
@@ -220,7 +220,7 @@
                         <option value="<?php echo $qry_mun_s['id_del_mun']; ?>">&nbsp;&bull;&nbsp;&nbsp;<?php echo $qry_mun_s['del_mun']; ?></option>
                   <?php   }else{ ?>
 
-                    <option value="<?php $id_del_mun?>"><?php $del_mun?>;.:</option>
+                    <option value="<?php $id_del_mun?>"><?php $del_mun?></option>
 
                   <?php
                        }
@@ -262,7 +262,7 @@
 
                   <?php   }else{ ?>
                            
-                    <option value="<?php echo "$id_cat_zonas"; ?>"><?php echo "$zona"; ?>.:</option>
+                    <option value="<?php echo "$id_cat_zonas"; ?>"><?php echo "$zona"; ?></option>
 
                   <?php  
                        }
