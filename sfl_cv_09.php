@@ -85,6 +85,15 @@ if ($id_laboral != "") {
 </table> -->
 
 
+                    <br><br>
+                    <div class="container">
+                      <div class="row">
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                      </div>
+                    </div>
+
+
 <div class="container">
   <hr>
   <div class="row">
@@ -255,7 +264,7 @@ if ($id_laboral != "") {
          </td> <tr>
           <td>Motivo de separación </td>
           <td><br><input onkeypress="return event.keyCode!=13" type="text" name="separacion" size="35" maxlength="35" class="form-control" placeholder="Motivo de separacion" <?php if ($separacion != "") { ?>value="<?php echo $separacion; ?>"<?php }?> /></td> <tr></tr>
-		  <td align="center"><br><input type="submit" name="submit" value="&nbsp;&nbsp;<?php if (!$id_laboral) { ?>** Agregar ** <?php }else{ ?>** Actualizar Datos **<?php } ?>&nbsp;&nbsp;" class="btn btn-default"></td>
+		  <td align="center"><br><button type="submit" name="submit" value="&nbsp;&nbsp;<?php if (!$id_laboral) { ?>** Agregar ** <?php }else{ ?>** Actualizar Datos **<?php } ?>&nbsp;&nbsp;" class="btn btn-default fa fa-plus"> Agregar</button></td>
          <td  class="menu02"> <?php if (!$accion) {?>   
 
 
@@ -271,12 +280,12 @@ if ($id_laboral != "") {
         <!-- query a BD referencia-->
                 <tr></tr>
 				<table align="center" width="700" border="0" cellspacing="1" cellpadding="4" class=" txt03">
-                <td height="20" class="txt06a" align="right" valign="middle">.:&nbsp;</td>
+                <td height="20" class="txt06a" align="right" valign="middle">&nbsp;</td>
                 <td class="txt06a" valign="middle">Empresa</td>
                 <td class="txt06a" valign="middle" >Puesto</td>
                 <td class="txt06a" valign="middle" >Jefe</td>
 				<td class="txt06a" valign="middle" >Telefono</td>
-                <td class="txt06a" valign="middle" align="center">.:.</td>  
+                <td class="txt06a" valign="middle" align="center"></td>  
 <?php
 	if ($exist_laboral > 0) {
 		$qry_laboral = mysql_fetch_assoc($query_laboral);
@@ -290,7 +299,7 @@ if ($id_laboral != "") {
                   <td class="txt06c"><?php echo $qry_laboral['puesto']; ?></td>
                   <td class="txt06c"><?php echo $qry_laboral['jefe']; ?></td>
 				  <td class="txt06c"><?php echo $qry_laboral['telefono']; ?></td>
-                  <td class="txt06c" align="center"><a href="sfl_cv_09.php?id_laboral=<?php echo $qry_laboral['id_laboral']  ?>&id_cuenta= <?php echo $id_cuenta ?>" class="txt06c">[ editar ]</a></td>
+                  <td class="txt06c" align="center"><a href="sfl_cv_09.php?id_laboral=<?php echo $qry_laboral['id_laboral']  ?>&id_cuenta= <?php echo $id_cuenta ?>" class="txt06c"><img class="right" src="images/editar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"></a></td>
             <?php
 			$i ++;
 			$x ++;
@@ -311,11 +320,11 @@ if ($id_laboral != "") {
            <td align="center">
             <br>
             <br>
-		  <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default">
-          <input type="button" name="Regresar" value="Regresar" class="btn btn-default" onClick="javascript:window.history.back()">&nbsp;
+		  <button type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default fa fa-trash-o"> Limpiar</button>
+          <button type="button" name="Regresar" value="Regresar" class="btn btn-default fa fa-reply" onClick="javascript:window.history.back()">&nbsp; Regresar</button>
           <input type="hidden" name="id_laboral" value="<?php echo $id_laboral; ?>">
    	   <?php if (($accion == 2) or ($accion == 3) or ($accion_up == 5 ))  {?>           
-			       <input type="button" name="continuar" value="Continuar" class="btn btn-primary"  onClick="location='sfl_cv_10.php?id_cuenta=<?php echo $id_cuenta; ?>'">&nbsp;
+			       <button type="button" name="continuar" value="Continuar" class="btn btn-primary fa fa-share"  onClick="location='sfl_cv_10.php?id_cuenta=<?php echo $id_cuenta; ?>'"> Continuar</button>
        <?php }?>
 		 <input type="hidden" name="id_cuenta" value="<?php echo $id_cuenta; ?>">
          </td>

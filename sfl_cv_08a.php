@@ -80,7 +80,13 @@
   </tr>
 </table> -->
 
-
+                    <br><br>
+                    <div class="container">
+                      <div class="row">
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                      </div>
+                    </div>
 
 
 
@@ -115,103 +121,105 @@
 
 
 
-<table width="600" border="0" cellspacing="1" cellpadding="0" align="center" class=" txt03">
-      <th class="txt09" align="left"></th><tr>
-    <form name="new_cv" action="sfl_cv_08a_.php" method="post" enctype="multipart/form-data">
-      <?php if ($accion == 1) { ?>
-        <tr>
-        <td colspan="2"><span class="txt08"><b>(*) Algun campo esta vacio .</b></span></td>
-        </tr>
-      <?php } ?>
-       <tr>
- <td colspan="5"><span  class="menu02"><b>( * ) Ingrese uno o mas  estudios que haya cursado.</b></span></td><tr></tr>
- 	
- <th>Nombre</th> <th>Status</th><th>De:(Año)</th><th>A:(Año)</th><tr></tr>
+                  <table width="600" border="0" cellspacing="1" cellpadding="0" align="center" class=" txt03">
+                    <th class="txt09" align="left"></th>
+                      <form name="new_cv" action="sfl_cv_08a_.php" method="post" enctype="multipart/form-data">
+                        <?php if ($accion == 1) { ?>
+                          <tr>
+                          <td colspan="2"><span class="txt08"><b>(*) Algun campo esta vacio .</b></span></td>
+                          </tr>
+                        <?php } ?>
+                         <tr>
+                          <br>
+                   <td colspan="5"><span  class="menu02"><b>( * ) Ingrese uno o mas  estudios que haya cursado.</b></span></td><tr></tr>
+                   	
+                   <th>Nombre</th> <th>Status</th><th>De:(Año)</th><th>A:(Año)</th><tr></tr>
 
- 
-        <td width="80"><br><input type="text" name="estudios" <?php if ($estudios !="") { ?>value="<?php echo $estudios;?>"<?php } ?>  size="70" maxlength="60" class="form-control" /></td>
-  	  
-	    <td><br><select name="status_est" class="form-control">
-            <option value="<?php echo $status_est;?>"><?php echo $status_est; ?> &nbsp;</option>
-            <option value="Pasante">Pasante</option>
-            <option value="Titulado">Titulado</option>
-            <option value="Trunco">Trunco</option>
-            <option value="Constancia">Constancia</option>
-			<option value="Diploma">Diplomado</option>
-            <option value="Estudiante">Estudiante</option>
-        </select></td>
- 		
-		<td><br><input type="text" name="de_estudios" size="5" maxlength="4" class="form-control"   <?php if ($de_estudios != "") { ?>value="<?php echo $de_estudios; ?>"<?php } ?>  /></td>
-        <td><br><input type="text" name="a_estudios" size="5" maxlength="4" class="form-control"  <?php if ($a_estudios != "") { ?>value="<?php echo $a_estudios; ?>"<?php } ?> /></td>
+                   
+                          <td width="80"><br><input type="text" name="estudios" <?php if ($estudios !="") { ?>value="<?php echo $estudios;?>"<?php } ?>  size="70" maxlength="60" class="form-control" /></td>
+                    	  
+                  	    
+                        <td><br><select name="status_est" class="form-control">
+                              <option value="<?php echo $status_est;?>"><?php echo $status_est; ?> &nbsp;</option>
+                              <option value="Pasante">Pasante</option>
+                              <option value="Titulado">Titulado</option>
+                              <option value="Trunco">Trunco</option>
+                              <option value="Constancia">Constancia</option>
+                  			      <option value="Diploma">Diplomado</option>
+                              <option value="Estudiante">Estudiante</option>
+                        </select></td>
 
-    <tr></tr>
-  
- <?php
-	$query_estudios = mysql_query("SELECT * FROM estudios where id_cuenta ='" . $id_cuenta . "'");
-	$exist_estudios = mysql_num_rows($query_estudios);
-     ?>
-        <!-- query a BD estudios-->
-                <tr>
-   <td><br><input type="submit"  name="submit"  value="&nbsp;&nbsp;<?php if (!$id_estudios) { ?>+ Nuevo Estudio<?php }else{ ?>Actualizar Estudio <?php } ?>&nbsp;&nbsp;" class="btn btn-default"></td>
-   <tr>
-   <td  class="txt06a"valign="middle">Institucion</td>
-   <td  class="txt06a" valign="middle" >Estatus</td>
-   <td   class="txt06a" valign="middle" >Período</td>
-   <td   class="txt06a" valign="middle" >Modificar</td><</tr>
-              </tr>
-<?php
-	if ($exist_estudios > 0) {
-		$qry_estudios = mysql_fetch_assoc($query_estudios);
+                   		
+                  		<td><br><input type="text" name="de_estudios" size="5" maxlength="4" class="form-control"   <?php if ($de_estudios != "") { ?>value="<?php echo $de_estudios; ?>"<?php } ?>  /></td>
+                          <td><br><input type="text" name="a_estudios" size="5" maxlength="4" class="form-control"  <?php if ($a_estudios != "") { ?>value="<?php echo $a_estudios; ?>"<?php } ?> /></td>
 
-            $i = 0;
-			$x = 0;
+                      <tr></tr>
+                    
+                   <?php
+                  	$query_estudios = mysql_query("SELECT * FROM estudios where id_cuenta ='" . $id_cuenta . "'");
+                  	$exist_estudios = mysql_num_rows($query_estudios);
+                       ?>
+                          <!-- query a BD estudios-->
+                                  <tr>
+                     <td><br><button type="submit"  name="submit"  value="&nbsp;&nbsp;<?php if (!$id_estudios) { ?>+ Nuevo Estudio<?php }else{ ?>Actualizar Estudio <?php } ?>&nbsp;&nbsp;" class="btn btn-default fa fa-plus"> Nuevo Estudio</button></td>
+                     <tr>
+                     <td  class="txt06a"valign="middle">Institucion</td>
+                     <td  class="txt06a" valign="middle" >Estatus</td>
+                     <td   class="txt06a" valign="middle" >Período</td>
+                     <td   class="txt06a" valign="middle" >Modificar</td><</tr>
+                                </tr>
+                  <?php
+                  	if ($exist_estudios > 0) {
+                  		$qry_estudios = mysql_fetch_assoc($query_estudios);
 
-			do {
+                              $i = 0;
+                  			$x = 0;
 
- 				?>
-                <tr></tr>
-                
-                  <td class="txt06b"><?php echo $qry_estudios['estudios']; ?></td>
-                  <td class="txt06b"><?php echo $qry_estudios['status']; ?></td>
-                  <td class="txt06b"><?php echo $qry_estudios['de']?> -  <?php echo $qry_estudios['a']; ?></td>
-                  <td class="txt06b" align="center"><a href="sfl_cv_08a.php?id_estudios=<?php echo $qry_estudios['id_estudios']?>& id_cuenta=<?php echo $id_cuenta?>" class="txt06c">[editar]</a></td>
-                 <?php
-			$i ++;
-			$x ++;
+                  			do {
 
-			} while ($qry_estudios = mysql_fetch_assoc($query_estudios));
-			  $rows = mysql_num_rows($query_estudios);
-			  if($rows > 0) {
-				  mysql_data_seek($query_estudios, 0);
-				  $qry_estudios = mysql_fetch_assoc($query_estudios);
-			  }
+                   				?>
+                                  <tr></tr>
+                                  
+                                    <td class="txt06b"><?php echo $qry_estudios['estudios']; ?></td>
+                                    <td class="txt06b"><?php echo $qry_estudios['status']; ?></td>
+                                    <td class="txt06b"><?php echo $qry_estudios['de']?> -  <?php echo $qry_estudios['a']; ?></td>
+                                    <td class="txt06b" align="center"><a href="sfl_cv_08a.php?id_estudios=<?php echo $qry_estudios['id_estudios']?>& id_cuenta=<?php echo $id_cuenta?>" class="txt06c"><img class="right" src="images/editar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"></a></td>
+                                   <?php
+                  			$i ++;
+                  			$x ++;
 
-	}else{
-?>
-              <tr></tr>
-<?php
-	} 
-  ?>
-   <tr></tr>
-  		     <td  colspan="4">&nbsp;</td> <tr></tr><td  colspan="4"align="center">
-                  <input type="button" name="Regresar" value="Regresar" class="btn btn-default" onClick="javascript:window.history.back()">&nbsp;
-                  <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default">
-    	    	  <input type="button" name="submit" value="Continuar" class="btn btn-primary"  onClick="location='sfl_cv_08b.php?id_cuenta=<?php echo $id_cuenta; ?>'">&nbsp;&nbsp;
-                  <input type="hidden" name="id_cuenta" value="<?php echo $id_cuenta; ?>">
-				  <input type="hidden" name="id_estudios" value="<?php echo $id_estudios; ?>">
-			</td>
-          </table>
-        </tr>
-      </table>
+                  			} while ($qry_estudios = mysql_fetch_assoc($query_estudios));
+                  			  $rows = mysql_num_rows($query_estudios);
+                  			  if($rows > 0) {
+                  				  mysql_data_seek($query_estudios, 0);
+                  				  $qry_estudios = mysql_fetch_assoc($query_estudios);
+                  			  }
 
-  </form>
-
-    </td>
-  </tr>
-  <tr>
-    <td class="padd_02" valign="top">&nbsp;</td>
-  </tr>
-</table>
+                  	}else{
+                  ?>
+                                <tr></tr>
+                  <?php
+                  	} 
+                    ?>
+                     <tr></tr>
+                    		     <td  colspan="4">&nbsp;</td> <tr></tr><td  colspan="4"align="center">
+                                    <button type="button" name="Regresar" value="Regresar" class="btn btn-default fa fa-reply" onClick="javascript:window.history.back()"> Regresar</button>
+                                    <button type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default fa fa-trash-o"> Limpiar</button>
+                      	    	  <button type="button" name="submit" value="Continuar" class="btn btn-primary fa fa-share"  onClick="location='sfl_cv_08b.php?id_cuenta=<?php echo $id_cuenta; ?>'"> Continuar</button>
+                                    <input type="hidden" name="id_cuenta" value="<?php echo $id_cuenta; ?>">
+                  				  <input type="hidden" name="id_estudios" value="<?php echo $id_estudios; ?>">
+                  			     </td>
+                            </table>
+                          </tr>
+                    </form>
+                      </td>
+                    </tr>
+                              <tr>
+                              <td class="padd_02" valign="top">&nbsp;</td>
+                              </tr>
+                  </table>
+</div>
+</div>
 
 <?php
 	//require_once('sfl_footer.php');

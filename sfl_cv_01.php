@@ -97,9 +97,16 @@
           </div>
           <div class="col-md-6"> -->
 
-                  <table> <br> <br> <br> <br> <br> <br> <br> <br> </table>
+                  <table> <br> <br> <br> <br> </table>
+                  <div class="container">
+                      <div class="row">
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
 
 
+                      </div>
+                  </div>
+                  <br><br>
                   <table width="500" border="0" cellspacing="0" cellpadding="0" align="center" class="box-formulario col-md-4">
                     <tr>
                       <td width="100%" class="padd_02" valign="top">

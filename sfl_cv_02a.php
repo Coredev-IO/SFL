@@ -112,6 +112,16 @@
 </table> -->
 
 
+
+                    <br><br>
+                    <div class="container">
+                      <div class="row">
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                      </div>
+                    </div>
+
+
 <div class="container">
   <hr>
   <div class="row">
@@ -354,9 +364,9 @@
 
           <div class="form-group">
             <div class="col-sm-offset-4 col-sm-10">
-              <button type="submit" class="btn btn-primary">Continuar</button>
-              <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default">
-              <input type="button" name="Regresar" value="Regresar" class="btn btn-default" onClick="javascript:window.history.back()">&nbsp;
+              <button type="button" name="Regresar" value="Regresar" class="btn btn-default fa fa-reply" onClick="javascript:window.history.back()">&nbsp; Regresar</button>
+              <button type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default fa fa-trash-o"> Limpiar</button>
+              <button type="submit" class="btn btn-primary fa fa-share" > Continuar</button>
               <input type="hidden" name="id_cuenta" value="<?php echo $id_cuenta; ?>">
               <input type="hidden" name="accion" value="<?php echo $accion; ?>">
             </div>

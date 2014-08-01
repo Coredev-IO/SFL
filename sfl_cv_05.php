@@ -87,6 +87,17 @@
 </table> -->
 
 
+
+
+                    <br><br>
+                    <div class="container">
+                      <div class="row">
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                      </div>
+                    </div>
+
+
 <div class="container">
   <hr>
   <div class="row">
@@ -147,7 +158,7 @@
             <label for="genero" class="col-sm-4 control-label">Genero :</label>
             <div class="col-sm-8">
                   <select name="genero" class="form03">
-                 <option <?php if ($genero != "") { ?>value="<?php echo $genero; ?>"<?php } ?>><?php echo $genero?> &nbsp;.:</option>
+                 <option <?php if ($genero != "") { ?>value="<?php echo $genero; ?>"<?php } ?>><?php echo $genero?> &nbsp;</option>
                  <option value="Hombre">Hombre</option>
                  <option value="Mujer">Mujer</option>
                  </option> </select>
@@ -158,7 +169,7 @@
             <label for="edo_civil" class="col-sm-4 control-label">Estado Civil:</label>
             <div class="col-sm-8">
                 <select name="edo_civil" class="form03">
-             <option value=" <?php echo "$edo_civil";?>"> <?php if ($edo_civil != "") { echo "$edo_civil"; } else {echo "&nbsp;.:";} ?></option>
+             <option value=" <?php echo "$edo_civil";?>"> <?php if ($edo_civil != "") { echo "$edo_civil"; } else {echo "&nbsp;";} ?></option>
              <option value="Casado">Casado</option>
              <option value="Divorciado">Separado/Divorciado</option>
              <option value="Soltero">Soltero</option>
@@ -223,9 +234,9 @@
 
           <div class="form-group">
             <div class="col-sm-offset-4 col-sm-10">
-                  <input type="button" name="Regresar" value="Regresar" class="btn btn-default" onClick="javascript:window.history.back()">&nbsp;
-                  <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default"> 
-                  <input type="submit" name="submit" value="Continuar"class="btn btn-primary" />
+                  <button type="button" name="Regresar" value="Regresar" class="btn btn-default fa fa-reply" onClick="javascript:window.history.back()"> Regresar</button>
+                  <button type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default fa fa-trash-o"> Limpiar</button>
+                  <button type="submit" name="submit" value="Continuar"class="btn btn-primary fa fa-share" /> Continuar</button>
                   <input type="hidden" name="id_cuenta" value="<?php echo $id_cuenta; ?>">
 
 

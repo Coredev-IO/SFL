@@ -58,6 +58,15 @@
     <td height="10"><img src="images/spacer.gif" width="1" height="20" border="0"></td>
   </tr>
 </table> -->
+                    <br><br>
+                    <div class="container">
+                      <div class="row">
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+
+
+                      </div>
+                    </div>
 
 <table width="885" border="0" cellspacing="0" cellpadding="0" align="center">
   <tr>

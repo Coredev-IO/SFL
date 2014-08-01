@@ -31,7 +31,13 @@
     <td height="10"><img src="images/spacer.gif" width="1" height="20" border="0"></td></tr>
 </table> -->
 
-
+                    <br><br>
+                    <div class="container">
+                      <div class="row">
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                      </div>
+                    </div>
 
 
 
@@ -111,12 +117,12 @@
 	   <td   class="menu02" align="center"width="250"><br>Canales/Clientes visitados<br><br>
    <?php $query_canales = mysql_query("SELECT * FROM cat_canales ORDER BY canales ASC");
          $qry_canales = mysql_fetch_assoc($query_canales); ?>
-<select name="canales" class="form-control" size="5" style="width: 250px">
+<select name="canales" class="form-control"  size="5" style="width: 250px">
    <?php  do { ?>
               <option value="<?php echo $qry_canales['id_cat_canales']; ?>">&nbsp;&bull;&nbsp;&nbsp;<?php echo $qry_canales['canales'];?></option>
    <?php } while ($qry_canales = mysql_fetch_assoc($query_canales)); ?>
  </select> </td> 
-		  <td  width="100" align="center"><input type="submit" name="submit" value="agregar" class="btn btn-default" /></td> 
+		  <td  width="100" align="center"><button type="submit" name="submit" value="agregar" class="btn btn-default fa fa-plus" /> Agregar</button></td> 
 		  <td  align="left" class="bg"width="250">        
 	<?php $query_canales= mysql_query("SELECT * FROM app_canales, cat_canales WHERE app_canales.id_cat_canales = cat_canales.id_cat_canales and  id_cuenta ='" . $id_cuenta. "'");
           $qry_canales = mysql_fetch_assoc($query_canales); ?>             
@@ -134,7 +140,7 @@
          <option value="<?php echo $qry_especialidad['id_cat_especialidad']; ?>">&nbsp;&bull;&nbsp;&nbsp;<?php echo $qry_especialidad['especialidad'];?></option>
        <?php } while ($qry_especialidad = mysql_fetch_assoc($query_especialidad)); ?>
 </select> </td> 
-		     <td align="center"><input type="submit" name="submit" value="agregar" class="btn btn-default" />&nbsp;</td>  
+		     <td align="center"><button type="submit" name="submit" value="agregar" class="btn btn-default fa fa-plus" />&nbsp; Agregar</button></td>  
              <td>
    <?php   
 		$query_especialidad= mysql_query("SELECT * FROM app_especialidad, cat_especialidad WHERE app_especialidad.id_cat_especialidad = cat_especialidad.id_cat_especialidad and  id_cuenta ='" . $id_cuenta. "'");
@@ -155,7 +161,7 @@
    <option value="<?php echo $qry_producto['id_cat_producto']; ?>">&nbsp;&bull;&nbsp;&nbsp;<?php echo $qry_producto['producto'];?></option>
      <?php } while ($qry_producto = mysql_fetch_assoc($query_producto)); ?>
  </select> </td> 
-		      <td align="center"><input type="submit" name="submit" value="agregar" class="btn btn-default" />&nbsp;</td>	  
+		      <td align="center"><button type="submit" name="submit" value="agregar" class="btn btn-default fa fa-plus" />&nbsp; Agregar</button></td>	  
                <td>
 	<?php    $query_producto= mysql_query("SELECT * FROM app_producto, cat_producto WHERE app_producto.id_cat_producto = cat_producto.id_cat_producto and  id_cuenta ='" . $id_cuenta. "'");
              $qry_producto = mysql_fetch_assoc($query_producto);
@@ -173,7 +179,7 @@
      <?php  do {   ?>
  <option value="<?php echo $qry_estado['id_estado']; ?>">&nbsp;&bull;&nbsp;&nbsp;<?php echo $qry_estado['estado'];?></option>
      <?php } while ($qry_estado = mysql_fetch_assoc($query_estado)); ?>
- </select> </td><td  align="center"><input type="submit" name="submit" value="agregar" class="btn btn-default" />&nbsp;</td>
+ </select> </td><td  align="center"><button type="submit" name="submit" value="agregar" class="btn btn-default fa fa-plus" />&nbsp; Agregar </button></td>
  <td>
 	<?php    $query_edo= mysql_query("SELECT * FROM app_edo_job, cat_estados WHERE app_edo_job.id_estado = cat_estados.id_estado and  id_cuenta ='" . $id_cuenta. "'");
              $qry_edo = mysql_fetch_assoc($query_edo);
@@ -193,7 +199,7 @@
          <?php
               } while ($qry_zonas = mysql_fetch_assoc($query_zonas));     ?>
  </select>	 
-	  <td align="center"><input type="submit" name="submit" value="agregar" class="btn btn-default" />&nbsp;</td><td>
+	  <td align="center"><button type="submit" name="submit" value="agregar" class="btn btn-default fa fa-plus" />&nbsp; Agregar</button></td><td>
 	  <?php  $query_zona= mysql_query("SELECT * FROM app_zona_job, cat_zonas WHERE app_zona_job.id_cat_zona = cat_zonas.id_cat_zonas and  id_cuenta ='" . $id_cuenta. "'");
              $qry_zona = mysql_fetch_assoc($query_zona);
          
@@ -212,7 +218,7 @@
        <?php  do {  ?>
  <option value="<?php echo $qry_ciudades['id_cat_ciudades']; ?>">&nbsp;&bull;&nbsp;&nbsp;<?php echo $qry_ciudades['ciudades'];?></option>
         <?php } while ($qry_ciudades = mysql_fetch_assoc($query_ciudades)); ?>
- </select> </td> <td align="center"><input type="submit" name="submit" value="agregar" class="btn btn-default" />&nbsp;</td><td>
+ </select> </td> <td align="center"><button type="submit" name="submit" value="agregar" class="btn btn-default fa fa-plus" />&nbsp; Agregar</button></td><td>
   <?php    $query_cd= mysql_query("SELECT * FROM app_ciudades_job, cat_ciudades WHERE app_ciudades_job.id_cat_ciudades = cat_ciudades.id_cat_ciudades and  id_cuenta ='" . $id_cuenta. "'");
              $qry_cd= mysql_fetch_assoc($query_cd);
              
@@ -226,9 +232,9 @@
 		  
 		 
          <td colspan="3">&nbsp;</td> <tr></tr><td colspan="3">&nbsp;</td><tr></tr><td colspan="3" align="center">
-         <input type="button" name="Regresar" value="Regresar" class="btn btn-default" onClick="javascript:window.history.back()">&nbsp;                
-         <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default">
-		 <input type="button" name="continuar" value="Continuar" class="btn btn-primary"  onClick="location='sfl_cv_07.php?id_cuenta=<?php echo $id_cuenta; ?>'">&nbsp;        
+         <button type="button" name="Regresar" value="Regresar" class="btn btn-default fa fa-reply" onClick="javascript:window.history.back()">&nbsp; Regresar</button>                
+         <button type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default fa fa-trash-o"> Limpiar</button>
+		 <button type="button" name="continuar" value="Continuar" class="btn btn-primary fa fa-share"  onClick="location='sfl_cv_07.php?id_cuenta=<?php echo $id_cuenta; ?>'">&nbsp;Continuar</button>      
 		 <input type="hidden" name="id_cuenta" value="<?php echo $id_cuenta; ?>"></td>
        
   </form>

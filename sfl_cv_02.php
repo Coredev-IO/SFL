@@ -100,13 +100,22 @@ $(document).ready(function() {
 <?php
 	//require_once('sfl_menu_02.php');
 ?>
-
+<!-- 
     </td>
   </tr>
   <tr>
     <td height="10"><img src="images/spacer.gif" width="1" height="20" border="0"></td>
   </tr>
-</table>
+</table> -->
+
+
+                    <br><br>
+                    <div class="container">
+                      <div class="row">
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                      </div>
+                    </div>
 
 <div class="container">
   <hr>
@@ -194,8 +203,8 @@ $(document).ready(function() {
 
           <div class="form-group">
             <div class="col-sm-offset-4 col-sm-10">
-              <button type="submit" class="btn btn-primary">Continuar</button>
-              <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default">
+              <button type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default fa fa-trash-o"> Limpiar</button>
+              <button type="submit" class="btn btn-primary fa fa-share" > Continuar</button>
               <input type="hidden" name="id_cuenta" value="<?php echo $id_cuenta; ?>">
               <input type="hidden" name="accion" value="<?php echo $accion; ?>">
             </div>

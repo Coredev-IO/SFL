@@ -15,7 +15,7 @@
             <div><ul>
                 <li><span></span></li>
                 <li>><span></span></li>
-                <li><<span></span></li>
+                <li><span></span></li>
             </ul></div>
         </li>
    

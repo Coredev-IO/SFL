@@ -56,6 +56,16 @@
 </table>
  -->
 
+
+
+                    <br><br>
+                    <div class="container">
+                      <div class="row">
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                      </div>
+                    </div>
+
 <div class="container">
   <hr>
   <div class="row">
@@ -183,7 +193,7 @@
 					$qry_cat= mysql_fetch_assoc($query_cat); 
 	               ?>
 				  <?php echo $qry_cat['industria']; ?></td>
-                  <td class="txt06c" align="center"><a href="sfl_cv_06_.php?accion=<?php echo"borrar"?>& id_cuenta=<?php echo "$id_cuenta"?> & id_cat_industria=<?php echo $cat_industria?>" class="txt06c">[ borrar]</a></td>
+                  <td class="txt06c" align="center"><a href="sfl_cv_06_.php?accion=<?php echo"borrar"?>& id_cuenta=<?php echo "$id_cuenta"?> & id_cat_industria=<?php echo $cat_industria?>" class="txt06c"><img class="right" src="images/eliminar.gif" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"></a></td>
                  <?php
 			$i ++;
 			$x ++;
@@ -205,10 +215,10 @@
 	   
             <tr></tr><td colspan="2">&nbsp;</td> <tr></tr> <td  colspan="2 "align="center">
                  
-				  <input type="button" name="Regresar" value="Regresar" class="btn btn-default" onClick="javascript:window.history.back()">&nbsp;
+				  <button type="button" name="Regresar" value="Regresar" class="btn btn-default fa fa-reply" onClick="javascript:window.history.back()">&nbsp; Regresar</button>
 			      
 				 <?php if ( $cat_industria != "") {?>           
-			       <input type="button" name="continuar" value="Continuar" class="btn btn-primary"  onClick="location='sfl_cv_06a.php?id_cuenta=<?php echo $id_cuenta; ?>'">&nbsp;          
+			       <button type="button" name="continuar" value="Continuar" class="btn btn-primary fa fa-share"  onClick="location='sfl_cv_06a.php?id_cuenta=<?php echo $id_cuenta; ?>'">&nbsp; Continuar</button>          
                 <?php }?>			
 		 		  
 				  <input type="hidden" name="id_cuenta" value="<?php echo $id_cuenta; ?>">

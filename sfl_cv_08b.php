@@ -68,6 +68,16 @@
   </tr>
 </table> -->
 
+
+                    <br><br>
+                    <div class="container">
+                      <div class="row">
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                      </div>
+                    </div>
+
+
 <div class="container">
   <hr>
   <div class="row">
@@ -144,9 +154,9 @@
 	    <td colspan="5"><textarea  name="otras_tec" rows="5" cols="50" class="form-control" /><?php if ($otras_tec != "") {  echo "$otras_tec"; }?> </textarea></td>
       <tr></tr>
   		    <td colspan="2">&nbsp;</td><tr></tr> <td  colspan="2"align="center">
-                  <input type="button" name="Regresar" value="Regresar" class="btn btn-default" onClick="javascript:window.history.back()">&nbsp;
-                  <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default">
-		    	  <input type="submit" name="submit" value="Continuar" class="btn btn-primary" >&nbsp;&nbsp;
+                  <button type="button" name="Regresar" value="Regresar" class="btn btn-default fa fa-reply" onClick="javascript:window.history.back()"> Regresar</button>
+                  <button type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default fa fa-trash-o"> Limpiar</button>
+		    	  <button type="submit" name="submit" value="Continuar" class="btn btn-primary fa fa-share" > Continuar</button>
                   <input type="hidden" name="id_cuenta" value="<?php echo $id_cuenta; ?>">
 				  <input type="hidden" name="id_estudios" value="<?php echo $id_estudios; ?>">
 			</td>

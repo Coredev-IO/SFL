@@ -35,30 +35,11 @@ function pintaVacante(data) {
 
     $.each(data, function(index, vacante) {
 
-        $("#api").append('<div class="box-inicio2">' +
+        $("#api").append('<div class="box-inicio">' +
 
 
-            '<h3>Vacante</h3>' +
+            '<h4>Vacante</h4>' +
             vacante.vacante +
-
-
-
-            '<h3>Empresa</h3>' +
-            vacante.empresa +
-
-
-
-            '<h3>Descripcion</h3>' +
-            vacante.descripcion +
-            '<br>' +
-
-
-
-
-            '<div class="row">' +
-            '<div class="col-md-1 col-md-offset-10">' +
-            '<button type="button class="btn btn-primary botonVacante">Aplicar</button>' +
-
             ' </div>');
     });
 }

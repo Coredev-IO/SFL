@@ -112,7 +112,13 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
 </table> -->
 
 
-
+                    <br><br>
+                    <div class="container">
+                      <div class="row">
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                      </div>
+                    </div>
 
 
 
@@ -306,9 +312,9 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
   
       <tr></tr><td colspan="5"></td><tr></tr>
   		     <td colspan="5" align="center">
-                  <input type="button" name="Regresar" value="Regresar" class="btn btn-default" onClick="javascript:window.history.back()">&nbsp;
-                  <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default">
-		    	  <input type="submit" name="submit" value="Continuar" class="btn btn-primary" >&nbsp;&nbsp;
+                  <button type="button" name="Regresar" value="Regresar" class="btn btn-default fa fa-reply" onClick="javascript:window.history.back()">&nbsp; Regresar</button>
+                  <button type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default fa fa-trash-o"> Limpiar</button>
+		    	  <button type="submit" name="submit" value="Continuar" class="btn btn-primary fa fa-share" > Continuar</button>
                   <input type="hidden" name="id_cuenta" value="<?php echo $id_cuenta; ?>">
 				  <input type="hidden" name="id_estudios" value="<?php echo $id_estudios; ?>">
 			</td>

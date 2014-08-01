@@ -85,6 +85,15 @@
 </table> -->
 
 
+                    <br><br>
+                    <div class="container">
+                      <div class="row">
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                      </div>
+                    </div>
+
+
 
 
 <div class="container">
@@ -172,9 +181,9 @@
         <td>
 		
           <br>
-          <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default">
-          <input type="button" name="Regresar" value="Regresar" class="btn btn-default" onClick="javascript:window.history.back()">&nbsp;
-           <input type="submit" name="continuar" value="Finalizar" class="btn btn-primary" >&nbsp;
+          <button type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default fa fa-trash-o"> Limpiar</button>
+          <button type="button" name="Regresar" value="Regresar" class="btn btn-default fa fa-reply" onClick="javascript:window.history.back()">&nbsp; Regresar</button>
+           <button type="submit" name="continuar" value="Finalizar" class="btn btn-primary fa fa-check" > Finalizar</button>
 		  <input type="hidden" name="id_cuenta" value="<?php echo $id_cuenta; ?>">
           </td>
         </tr>

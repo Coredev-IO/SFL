@@ -55,6 +55,15 @@
 </table> -->
 
 
+                    <br><br>
+                    <div class="container">
+                      <div class="row">
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                      </div>
+                    </div>
+
+
 <div class="container">
   <hr>
   <div class="row">
@@ -156,7 +165,7 @@
                                             }
                     ?>
            </select> </td>
-		   <td>  <input type="submit" name="agregar" value="Agregar" class="btn btn-default" >        
+		   <td>  <button type="submit" name="agregar" value="Agregar" class="btn btn-default fa fa-plus" > Agregar</button>        
 </td>
    
 			 <?php
@@ -196,7 +205,7 @@
 				  <?php echo $qry_app['time_expe_line'];?>
 				  
 				  <br><select style="width: 200px"name="time_expe_line" class="form03" onChange="MM_jumpMenu('parent',this,0)"><br>
-             <option value="">Seleccione el tiempo en linea;.:</option>
+             <option value="">Seleccione el tiempo en linea</option>
              <option value="sfl_cv_06b_.php?time_expe_line=<?php echo "sin experiencia";?>& id_line=<?php echo $qry_indus['id_line'];?>& id_cuenta=<?php echo $id_cuenta ;?>">Sin experiencia</option>
              <option value="sfl_cv_06b_.php?time_expe_line=<?php echo "Menos de seis meses";?>& id_line=<?php echo $qry_indus['id_line'];?>& id_cuenta=<?php echo $id_cuenta;?>">Menos de seis meses</option>
              <option value="sfl_cv_06b_.php?time_expe_line=<?php echo "6 menor a 1 año";?>& id_line=<?php echo $qry_indus['id_line'];?>& id_cuenta=<?php echo $id_cuenta;?>">6 menor a 1 año</option>
@@ -207,7 +216,7 @@
              <option value="sfl_cv_06b_.php?time_expe_line=<?php echo "10 años";?>& id_line=<?php echo $qry_indus['id_line'];?>& id_cuenta=<?php echo $id_cuenta;?>">10 años</option>
  
 		     </option> </select></td></td>
-                  <td class="txt06c" align="center"><a href="sfl_cv_06b_.php?accion=<?php echo"borrar"?>& id_cuenta=<?php echo "$id_cuenta"?> & id_cat_line=<?php echo $cat_line?>" class="txt06c">[borrar]</a></td>
+                  <td class="txt06c" align="center"><a href="sfl_cv_06b_.php?accion=<?php echo"borrar"?>& id_cuenta=<?php echo "$id_cuenta"?> & id_cat_line=<?php echo $cat_line?>" class="txt06c"><img class="right" src="images/eliminar.gif" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"></a></td>
                  <?php
 			$i ++;
 			$x ++;
@@ -230,8 +239,8 @@
           </table>
               <tr></tr><td colspan="3">&nbsp;</td><tr></tr><td colspan="3 "align="center"> 
                  
-				  <input type="button" name="Regresar" value="Regresar" class="btn btn-default" onClick="javascript:window.history.back()">&nbsp;
-			      <input type="button" name="continuar" value="Continuar" class="btn btn-primary"  onClick="location='sfl_cv_06c.php?id_cuenta=<?php echo $id_cuenta; ?>'">&nbsp;          
+				  <button type="button" name="Regresar" value="Regresar" class="btn btn-default fa fa-reply" onClick="javascript:window.history.back()">&nbsp; Regresar</button>
+			      <button type="button" name="continuar" value="Continuar" class="btn btn-primary fa fa-share"  onClick="location='sfl_cv_06c.php?id_cuenta=<?php echo $id_cuenta; ?>'">&nbsp; Continuar</button>         
       			  <input type="hidden" name="id_cuenta" value="<?php echo $id_cuenta; ?>">
 				 
              </td>
