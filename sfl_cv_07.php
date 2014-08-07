@@ -80,15 +80,15 @@
     <div class="box-menu">
       <a href="sfl_cv_02.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-user'></i> Datos Personales</a>
       <a href="sfl_cv_02a.php" type="button" class="btn btn-default btn-100"disabled><i class='fa fa-map-marker'></i> Direcci&oacute;n</a>
-      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Contacto</a>
-      <a href="sfl_cv_04.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-home'></i> Referencias</a>
+      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Datos de Indentificaci&oacute;n</a>
+      <a href="sfl_cv_04.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-home'></i> Referencias Personales</a>
       <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento y Experiencia</a>
       <a href="sfl_cv_06.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cog'></i> Industria</a>
       <a href="sfl_cv_06a.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-child'></i> Posici&oacute;n</a>
-      <a href="sfl_cv_06b.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-cubes'></i> L&iacute;neas</a>
+      <a href="sfl_cv_06b.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-cubes'></i> L&iacute;neas y Especialidades</a>
       <a href="sfl_cv_06c.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cab'></i> &Aacute;reas de Expericia I</a>
       <a href="sfl_cv_07.php" type="button" class="btn btn-primary btn-100" ><i class='fa fa-car'></i> &Aacute;reas de Expericia II</a>
-      <a href="sfl_cv_08.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-graduation-cap'></i> Histotial Acad&eacute;mico</a>
+      <a href="sfl_cv_08.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-graduation-cap'></i> Historial Acad&eacute;mico</a>
       <a href="sfl_cv_08a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-institution'></i> Otros Estudios/Certificaciones</a>
       <a href="sfl_cv_08b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-file-word-o'></i> Habilidades tecnol&oacute;gicas</a>
       <a href="sfl_cv_09.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-briefcase'></i> Historial Laboral</a>
@@ -137,6 +137,20 @@
         
       <?php } ?>
             <td>
+              <br ><samp class="menu02"> Canales trabajados / Clientes Visitados</samp><br><br>
+      <input type="checkbox" name="canales[]" value="sin_exp"> Sin Experiencia<br>
+          <input type="checkbox" name="canales[]" value="Consultorios y hospitales">Consultorios y hospitales (M&eacute;dicos)<br>
+          <input type="checkbox" name="canales[]" value="punto de venta(Cadena, Autoservicios e independientes)"> punto de venta(Farmacias de Cadena, Autoservicios e independientes)<br>
+          <input type="checkbox" name="canales[]" value="Cuentas Clave Públicas"> Cuentas Clave Públicas<br>
+          <input type="checkbox" name="canales[]" value=" Cuentas Clave Privadas"> Cuentas Clave Privadas<br>
+          <!-- <input type="checkbox" name="canales[]" value=" Realización y/o apoyo en inventario"> Realización y/o apoyo en inventarios<br>
+          <input type="checkbox" name="canales[]" value="Manejo de material POP"> Manejo de material POP<br>
+          <input type="checkbox" name="canales[]" value="Aborde en punto de venta"> Aborde en punto de venta<br>
+          <input type="checkbox" name="canales[]" value="Impulso de CPM´s(Consumos promedios Mínimos)"> Impulso de CPM´s(Consumos promedios Mínimos)<br>
+          <input type="checkbox" name="canales[]" value="promocion de productos y Servicios"> promocion de productos y Servicios<br>
+           -->
+
+           <br><samp class="menu02"> Habilidades </samp><br><br>
 		   <input type="checkbox" name="area_exp[]" value="sin_exp"> Sin experiencia<br>	
           <input type="checkbox" name="area_exp[]" value="Visita de Farmacia">Visita de Farmacia<br>
           <input type="checkbox" name="area_exp[]" value="Negociaciones con Farmacia"> Negociaciones con Farmacia<br>
@@ -145,25 +159,14 @@
           <input type="checkbox" name="area_exp[]" value="Actividades de mercadeo (merchandising)">Actividades de mercadeo (merchandising)<br>
           <input type="checkbox" name="area_exp[]" value=" Negociacion de espacios en punto de venta"> Negociacion de espacios en punto de venta<br>
 		 		
-           <br><samp class="menu02">**Conocimiento e interpretación de auditorias**</samp><br><br>
+           <br><samp class="menu02">Interpretación de auditorias</samp><br><br>
 		    <input type="checkbox" name="auditoria[]" value="sin_exp">Sin Experiencia<br>
    		    <input type="checkbox" name="auditoria[]" value="ATV">ATV<br>
             <input type="checkbox" name="auditoria[]" value="DDD"> DDD<br>
 		    <input type="checkbox" name="auditoria[]" value="INTE">INTE<br>
-            <input type="checkbox" name="auditoria[]" value="Auditpharma"> Auditpharma<br>  
+            <input type="checkbox" name="auditoria[]" value="Auditpharma"> Auditpharma (Close Up)<br>  
 				
-		  <br ><samp class="menu02">**Canales trabajados**</samp><br><br>
-		  <input type="checkbox" name="canales[]" value="sin_exp"> Sin Experiencia<br>
-          <input type="checkbox" name="canales[]" value="Consultorios y hospitales">Consultorios y hospitales<br>
-          <input type="checkbox" name="canales[]" value="punto de venta(Cadena, Autoservicios e independientes)"> punto de venta(Cadena, Autoservicios e independientes)<br>
-          <input type="checkbox" name="canales[]" value="Cuentas Clave Públicas"> Cuentas Clave Públicas<br>
-          <input type="checkbox" name="canales[]" value=" Cuentas Clave Privadas"> Cuentas Clave Privadas<br>
-          <input type="checkbox" name="canales[]" value=" Realización y/o apoyo en inventario"> Realización y/o apoyo en inventarios<br>
-          <input type="checkbox" name="canales[]" value="Manejo de material POP"> Manejo de material POP<br>
-          <input type="checkbox" name="canales[]" value="Aborde en punto de venta"> Aborde en punto de venta<br>
-          <input type="checkbox" name="canales[]" value="Impulso de CPM´s(Consumos promedios Mínimos)"> Impulso de CPM´s(Consumos promedios Mínimos)<br>
-          <input type="checkbox" name="canales[]" value="promocion de productos y Servicios"> promocion de productos y Servicios<br>
-          
+		  
            </td>
              
             <tr></tr> <td>&nbsp;</td><tr></tr><td align="center">

@@ -108,15 +108,15 @@
     <div class="box-menu">
       <a href="sfl_cv_02.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-user'></i> Datos Personales</a>
       <a href="sfl_cv_02a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-map-marker'></i> Direcci&oacute;n</a>
-      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Contacto</a>
-      <a href="sfl_cv_04.php" type="button" class="btn btn-primary btn-100" ><i class='fa fa-home'></i> Referencias</a>
+      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Datos de Indentificaci&oacute;n</a>
+      <a href="sfl_cv_04.php" type="button" class="btn btn-primary btn-100" ><i class='fa fa-home'></i> Referencias Personales</a>
       <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento y Experiencia</a>
       <a href="sfl_cv_06.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cog'></i> Industria</a>
       <a href="sfl_cv_06a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-child'></i> Posici&oacute;n</a>
-      <a href="sfl_cv_06b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cubes'></i> L&iacute;neas</a>
+      <a href="sfl_cv_06b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cubes'></i> L&iacute;neas y Especialidades</a>
       <a href="sfl_cv_06c.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cab'></i> &Aacute;reas de Expericia I</a>
       <a href="sfl_cv_07.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-car'></i> &Aacute;reas de Expericia II</a>
-      <a href="sfl_cv_08.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-graduation-cap'></i> Histotial Acad&eacute;mico</a>
+      <a href="sfl_cv_08.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-graduation-cap'></i> Historial Acad&eacute;mico</a>
       <a href="sfl_cv_08a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-institution'></i> Otros Estudios/Certificaciones</a>
       <a href="sfl_cv_08b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-file-word-o'></i> Habilidades tecnol&oacute;gicas</a>
       <a href="sfl_cv_09.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-briefcase'></i> Historial Laboral</a>
@@ -163,7 +163,7 @@
               </div>
 
           
-          <div class="form-group">
+         <!--  <div class="form-group">
                 <label for="ref_dom" class="col-sm-4 control-label">Domicilio : </label>
                   <div class="col-sm-8">
                     
@@ -171,7 +171,7 @@
                   <input onkeypress="return event.keyCode!=13"  type="text" name="ref_dom" size="50" maxlength="100"  <?php if ($ref_dom != "") { ?>value="<?php echo $ref_dom; ?>"<?php } ?> class="form-control" placeholder='Domicilio '>
 
                 </div>
-              </div>
+              </div> -->
 
           <div class="form-group">
                 <label for="ref_tel" class="col-sm-4 control-label">Telefono :* </label>
@@ -185,11 +185,11 @@
               
 
         <div class="form-group">
-                <label for="ref_ocu" class="col-sm-4 control-label">Ocupacion : </label>
+                <label for="ref_ocu" class="col-sm-4 control-label">Relaci&oacute;n Laboral : </label>
                   <div class="col-sm-8">
                     
 
-                  <input onkeypress="return event.keyCode!=13"  type="text" name="ref_ocu" size="25" maxlength="30"  <?php if ($ref_ocu != "") { ?>value="<?php echo $ref_ocu; ?>"<?php } ?> class="form-control" placeholder='Ocupacion ' >
+                  <input onkeypress="return event.keyCode!=13"  type="text" name="ref_ocu" size="25" maxlength="30"  <?php if ($ref_ocu != "") { ?>value="<?php echo $ref_ocu; ?>"<?php } ?> class="form-control" placeholder='Relaci&oacute;n Laboral ' >
 
                 </div>
               </div>
@@ -199,7 +199,7 @@
                   <div class="col-sm-8">
                     
 
-                  <input onkeypress="return event.keyCode!=13"  type="text" name="time_con" size="3" maxlength="2"  <?php if ($time_con != "") { ?>value="<?php echo $time_con; ?>"<?php } ?> class="form-control" placeholder='Años ' >
+                  <input onkeypress="return event.keyCode!=13"  type="number" name="time_con" size="3" maxlength="2"  <?php if ($time_con != "") { ?>value="<?php echo $time_con; ?>"<?php } ?> class="form-control" placeholder='Años ' >
 
                 </div>
               </div>            
@@ -284,7 +284,7 @@
                 <tr>
                 <!-- <td height="20" class="" align="right" valign="middle">&nbsp;</td> -->
                 <td class="" valign="middle">Nombre</td>
-                <td class="" valign="middle" >Domicilio</td>
+              <!--   <td class="" valign="middle" >Domicilio</td> -->
                 <td class="" valign="middle" >telefono</td>
                 <td class="" valign="middle" align="center"></td>
               </tr>
@@ -302,7 +302,7 @@
                 <tr></tr>
                   <!-- <td height="20" class=""align="right">&bull;&nbsp;</td> -->
                   <td class=""><?php echo $qry_refer['ref_nom']; ?></td>
-                  <td class=""><?php echo $qry_refer['ref_dom']; ?></td>
+                  <!-- <td class=""><?php echo $qry_refer['ref_dom']; ?></td> -->
                   <td class=""><?php echo $qry_refer['ref_tel']; ?></td>
                   <td class="" align="center"><a href="sfl_cv_04.php?id_ref=<?php echo $qry_refer['id_ref']?> id_cuenta=<?php echo $id_cuenta?>" class="">
                   <img class="right" src="images/editar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left">

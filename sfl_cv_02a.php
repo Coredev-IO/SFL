@@ -129,15 +129,15 @@
     <div class="box-menu">
       <a href="sfl_cv_02.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-user'></i> Datos Personales</a>
       <a href="sfl_cv_02a.php" type="button" class="btn btn-primary btn-100"><i class='fa fa-map-marker'></i> Direcci&oacute;n</a>
-      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Contacto</a>
-      <a href="sfl_cv_04.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-home'></i> Referencias</a>
+      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Datos de Indentificaci&oacute;n</a>
+      <a href="sfl_cv_04.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-home'></i> Referencias Personales</a>
       <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento y Experiencia</a>
       <a href="sfl_cv_06.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cog'></i> Industria</a>
       <a href="sfl_cv_06a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-child'></i> Posici&oacute;n</a>
-      <a href="sfl_cv_06b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cubes'></i> L&iacute;neas</a>
+      <a href="sfl_cv_06b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cubes'></i> L&iacute;neas y Especialidades</a>
       <a href="sfl_cv_06c.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cab'></i> &Aacute;reas de Expericia I</a>
       <a href="sfl_cv_07.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-car'></i> &Aacute;reas de Expericia II</a>
-      <a href="sfl_cv_08.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-graduation-cap'></i> Histotial Acad&eacute;mico</a>
+      <a href="sfl_cv_08.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-graduation-cap'></i> Historial Acad&eacute;mico</a>
       <a href="sfl_cv_08a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-institution'></i> Otros Estudios/Certificaciones</a>
       <a href="sfl_cv_08b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-file-word-o'></i> Habilidades tecnol&oacute;gicas</a>
       <a href="sfl_cv_09.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-briefcase'></i> Historial Laboral</a>
@@ -170,7 +170,75 @@
         <form class="form-horizontal" role="form" name="new_cv" action="sfl_cv_02a_.php" method="post" enctype="multipart/form-data" >
           <!-- Termina Errores -->
 
-          
+
+           <div class="form-group">
+            <label for="calle" class="col-sm-4 control-label">Calle: </label>
+              <div class="col-sm-8">
+                
+
+              <input onkeypress="return event.keyCode!=13"  type="text" name="calle" size="30" maxlength="50" <?php if ($calle != "") { ?>value="<?php echo $calle; ?>"<?php } ?>  class="form-control" placeholder='Calle ' autofocus>
+             
+
+
+            </div>
+          </div>
+
+
+
+           <div class="form-group">
+            <label for="NumExt" class="col-sm-4 control-label">Numero ext: </label>
+              <div class="col-sm-8">
+                
+
+              <input onkeypress="return event.keyCode!=13"  type="text" name="calle" size="30" maxlength="50" <?php if ($num_ext != "") { ?>value="<?php echo $num_ext; ?>"<?php } ?>   class="form-control" placeholder='Numero Ext.' >
+             
+
+
+            </div>
+          </div>
+
+
+
+           <div class="form-group">
+            <label for="NumInt" class="col-sm-4 control-label">Numero Int: </label>
+              <div class="col-sm-8">
+                
+
+              <input onkeypress="return event.keyCode!=13"  type="text" name="calle" size="30" maxlength="50" <?php if ($num_int != "") { ?>value="<?php echo $num_int; ?>"<?php } ?> class="form-control" placeholder='Numero Int.'>
+             
+
+
+            </div>
+          </div>
+
+
+           <div class="form-group">
+            <label for="Colonia" class="col-sm-4 control-label">Colonia: </label>
+              <div class="col-sm-8">
+                
+
+              <input onkeypress="return event.keyCode!=13"  type="text" name="calle" size="30" maxlength="50" <?php if ($colonia != "") { ?>value="<?php echo $colonia; ?>"<?php } ?>   class="form-control" placeholder='Colonia' >
+             
+
+
+            </div>
+          </div>
+
+
+           <div class="form-group">
+            <label for="CP" class="col-sm-4 control-label">C.P : </label>
+              <div class="col-sm-8">
+                
+
+              <input onkeypress="return event.keyCode!=13"  type="text" name="calle" size="30" maxlength="50" <?php if ($cp != "") { ?>value="<?php echo $cp; ?>"<?php } ?>  class="form-control" placeholder='C.P' >
+            
+
+
+            </div>
+          </div>
+
+
+
           <div class="form-group">
             <label for="Estado" class="col-sm-4 control-label">Estado</label>
             <div class="col-sm-8">
@@ -213,7 +281,7 @@
 
           
           <div class="form-group">
-            <label for="Municipio" class="col-sm-4 control-label">Municipio/del: *</label>
+            <label for="Municipio" class="col-sm-4 control-label">Municipio/Delegaci&oacute;n: *</label>
               <div class="col-sm-8">
             <?php
                     $query_mun = mysql_query("SELECT * FROM cat_mun_del WHERE id_estado ='" . $id_estado . "' ORDER BY id_del_mun ASC");
@@ -293,72 +361,6 @@
           </div>
 
 
-
-           <div class="form-group">
-            <label for="calle" class="col-sm-4 control-label">Calle: </label>
-              <div class="col-sm-8">
-                
-
-              <input onkeypress="return event.keyCode!=13"  type="text" name="calle" size="30" maxlength="50" <?php if ($calle != "") { ?>value="<?php echo $calle; ?>"<?php } ?>  class="form-control" placeholder='Calle ' autofocus>
-             
-
-
-            </div>
-          </div>
-
-
-
-           <div class="form-group">
-            <label for="NumExt" class="col-sm-4 control-label">Numero ext: </label>
-              <div class="col-sm-8">
-                
-
-              <input onkeypress="return event.keyCode!=13"  type="text" name="calle" size="30" maxlength="50" <?php if ($num_ext != "") { ?>value="<?php echo $num_ext; ?>"<?php } ?>   class="form-control" placeholder='Numero Ext.' >
-             
-
-
-            </div>
-          </div>
-
-
-
-           <div class="form-group">
-            <label for="NumInt" class="col-sm-4 control-label">Numero Int: </label>
-              <div class="col-sm-8">
-                
-
-              <input onkeypress="return event.keyCode!=13"  type="text" name="calle" size="30" maxlength="50" <?php if ($num_int != "") { ?>value="<?php echo $num_int; ?>"<?php } ?> class="form-control" placeholder='Numero Int.'>
-             
-
-
-            </div>
-          </div>
-
-
-           <div class="form-group">
-            <label for="Colonia" class="col-sm-4 control-label">Colonia: </label>
-              <div class="col-sm-8">
-                
-
-              <input onkeypress="return event.keyCode!=13"  type="text" name="calle" size="30" maxlength="50" <?php if ($colonia != "") { ?>value="<?php echo $colonia; ?>"<?php } ?>   class="form-control" placeholder='Colonia' >
-             
-
-
-            </div>
-          </div>
-
-
-           <div class="form-group">
-            <label for="CP" class="col-sm-4 control-label">C.P : </label>
-              <div class="col-sm-8">
-                
-
-              <input onkeypress="return event.keyCode!=13"  type="text" name="calle" size="30" maxlength="50" <?php if ($cp != "") { ?>value="<?php echo $cp; ?>"<?php } ?>  class="form-control" placeholder='C.P' >
-             
-
-
-            </div>
-          </div>
 
 
 
