@@ -61,8 +61,8 @@
                     <br><br>
                     <div class="container">
                       <div class="row">
-                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
-                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="60px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="60px"></div>
 
 
                       </div>

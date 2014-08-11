@@ -91,7 +91,7 @@
         <tr></tr>
         <tr></tr>
         <td>
-            <div class="col-md-3 col-sm-3 col-xs-3 col-md-offset-1"><a href="sfl_Vacantes.php">  <button type="button" class="btn btn-primary btn-lg btn-block botonInicio">Vac&aacute;ntes</button> </div>
+            <div class="col-md-3 col-sm-3 col-xs-3 col-md-offset-1"><a href="sfl_Vacantes.php">  <button type="button" class="btn btn-primary btn-lg btn-block botonInicio">Vacantes</button> </div>
             <div class="col-md-3 col-sm-3 col-xs-3 col-md-offset-4"><a href="sfl_cv_01.php"> <button type="button" class="btn btn-primary btn-lg btn-block botonInicio" >Reg&iacute;strate</button></a> </div> 
           </td>
         </tr>

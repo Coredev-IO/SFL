@@ -64,11 +64,40 @@ $(document).ready(function() {
 	require_once('sfl_tit.php');
 ?>
 
+
+
+
 <link type="text/css" href="css/sfl_style.css" rel="stylesheet"/>
 <link type="text/css" href="css/menu.css" rel="stylesheet" />
 <script type="text/javascript" src="controller.js"></script>
 <script type="text/javascript" src="css/jquery.js"></script>
 <script type="text/javascript" src="css/menu.js"></script>
+
+<link rel="stylesheet" type="text/css" media="all" href="jsDatePick_ltr.min.css" />
+<script type="text/javascript" src="jsDatePick.min.1.3.js"></script>
+
+<script type="text/javascript">
+  window.onload = function(){
+    new JsDatePick({
+      useMode:2,
+      target:"inputField",
+      dateFormat:"%d-%m-%Y"
+      /*selectedDate:{        This is an example of what the full configuration offers.
+        day:5,            For full documentation about these settings please see the full version of the code.
+        month:9,
+        year:2006
+      },
+      yearsRange:[1978,2020],
+      limitToToday:false,
+      cellColorScheme:"beige",
+      dateFormat:"%m-%d-%Y",
+      imgPath:"img/",
+      weekStartDay:1*/
+    });
+  };
+</script>
+
+
 
 <?php
 	require_once('sfl_functions.php');
@@ -112,8 +141,8 @@ $(document).ready(function() {
                     <br><br>
                     <div class="container">
                       <div class="row">
-                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
-                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="60px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="60px"></div>
                       </div>
                     </div>
 
@@ -124,9 +153,9 @@ $(document).ready(function() {
     <div class="box-menu">
       <a href="sfl_cv_02.php" type="button" class="btn btn-primary btn-100"><i class='fa fa-user'></i> Datos Personales</a>
       <a href="sfl_cv_02a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-map-marker'></i> Direcci&oacute;n</a>
-      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Datos de Indentificaci&oacute;n</a>
+      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Datos de Identificaci&oacute;n</a>
       <a href="sfl_cv_04.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-home'></i> Referencias Personales</a>
-      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento y Experiencia</a>
+      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento</a>
       <a href="sfl_cv_06.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cog'></i> Industria</a>
       <a href="sfl_cv_06a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-child'></i> Posici&oacute;n</a>
       <a href="sfl_cv_06b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cubes'></i> L&iacute;neas y Especialidades</a>
@@ -177,6 +206,7 @@ $(document).ready(function() {
             <label for="materno" class="col-sm-4 control-label">Apellido Materno:</label>
             <div class="col-sm-8">
               <input onkeypress="return event.keyCode!=13" type="text" name="materno" size="30" maxlength="50" <?php if ($materno != "") { ?>value="<?php echo $materno; ?>"<?php } ?> class="form-control" placeholder='Apellido Materno'>
+
             </div>
           </div>
 
@@ -191,9 +221,9 @@ $(document).ready(function() {
             <label for="fec_nac" class="col-sm-4 control-label">Fecha de Nacimiento: *</label>
             <div class="col-sm-8">
                <?php if (!$fec_nac) { ?>
-                  <input name="fec_nac" type="text" size="10" maxlength="10" onKeyUp = "this.value=formateafecha(this.value);" class="form-control" placeholder='[ dd/mm/aaaa ]'> 
+                  <input name="fec_nac" type="text" size="10" maxlength="10" id="inputField" onKeyUp = "this.value=formateafecha(this.value);" class="form-control" placeholder='[ dd/mm/aaaa ]'> 
                 <?php }else{ ?>
-                  <input name="fec_nac" type="text" size="10" maxlength="10" value="<?php echo $fec_nac; ?>" class="form-control" placeholder='[ dd/mm/aaaa ]'> 
+                  <input name="fec_nac" type="text" size="10" maxlength="10" id="inputField" value="<?php echo $fec_nac; ?>" class="form-control" placeholder='[ dd/mm/aaaa ]'> 
                 <?php }   ?>
               
             </div>

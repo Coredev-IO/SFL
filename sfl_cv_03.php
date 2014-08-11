@@ -90,8 +90,8 @@
                      <br><br>
                     <div class="container">
                       <div class="row">
-                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
-                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="60px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="60px"></div>
                       </div>
                     </div>
 
@@ -105,9 +105,9 @@
     <div class="box-menu">
       <a href="sfl_cv_02.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-user'></i> Datos Personales</a>
       <a href="sfl_cv_02a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-map-marker'></i> Direcci&oacute;n</a>
-      <a href="sfl_cv_03.php" type="button" class="btn btn-primary btn-100"><i class='fa fa-phone'></i> Datos de Indentificaci&oacute;n</a>
+      <a href="sfl_cv_03.php" type="button" class="btn btn-primary btn-100"><i class='fa fa-phone'></i> Datos de Identificaci&oacute;n</a>
       <a href="sfl_cv_04.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-home'></i> Referencias Personales</a>
-      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento y Experiencia</a>
+      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento</a>
       <a href="sfl_cv_06.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cog'></i> Industria</a>
       <a href="sfl_cv_06a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-child'></i> Posici&oacute;n</a>
       <a href="sfl_cv_06b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cubes'></i> L&iacute;neas y Especialidades</a>
@@ -123,7 +123,7 @@
      </div>
 
     <div class="col-md-9">
-      <div class="box-title"> Datos de Indentificaci&oacute;n </div>
+      <div class="box-title"> Datos de Identificaci&oacute;n </div>
 
       <!-- Errores-->
           <?php if ($accion == 1) { ?>
@@ -149,7 +149,7 @@
               <div class="col-sm-8">
                 
 
-              <input onkeypress="return event.keyCode!=13"  type="text" name="RFC" size="30" maxlength="50" <?php if ($rfc != "") { ?>value="<?php echo $rfc; ?>"<?php } ?>  class="form-control" placeholder='RFC ' autofocus>
+              <input onkeypress="return event.keyCode!=13"  type="text" name="rfc" size="30" maxlength="50" <?php if ($rfc != "") { ?>value="<?php echo $rfc; ?>"<?php } ?>  class="form-control" placeholder='RFC ' autofocus>
 
             </div>
           </div>
@@ -160,7 +160,7 @@
               <div class="col-sm-8">
                 
 
-              <input onkeypress="return event.keyCode!=13"  type="text" name="CURP" size="30" maxlength="50" <?php if ($curp != "") { ?>value="<?php echo $curp; ?>"<?php } ?>  class="form-control" placeholder='CURP '>
+              <input onkeypress="return event.keyCode!=13"  type="text" name="curp" size="30" maxlength="50" <?php if ($curp != "") { ?>value="<?php echo $curp; ?>"<?php } ?>  class="form-control" placeholder='CURP '>
 
             </div>
           </div>
@@ -171,7 +171,7 @@
               <div class="col-sm-8">
                 
 
-              <input onkeypress="return event.keyCode!=13"  type="text" name="No.DeAfilicacion" size="30" maxlength="50" <?php if ($no_imss != "") { ?>value="<?php echo $no_imss; ?>"<?php } ?>  class="form-control" placeholder='No. de afiliación al IMSS '>
+              <input onkeypress="return event.keyCode!=13"  type="text" name="no_imss" size="30" maxlength="50" <?php if ($no_imss != "") { ?>value="<?php echo $no_imss; ?>"<?php } ?>  class="form-control" placeholder='No. de afiliación al IMSS '>
 
             </div>
           </div>
@@ -182,12 +182,14 @@
             <label for="No.deClinica" class="col-sm-4 control-label">No. de Clínica : </label>
               <div class="col-sm-8">
                 
+              <input onkeypress="return event.keyCode!=13" type="text" name="no_clinica" size="18" maxlength="50"  <?php if ($no_clinica != "") { ?>value="<?php echo $no_clinica; ?>"<?php } ?> class="form-control" placeholder="No. de Clínica" >
 
-              <input onkeypress="return event.keyCode!=13"  type="text" name="No.deClinica" size="30" maxlength="50" <?php if ($no_clinica != "") { ?>value="<?php echo $no_clinica; ?>"<?php } ?> class="form-control" placeholder='No. de Clínica ' >
 
             </div>
           </div>
 
+
+           <div class="box-title"> Datos de Contacto </div>
 
 
           <div class="form-group">
@@ -195,7 +197,7 @@
               <div class="col-sm-8">
                 
 
-              <input onkeypress="return event.keyCode!=13"  type="text" name="TelefonoParticular" size="30" maxlength="50" <?php if ($no_clinica != "") { ?>value="<?php echo $no_clinica; ?>"<?php } ?>  class="form-control" placeholder='eléfono Particular ' >
+              <input onkeypress="return event.keyCode!=13"  type="text" name="tel_particular" size="30" maxlength="50" <?php if ($tel_particular != "") { ?>value="<?php echo $no_clinica; ?>"<?php } ?>  class="form-control" placeholder='Teléfono Particular ' >
 
             </div>
           </div>
@@ -207,7 +209,7 @@
               <div class="col-sm-8">
                 
 
-              <input onkeypress="return event.keyCode!=13"  type="text" name="TelefonoMovil" size="30" maxlength="50" <?php if ($tel_movil != "") { ?>value="<?php echo $tel_movil; ?>"<?php } ?> class="form-control" placeholder='Teléfono M&oacute;vil ' >
+              <input onkeypress="return event.keyCode!=13"  type="text" name="tel_movil" size="30" maxlength="50" <?php if ($tel_movil != "") { ?>value="<?php echo $tel_movil; ?>"<?php } ?> class="form-control" placeholder='Teléfono M&oacute;vil ' >
 
             </div>
           </div>
@@ -219,7 +221,7 @@
               <div class="col-sm-8">
                 
 
-              <input onkeypress="return event.keyCode!=13"  type="text" name="TelefonoOficina" size="30" maxlength="50" <?php if ($tel_oficina != "") { ?>value="<?php echo $tel_oficina; ?>"<?php } ?> class="form-control" placeholder='Teléfono Oficina ' >
+              <input onkeypress="return event.keyCode!=13"  type="text" name="tel_oficina" size="30" maxlength="50" <?php if ($tel_oficina != "") { ?>value="<?php echo $tel_oficina; ?>"<?php } ?> class="form-control" placeholder='Teléfono Oficina ' >
 
             </div>
           </div>
@@ -232,7 +234,7 @@
               <div class="col-sm-8">
                 
 
-              <input onkeypress="return event.keyCode!=13"  type="text" name="TelefonoRecados" size="30" maxlength="50" <?php if ($tel_rec != "") { ?>value="<?php echo $tel_rec; ?>"<?php } ?>   class="form-control" placeholder='Teléfono Recados ' >
+              <input onkeypress="return event.keyCode!=13"  type="text" name="tel_reca" size="30" maxlength="50" <?php if ($tel_rec != "") { ?>value="<?php echo $tel_rec; ?>"<?php } ?>   class="form-control" placeholder='Teléfono Recados ' >
 
             </div>
           </div>
@@ -243,7 +245,7 @@
               <div class="col-sm-8">
                 
 
-              <input onkeypress="return event.keyCode!=13"  type="text" name="UsuarioTwitter" size="30" maxlength="50" <?php if ($twitter != "") { ?>value="<?php echo $twitter; ?>"<?php } ?> class="form-control" placeholder='Usuario Twitter ' >
+              <input onkeypress="return event.keyCode!=13"  type="text" name="twitter" size="30" maxlength="50" <?php if ($twitter != "") { ?>value="<?php echo $twitter; ?>"<?php } ?> class="form-control" placeholder='Usuario Twitter ' >
 
             </div>
           </div>
@@ -255,7 +257,7 @@
               <div class="col-sm-8">
                 
 
-              <input onkeypress="return event.keyCode!=13"  type="text" name="UsuarioFacebook" size="30" maxlength="50" <?php if ($facebook != "") { ?>value="<?php echo $facebook; ?>"<?php } ?>  class="form-control" placeholder='Usuario Facebook ' >
+              <input onkeypress="return event.keyCode!=13"  type="text" name="facebook" size="30" maxlength="50" <?php if ($facebook != "") { ?>value="<?php echo $facebook; ?>"<?php } ?>  class="form-control" placeholder='Usuario Facebook ' >
 
             </div>
           </div>
@@ -268,7 +270,7 @@
               <div class="col-sm-8">
                 
 
-              <input onkeypress="return event.keyCode!=13"  type="text" name="UsuarioLinkdin" size="30" maxlength="50" <?php if ($linkedin != "") { ?>value="<?php echo $linkedin; ?>"<?php } ?> class="form-control" placeholder='Usuario Linkedin ' >
+              <input onkeypress="return event.keyCode!=13"  type="text" name="linkedin" size="30" maxlength="50" <?php if ($linkedin != "") { ?>value="<?php echo $linkedin; ?>"<?php } ?> class="form-control" placeholder='Usuario Linkedin ' >
 
             </div>
           </div>

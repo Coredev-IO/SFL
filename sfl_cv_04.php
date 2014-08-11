@@ -94,8 +94,8 @@
                     <br><br>
                     <div class="container">
                       <div class="row">
-                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
-                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="60px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="60px"></div>
                       </div>
                     </div>
 
@@ -108,9 +108,9 @@
     <div class="box-menu">
       <a href="sfl_cv_02.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-user'></i> Datos Personales</a>
       <a href="sfl_cv_02a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-map-marker'></i> Direcci&oacute;n</a>
-      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Datos de Indentificaci&oacute;n</a>
+      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Datos de Identificaci&oacute;n</a>
       <a href="sfl_cv_04.php" type="button" class="btn btn-primary btn-100" ><i class='fa fa-home'></i> Referencias Personales</a>
-      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento y Experiencia</a>
+      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento</a>
       <a href="sfl_cv_06.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cog'></i> Industria</a>
       <a href="sfl_cv_06a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-child'></i> Posici&oacute;n</a>
       <a href="sfl_cv_06b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cubes'></i> L&iacute;neas y Especialidades</a>
@@ -185,11 +185,11 @@
               
 
         <div class="form-group">
-                <label for="ref_ocu" class="col-sm-4 control-label">Relaci&oacute;n Laboral : </label>
+                <label for="ref_ocu" class="col-sm-4 control-label">Relaci&oacute;n : </label>
                   <div class="col-sm-8">
                     
 
-                  <input onkeypress="return event.keyCode!=13"  type="text" name="ref_ocu" size="25" maxlength="30"  <?php if ($ref_ocu != "") { ?>value="<?php echo $ref_ocu; ?>"<?php } ?> class="form-control" placeholder='Relaci&oacute;n Laboral ' >
+                  <input onkeypress="return event.keyCode!=13"  type="text" name="ref_ocu" size="25" maxlength="30"  <?php if ($ref_ocu != "") { ?>value="<?php echo $ref_ocu; ?>"<?php } ?> class="form-control" placeholder='Relaci&oacute;n' >
 
                 </div>
               </div>
@@ -285,7 +285,7 @@
                 <!-- <td height="20" class="" align="right" valign="middle">&nbsp;</td> -->
                 <td class="" valign="middle">Nombre</td>
               <!--   <td class="" valign="middle" >Domicilio</td> -->
-                <td class="" valign="middle" >telefono</td>
+                <td class="" valign="middle" >Teléfono</td>
                 <td class="" valign="middle" align="center"></td>
               </tr>
 

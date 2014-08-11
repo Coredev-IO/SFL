@@ -46,6 +46,51 @@ if ($id_laboral != "") {
 	require_once('sfl_tit.php');
 ?>
 
+
+<link rel="stylesheet" type="text/css" media="all" href="jsDatePick_ltr.min.css" />
+<script type="text/javascript" src="jsDatePick.min.1.3.js"></script>
+
+<script type="text/javascript">
+  window.onload = function(){
+    new JsDatePick({
+      useMode:2,
+      target:"inputField2",
+      dateFormat:"%d-%m-%Y"
+      /*selectedDate:{        This is an example of what the full configuration offers.
+        day:5,            For full documentation about these settings please see the full version of the code.
+        month:9,
+        year:2006
+      },
+      yearsRange:[1978,2020],
+      limitToToday:false,
+      cellColorScheme:"beige",
+      dateFormat:"%m-%d-%Y",
+      imgPath:"img/",
+      weekStartDay:1*/
+    });
+
+    new JsDatePick({
+      useMode:2,
+      target:"inputField3",
+      dateFormat:"%d-%m-%Y"
+      /*selectedDate:{        This is an example of what the full configuration offers.
+        day:5,            For full documentation about these settings please see the full version of the code.
+        month:9,
+        year:2006
+      },
+      yearsRange:[1978,2020],
+      limitToToday:false,
+      cellColorScheme:"beige",
+      dateFormat:"%m-%d-%Y",
+      imgPath:"img/",
+      weekStartDay:1*/
+    });
+  };
+</script>
+
+
+
+
 <link type="text/css" href="css/sfl_style.css" rel="stylesheet" />
 <link type="text/css" href="css/menu.css" rel="stylesheet" />
 <script type="text/javascript" src="controller.js"></script>
@@ -88,8 +133,8 @@ if ($id_laboral != "") {
                     <br><br>
                     <div class="container">
                       <div class="row">
-                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
-                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="60px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="60px"></div>
                       </div>
                     </div>
 
@@ -101,9 +146,9 @@ if ($id_laboral != "") {
     <div class="box-menu">
       <a href="sfl_cv_02.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-user'></i> Datos Personales</a>
       <a href="sfl_cv_02a.php" type="button" class="btn btn-default btn-100"disabled><i class='fa fa-map-marker'></i> Direcci&oacute;n</a>
-      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Datos de Indentificaci&oacute;n</a>
+      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Datos de Identificaci&oacute;n</a>
       <a href="sfl_cv_04.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-home'></i> Referencias Personales</a>
-      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento y Experiencia</a>
+      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento</a>
       <a href="sfl_cv_06.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cog'></i> Industria</a>
       <a href="sfl_cv_06a.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-child'></i> Posici&oacute;n</a>
       <a href="sfl_cv_06b.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-cubes'></i> L&iacute;neas y Especialidades</a>
@@ -128,7 +173,7 @@ if ($id_laboral != "") {
 
 
 
-<table width="700" border="0" cellspacing="1" cellpadding="0" align="center" class=" txt03">
+<table width="700" border="0" cellspacing="1" cellpadding="0" align="center" class=" txt03 ">
     <tr></tr>
 <!-- 	<th  colspan="2" align="left" class="txt09">HISTORIAL LABORAL</th><tr><tr> -->
     <form name="new_cv" action="sfl_cv_09_.php" method="post" enctype="multipart/form-data">
@@ -228,16 +273,16 @@ if ($id_laboral != "") {
 
          <td><b> Periodo de: </td>
         <?php if (!$fecha_i) { ?>
-	    <td> <br> <input onkeypress="return event.keyCode!=13" name="fecha_i" type="text" size="10" maxlength="10" onKeyUp = "this.value=formateafecha(this.value);" class="form-control"> [ dd/mm/aaaa ]</td>
+	    <td> <br> <input onkeypress="return event.keyCode!=13" name="fecha_i" type="text" size="10" id="inputField2" maxlength="10" onKeyUp = "this.value=formateafecha(this.value);" class="form-control"> [ dd/mm/aaaa ]</td>
         <?php }else{ ?>
-	    <td><input onkeypress="return event.keyCode!=13" name="fecha_i" type="text" size="10" maxlength="10" value="<?php echo $fecha_i; ?>" class="form05a"> [ dd/mm/aaaa ]</td>
+	    <td><input onkeypress="return event.keyCode!=13" name="fecha_i" type="text" size="10"  maxlength="10" value="<?php echo $fecha_i; ?>" class="form05a"> [ dd/mm/aaaa ]</td>
         <?php } ?>
 
 
 
         <tr></tr> <td><b> Periodo a: </td>
 		 <?php if (!$fecha_i) { ?>
-	    <td> <br> <input onkeypress="return event.keyCode!=13" name="fecha_f" type="text" size="10" maxlength="10" onKeyUp = "this.value=formateafecha(this.value);" class="form-control"> [ dd/mm/aaaa ]</td>
+	    <td> <br> <input onkeypress="return event.keyCode!=13" name="fecha_f" type="text" size="10" id="inputField3" maxlength="10" onKeyUp = "this.value=formateafecha(this.value);" class="form-control"> [ dd/mm/aaaa ]</td>
         <?php }else{ ?>
 	    <td><input onkeypress="return event.keyCode!=13" name="fecha_f" type="text" size="10" maxlength="10" value="<?php echo $fecha_f; ?>" class="form05a"> [ dd/mm/aaaa ]</td>
         <?php } ?>
@@ -279,7 +324,7 @@ if ($id_laboral != "") {
           ?>
         <!-- query a BD referencia-->
                 <tr></tr>
-				<table align="center" width="700" border="0" cellspacing="1" cellpadding="4" class=" txt03">
+				<table align="center" width="700" border="0" cellspacing="1" cellpadding="4" class=" txt03 CSSTableGenerator">
                 <td height="20" class="txt06a" align="right" valign="middle">&nbsp;</td>
                 <td class="txt06a" valign="middle">Empresa</td>
                 <td class="txt06a" valign="middle" >Puesto</td>

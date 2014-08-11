@@ -69,6 +69,12 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
 	require_once('sfl_tit.php');
 ?>
 
+
+<link type="text/css" href="css/bootstrap.css" rel="stylesheet"/>
+ <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+
 <link type="text/css" href="css/sfl_style.css" rel="stylesheet" />
 <link type="text/css" href="css/menu.css" rel="stylesheet" />
 <script type="text/javascript" src="controller.js"></script>
@@ -115,8 +121,8 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
                     <br><br>
                     <div class="container">
                       <div class="row">
-                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
-                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="60px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="60px"></div>
                       </div>
                     </div>
 
@@ -130,9 +136,9 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
     <div class="box-menu">
       <a href="sfl_cv_02.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-user'></i> Datos Personales</a>
       <a href="sfl_cv_02a.php" type="button" class="btn btn-default btn-100"disabled><i class='fa fa-map-marker'></i> Direcci&oacute;n</a>
-      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Datos de Indentificaci&oacute;n</a>
+      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Datos de Identificaci&oacute;n</a>
       <a href="sfl_cv_04.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-home'></i> Referencias Personales</a>
-      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento y Experiencia</a>
+      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento</a>
       <a href="sfl_cv_06.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cog'></i> Industria</a>
       <a href="sfl_cv_06a.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-child'></i> Posici&oacute;n</a>
       <a href="sfl_cv_06b.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-cubes'></i> L&iacute;neas y Especialidades</a>
@@ -186,7 +192,7 @@ $query_doc_s = mysql_query("SELECT * FROM academia WHERE id_cuenta = '$id_cuenta
 
 
 
-<table width="700" border="0" cellspacing="1" cellpadding="0" align="center" class=" txt03">
+<table width="700" border="0" cellspacing="1" cellpadding="0" align="center" class=" txt03 " >
   <tr></tr>
       <?php if ($accion == 1) { ?>
         <tr>

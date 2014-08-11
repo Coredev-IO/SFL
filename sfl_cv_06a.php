@@ -56,8 +56,8 @@
                     <br><br>
                     <div class="container">
                       <div class="row">
-                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
-                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="60px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="60px"></div>
                       </div>
                     </div>
 
@@ -68,9 +68,9 @@
     <div class="box-menu">
       <a href="sfl_cv_02.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-user'></i> Datos Personales</a>
       <a href="sfl_cv_02a.php" type="button" class="btn btn-default btn-100"disabled><i class='fa fa-map-marker'></i> Direcci&oacute;n</a>
-      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Datos de Indentificaci&oacute;n</a>
+      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Datos de Identificaci&oacute;n</a>
       <a href="sfl_cv_04.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-home'></i> Referencias Personales</a>
-      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento y Experiencia</a>
+      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento</a>
       <a href="sfl_cv_06.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cog'></i> Industria</a>
       <a href="sfl_cv_06a.php" type="button" class="btn btn-primary btn-100" ><i class='fa fa-child'></i> Posici&oacute;n</a>
       <a href="sfl_cv_06b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cubes'></i> L&iacute;neas y Especialidades</a>
@@ -198,19 +198,19 @@
 				  <?php echo $qry_cat['posicion']; ?><br> 
 				  <?php echo $qry_app['time_expe_pos'];?>
 				  
-				  <br><br><select style="width: 200px"name="time_expe_pos" class="form03" onChange="MM_jumpMenu('parent',this,0)"><br>
+				  <select style="width: 200px"name="time_expe_pos" class="form03" onChange="MM_jumpMenu('parent',this,0)"><br>
              <option value="">Seleccione el tiempo en Puesto</option>
              <option value="sfl_cv_06a_.php?time_expe_pos=<?php echo "sin experiencia";?>& id_posicion=<?php echo $qry_indus['id_posicion'];?>& id_cuenta=<?php echo $id_cuenta ;?>">Sin experiencia</option>
              <option value="sfl_cv_06a_.php?time_expe_pos=<?php echo "Menos de seis meses";?>& id_posicion=<?php echo $qry_indus['id_posicion'];?>& id_cuenta=<?php echo $id_cuenta;?>">Menos de seis meses</option>
-             <option value="sfl_cv_06a_.php?time_expe_pos=<?php echo "6 menor a 1 año";?>& id_posicion=<?php echo $qry_indus['id_posicion'];?>& id_cuenta=<?php echo $id_cuenta;?>">6 menor a 1 año</option>
+             <option value="sfl_cv_06a_.php?time_expe_pos=<?php echo "6 meses 1 año";?>& id_posicion=<?php echo $qry_indus['id_posicion'];?>& id_cuenta=<?php echo $id_cuenta;?>">6 meses a 1 año</option>
              <option value="sfl_cv_06a_.php?time_expe_pos=<?php echo "1-2 años";?>& id_posicion=<?php echo $qry_indus['id_posicion'];?>& id_cuenta=<?php echo $id_cuenta;?>">1-2 años</option>
              <option value="sfl_cv_06a_.php?time_expe_pos=<?php echo "2-3 años";?>& id_posicion=<?php echo $qry_indus['id_posicion'];?>& id_cuenta=<?php echo $id_cuenta;?>">2-3 años</option>
              <option value="sfl_cv_06a_.php?time_expe_pos=<?php echo "4-5 años";?>& id_posicion=<?php echo $qry_indus['id_posicion'];?>& id_cuenta=<?php echo $id_cuenta;?>">4-5 años</option>
-             <option value="sfl_cv_06a_.php?time_expe_pos=<?php echo "5 años menor a 10 años";?>& id_posicion=<?php echo $qry_indus['id_posicion'];?>& id_cuenta=<?php echo $id_cuenta;?>">5 años menor a 10 años</option>
+             <option value="sfl_cv_06a_.php?time_expe_pos=<?php echo "5-10 años";?>& id_posicion=<?php echo $qry_indus['id_posicion'];?> id_cuenta=<?php echo $id_cuenta;?>">5-10 años</option>
              <option value="sfl_cv_06a_.php?time_expe_pos=<?php echo "10 años";?>& id_posicion=<?php echo $qry_indus['id_posicion'];?>& id_cuenta=<?php echo $id_cuenta;?>">10 años</option>
  
 		     </option> </select></td></td>
-                  <td class="txt06c" align="center"><a href="sfl_cv_06a_.php?accion=<?php echo"borrar"?>& id_cuenta=<?php echo "$id_cuenta"?> & id_cat_posicion=<?php echo $cat_posicion?>" class="txt06c"><img class="right" src="images/eliminar.gif" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"></a></td>
+                  <td class="txt06c" align="center"><a href="sfl_cv_06a_.php?accion=<?php echo"borrar"?>& id_cuenta=<?php echo "$id_cuenta"?> & id_cat_posicion=<?php echo $cat_posicion?>" class="txt06c"><img class="right" src="images/eliminar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"></a></td>
                  <?php
 			$i ++;
 			$x ++;

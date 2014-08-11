@@ -34,8 +34,8 @@
                     <br><br>
                     <div class="container">
                       <div class="row">
-                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
-                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="60px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="60px"></div>
                       </div>
                     </div>
 
@@ -49,9 +49,9 @@
     <div class="box-menu">
       <a href="sfl_cv_02.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-user'></i> Datos Personales</a>
       <a href="sfl_cv_02a.php" type="button" class="btn btn-default btn-100"disabled><i class='fa fa-map-marker'></i> Direcci&oacute;n</a>
-      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Datos de Indentificaci&oacute;n</a>
+      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Datos de Identificaci&oacute;n</a>
       <a href="sfl_cv_04.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-home'></i> Referencias Personales</a>
-      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento y Experiencia</a>
+      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento</a>
       <a href="sfl_cv_06.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cog'></i> Industria</a>
       <a href="sfl_cv_06a.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-child'></i> Posici&oacute;n</a>
       <a href="sfl_cv_06b.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-cubes'></i> L&iacute;neas y Especialidades</a>
@@ -113,7 +113,7 @@
       <?php } ?>    
 
 	  <!--************** Canales  ************************************-->
-	  
+	<!--   
 	   <td   class="menu02" align="center"width="250"><br>Canales y Clientes<br><br>
    <?php $query_canales = mysql_query("SELECT * FROM cat_canales ORDER BY canales ASC");
          $qry_canales = mysql_fetch_assoc($query_canales); ?>
@@ -127,8 +127,8 @@
 	<?php $query_canales= mysql_query("SELECT * FROM app_canales, cat_canales WHERE app_canales.id_cat_canales = cat_canales.id_cat_canales and  id_cuenta ='" . $id_cuenta. "'");
           $qry_canales = mysql_fetch_assoc($query_canales); ?>             
     <?php   do { ?> <br> &nbsp;&bull;&nbsp;&nbsp; 
-			<a href="sfl_cv_06c_.php?accion=<?php echo "borrar";?> & id_cuenta=<?php echo "$id_cuenta";?> & id_cat_canales=<?php echo  $qry_canales['id_cat_canales'];?>" class="txt06c"><?php echo $qry_canales['canales']; ?></a>
-    <?php   } while ($qry_canales = mysql_fetch_assoc($query_canales)); ?> </td><tr></tr>
+			<a href="sfl_cv_06c_.php?accion=<?php echo "borrar";?> & id_cuenta=<?php echo "$id_cuenta";?> & id_cat_canales=<?php echo  $qry_canales['id_cat_canales'];?>" class="txt06c"><?php echo $qry_canales['canales']; ?><img class="right" src="images/eliminar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"></a>
+    <?php   } while ($qry_canales = mysql_fetch_assoc($query_canales)); ?> </td><tr></tr> -->
 	     
          <!-- ****************************** Especialidad   *************************** -->
 		 
@@ -146,7 +146,7 @@
 		$query_especialidad= mysql_query("SELECT * FROM app_especialidad, cat_especialidad WHERE app_especialidad.id_cat_especialidad = cat_especialidad.id_cat_especialidad and  id_cuenta ='" . $id_cuenta. "'");
         $qry_especialidad = mysql_fetch_assoc($query_especialidad);		   
 		do {   ?> <br>&nbsp;&bull;&nbsp;&nbsp;
-        <a href="sfl_cv_06c_.php?accion=<?php echo"borrar";?> & id_cuenta=<?php echo "$id_cuenta";?> & id_cat_especialidad=<?php echo $qry_especialidad['id_cat_especialidad'];?>" class="txt06c"> <?php echo $qry_especialidad['especialidad']; ?> </a>                  
+        <a href="sfl_cv_06c_.php?accion=<?php echo"borrar";?> & id_cuenta=<?php echo "$id_cuenta";?> & id_cat_especialidad=<?php echo $qry_especialidad['id_cat_especialidad'];?>" class="txt06c"> <?php echo $qry_especialidad['especialidad']; ?><img class="right" src="images/eliminar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"> </a>                  
     <?php
         } while ($qry_especialidad = mysql_fetch_assoc($query_especialidad)); ?>
          
@@ -167,7 +167,7 @@
              $qry_producto = mysql_fetch_assoc($query_producto);
              $id_cat_producto = $qry_producto['id_cat_producto'];
              do {	?> <br> &nbsp;&bull;&nbsp;&nbsp;
-             <a href="sfl_cv_06c_.php?accion=<?php echo"borrar";?> & id_cuenta=<?php echo "$id_cuenta";?> & id_cat_producto=<?php echo $qry_producto['id_cat_producto']; ?>" class="txt06c"> <?php echo $qry_producto['producto']; ?> </a>                                 
+             <a href="sfl_cv_06c_.php?accion=<?php echo"borrar";?> & id_cuenta=<?php echo "$id_cuenta";?> & id_cat_producto=<?php echo $qry_producto['id_cat_producto']; ?>" class="txt06c"> <?php echo $qry_producto['producto']; ?> <img class="right" src="images/eliminar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"> </a>                                 
      <?php   } while ($qry_producto = mysql_fetch_assoc($query_producto));   ?></td>
         
 		 <!--****************************** estados trabajados ************************************************** --> 
@@ -204,7 +204,7 @@
              $qry_zona = mysql_fetch_assoc($query_zona);
          
              do {	?> <br> &nbsp;&bull;&nbsp;&nbsp;
-             <a href="sfl_cv_06c_.php?accion=<?php echo"borrar";?> & id_cuenta=<?php echo "$id_cuenta";?> & id_cat_zona=<?php echo $qry_zona['id_cat_zonas']; ?>" class="txt06c"> <?php echo $qry_zona['zonas']; ?> </a>                                 
+             <a href="sfl_cv_06c_.php?accion=<?php echo"borrar";?> & id_cuenta=<?php echo "$id_cuenta";?> & id_cat_zona=<?php echo $qry_zona['id_cat_zonas']; ?>" class="txt06c"> <?php echo $qry_zona['zonas']; ?> <img class="right" src="images/eliminar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"> </a>                                 
      <?php   } while ($qry_zona = mysql_fetch_assoc($query_zona));   ?></td><tr></tr>
 	
       
@@ -223,7 +223,7 @@
              $qry_cd= mysql_fetch_assoc($query_cd);
              
              do {	?> <br> &nbsp;&bull;&nbsp;&nbsp;
-             <a href="sfl_cv_06c_.php?accion=<?php echo"borrar";?> & id_cuenta=<?php echo "$id_cuenta";?>& id_cat_ciudades=<?php echo $qry_cd['id_cat_ciudades']; ?>" class="txt06c"> <?php echo $qry_cd['ciudades']; ?> </a>                                 
+             <a href="sfl_cv_06c_.php?accion=<?php echo"borrar";?> id_cuenta=<?php echo "$id_cuenta";?> id_cat_ciudades=<?php echo $qry_cd['id_cat_ciudades']; ?>" class="txt06c"> <?php echo $qry_cd['ciudades']; ?> <img class="right" src="images/eliminar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"> </a>                                 
      <?php   } while ($qry_cd = mysql_fetch_assoc($query_cd));   ?></td><tr></tr>
 
 	        

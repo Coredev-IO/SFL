@@ -83,8 +83,8 @@
                     <br><br>
                     <div class="container">
                       <div class="row">
-                               <div class="col-md-8 "><img src="images/talent.jpg", height="80px"></div>
-                               <div class="col-md-4 "><img src="images/leasing.jpg", height="80px"></div>
+                               <div class="col-md-8 "><img src="images/talent.jpg", height="60px"></div>
+                               <div class="col-md-4 "><img src="images/leasing.jpg", height="60px"></div>
                       </div>
                     </div>
 
@@ -98,9 +98,9 @@
     <div class="box-menu">
       <a href="sfl_cv_02.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-user'></i> Datos Personales</a>
       <a href="sfl_cv_02a.php" type="button" class="btn btn-default btn-100"disabled><i class='fa fa-map-marker'></i> Direcci&oacute;n</a>
-      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Datos de Indentificaci&oacute;n</a>
+      <a href="sfl_cv_03.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-phone'></i> Datos de Identificaci&oacute;n</a>
       <a href="sfl_cv_04.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-home'></i> Referencias Personales</a>
-      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento y Experiencia</a>
+      <a href="sfl_cv_05.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-thumbs-up'></i> Perfilamiento</a>
       <a href="sfl_cv_06.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-cog'></i> Industria</a>
       <a href="sfl_cv_06a.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-child'></i> Posici&oacute;n</a>
       <a href="sfl_cv_06b.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-cubes'></i> L&iacute;neas y Especialidades</a>
@@ -162,11 +162,12 @@
                           <!-- query a BD estudios-->
                                   <tr>
                      <td><br><button type="submit"  name="submit"  value="&nbsp;&nbsp;<?php if (!$id_estudios) { ?>+ Nuevo Estudio<?php }else{ ?>Actualizar Estudio <?php } ?>&nbsp;&nbsp;" class="btn btn-default fa fa-plus"> Nuevo Estudio</button></td>
+                     <table width="500" align="center" border="0" cellspacing="1" cellpadding="4" class=" CSSTableGenerator">
                      <tr>
                      <td  class="txt06a"valign="middle">Institucion</td>
                      <td  class="txt06a" valign="middle" >Estatus</td>
                      <td   class="txt06a" valign="middle" >Período</td>
-                     <td   class="txt06a" valign="middle" >Modificar</td><</tr>
+                     <td   class="txt06a" valign="middle" >Modificar</td></tr>
                                 </tr>
                   <?php
                   	if ($exist_estudios > 0) {
@@ -183,7 +184,7 @@
                                     <td class="txt06b"><?php echo $qry_estudios['estudios']; ?></td>
                                     <td class="txt06b"><?php echo $qry_estudios['status']; ?></td>
                                     <td class="txt06b"><?php echo $qry_estudios['de']?> -  <?php echo $qry_estudios['a']; ?></td>
-                                    <td class="txt06b" align="center"><a href="sfl_cv_08a.php?id_estudios=<?php echo $qry_estudios['id_estudios']?>& id_cuenta=<?php echo $id_cuenta?>" class="txt06c"><img class="right" src="images/editar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"></a></td>
+                                    <td class="txt06b" align="center"><a href="sfl_cv_08a.php?id_estudios=<?php echo $qry_estudios['id_estudios']?> id_cuenta=<?php echo $id_cuenta?>" class="txt06c"><img class="right" src="images/editar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"></a></td>
                                    <?php
                   			$i ++;
                   			$x ++;
@@ -201,7 +202,10 @@
                   <?php
                   	} 
                     ?>
+                     </table>
+                     <br>
                      <tr></tr>
+
                     		     <td  colspan="4">&nbsp;</td> <tr></tr><td  colspan="4"align="center">
                                     <button type="button" name="Regresar" value="Regresar" class="btn btn-default fa fa-reply" onClick="javascript:window.history.back()"> Regresar</button>
                                     <button type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default fa fa-trash-o"> Limpiar</button>
