@@ -78,7 +78,7 @@
       <a href="sfl_cv_07.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-car'></i> &Aacute;reas de Expericia II</a>
       <a href="sfl_cv_08.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-graduation-cap'></i> Historial Acad&eacute;mico</a>
       <a href="sfl_cv_08a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-institution'></i> Otros Estudios/Certificaciones</a>
-      <a href="sfl_cv_08b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-file-word-o'></i> Habilidades tecnol&oacute;gicas</a>
+      <a href="sfl_cv_08b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-file-word-o'></i> Habilidades Tecnol&oacute;gicas</a>
       <a href="sfl_cv_09.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-briefcase'></i> Historial Laboral</a>
       <a href="sfl_cv_10.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-facebook-square'></i> Intereses</a>
     </div>
@@ -130,7 +130,7 @@
      <td align="center" >
      
 	 <?php
-                    $query_posicion = mysql_query("SELECT * FROM cat_posicion ORDER BY id_cat_posicion ASC");
+                    $query_posicion = mysql_query("SELECT * FROM cat_posicion ORDER BY posicion ASC");
                     $qry_posicion = mysql_fetch_assoc($query_posicion);
       ?>
    	      <select name="id_cat_posicion"  size="10" style="width: 300px" class="form-control">

@@ -81,7 +81,7 @@
       <a href="sfl_cv_07.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-car'></i> &Aacute;reas de Expericia II</a>
       <a href="sfl_cv_08.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-graduation-cap'></i> Historial Acad&eacute;mico</a>
       <a href="sfl_cv_08a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-institution'></i> Otros Estudios/Certificaciones</a>
-      <a href="sfl_cv_08b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-file-word-o'></i> Habilidades tecnol&oacute;gicas</a>
+      <a href="sfl_cv_08b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-file-word-o'></i> Habilidades Tecnol&oacute;gicas</a>
       <a href="sfl_cv_09.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-briefcase'></i> Historial Laboral</a>
       <a href="sfl_cv_10.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-facebook-square'></i> Intereses</a>
     </div>
@@ -135,7 +135,7 @@
 
 <table width="600" border="0" cellspacing="1" cellpadding="0" align="center" class=" txt03">
 
-      <td colspan="3"><span  class="menu02" ><b><br><br>( * ) Agregue la linea y seleccione el tiempo de acuerdo a su experiencia .</b></span></td>
+      <td colspan="3"><span  class="menu02" ><b><br><br>( * ) Agregue la(s) linea(s) y seleccione el tiempo de acuerdo a su experiencia .</b></span></td>
 	  <tr></tr><td colspan="3">&nbsp;</td>
      <tr></tr>
      <td align="center" >

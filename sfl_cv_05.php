@@ -115,7 +115,7 @@
       <a href="sfl_cv_07.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-car'></i> &Aacute;reas de Expericia II</a>
       <a href="sfl_cv_08.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-graduation-cap'></i> Historial Acad&eacute;mico</a>
       <a href="sfl_cv_08a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-institution'></i> Otros Estudios/Certificaciones</a>
-      <a href="sfl_cv_08b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-file-word-o'></i> Habilidades tecnol&oacute;gicas</a>
+      <a href="sfl_cv_08b.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-file-word-o'></i> Habilidades Tecnol&oacute;gicas</a>
       <a href="sfl_cv_09.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-briefcase'></i> Historial Laboral</a>
       <a href="sfl_cv_10.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-facebook-square'></i> Intereses</a>
     </div>
@@ -192,7 +192,7 @@
 
 
           <div class="form-group">
-            <label for="ManejaAuto" class="col-sm-4 control-label">¿Maneja automóvil estándar?::</label>
+            <label for="ManejaAuto" class="col-sm-4 control-label">¿Maneja automóvil estándar?:</label>
             <div class="col-sm-8">
                 <?php if ($auto_esta == "si") {$c="checked";$d=""; }else{$c=""; $d="checked";}?>
                   Si<input type="radio" name="auto_esta" <?php echo"$c";?>  value="si" class="form03">

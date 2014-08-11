@@ -156,7 +156,7 @@ if ($id_laboral != "") {
       <a href="sfl_cv_07.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-car'></i> &Aacute;reas de Expericia II</a>
       <a href="sfl_cv_08.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-graduation-cap'></i> Historial Acad&eacute;mico</a>
       <a href="sfl_cv_08a.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-institution'></i> Otros Estudios/Certificaciones</a>
-      <a href="sfl_cv_08b.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-file-word-o'></i> Habilidades tecnol&oacute;gicas</a>
+      <a href="sfl_cv_08b.php" type="button" class="btn btn-default btn-100" disabled ><i class='fa fa-file-word-o'></i> Habilidades Tecnol&oacute;gicas</a>
       <a href="sfl_cv_09.php" type="button" class="btn btn-primary btn-100" ><i class='fa fa-briefcase'></i> Historial Laboral</a>
       <a href="sfl_cv_10.php" type="button" class="btn btn-default btn-100" disabled><i class='fa fa-facebook-square'></i> Intereses</a>
     </div>
@@ -207,7 +207,7 @@ if ($id_laboral != "") {
        <tr>
 
 
-            <td> <b>Area</td>
+            <td> <b>Área</td>
         <td><br><input onkeypress="return event.keyCode!=13" type="text" name="area" size="35" maxlength="35" class="form-control" placeholder="Area" <?php if ($area != "") { ?>value="<?php echo $area; ?>"<?php } ?> /></td>
         <tr>
         </tr>
@@ -266,25 +266,25 @@ if ($id_laboral != "") {
 
 
          <td><b> Teléfono </td>
-        <td><br><input onkeypress="return event.keyCode!=13" type="text" name="telefono" size="35" maxlength="35" class="form-control" placeholder="Telefono" <?php if ($telefono != "") { ?>value="<?php echo $telefono; ?>"<?php }?> /></td>
+        <td><br><input onkeypress="return event.keyCode!=13" type="text" name="telefono" size="35" maxlength="35" class="form-control" placeholder="Teléfono" <?php if ($telefono != "") { ?>value="<?php echo $telefono; ?>"<?php }?> /></td>
         <tr>
         </tr>
 
 
          <td><b> Periodo de: </td>
         <?php if (!$fecha_i) { ?>
-	    <td> <br> <input onkeypress="return event.keyCode!=13" name="fecha_i" type="text" size="10" id="inputField2" maxlength="10" onKeyUp = "this.value=formateafecha(this.value);" class="form-control"> [ dd/mm/aaaa ]</td>
+	    <td> <br> <input onkeypress="return event.keyCode!=13" name="fecha_i" type="text" size="10" id="inputField2" maxlength="10" onKeyUp = "this.value=formateafecha(this.value);" class="form-control" placeholder="dd/mm/aaaa"></td>
         <?php }else{ ?>
-	    <td><input onkeypress="return event.keyCode!=13" name="fecha_i" type="text" size="10"  maxlength="10" value="<?php echo $fecha_i; ?>" class="form05a"> [ dd/mm/aaaa ]</td>
+	    <td><input onkeypress="return event.keyCode!=13" name="fecha_i" type="text" size="10"  maxlength="10" value="<?php echo $fecha_i; ?>" class="form05a" placeholder="dd/mm/aaaa"></td>
         <?php } ?>
 
 
 
         <tr></tr> <td><b> Periodo a: </td>
 		 <?php if (!$fecha_i) { ?>
-	    <td> <br> <input onkeypress="return event.keyCode!=13" name="fecha_f" type="text" size="10" id="inputField3" maxlength="10" onKeyUp = "this.value=formateafecha(this.value);" class="form-control"> [ dd/mm/aaaa ]</td>
+	    <td> <br> <input onkeypress="return event.keyCode!=13" name="fecha_f" type="text" size="10" id="inputField3" maxlength="10" onKeyUp = "this.value=formateafecha(this.value);" class="form-control" placeholder="dd/mm/aaaa"></td>
         <?php }else{ ?>
-	    <td><input onkeypress="return event.keyCode!=13" name="fecha_f" type="text" size="10" maxlength="10" value="<?php echo $fecha_f; ?>" class="form05a"> [ dd/mm/aaaa ]</td>
+	    <td><input onkeypress="return event.keyCode!=13" name="fecha_f" type="text" size="10" maxlength="10" value="<?php echo $fecha_f; ?>" class="form05a" placeholder="dd/mm/aaaa"></td>
         <?php } ?>
          <tr>
         </tr>
