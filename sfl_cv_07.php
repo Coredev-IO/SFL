@@ -139,8 +139,8 @@
             <td>
               <br ><samp class="menu02"> Canales trabajados / Clientes Visitados</samp><br><br>
       <input type="checkbox" name="canales[]" value="sin_exp"> Sin Experiencia<br>
-          <input type="checkbox" name="canales[]" value="Consultorios y hospitales">Consultorios y hospitales (M&eacute;dicos)<br>
-          <input type="checkbox" name="canales[]" value="punto de venta(Cadena, Autoservicios e independientes)"> punto de venta(Farmacias de Cadena, Autoservicios e independientes)<br>
+          <input type="checkbox" name="canales[]" value="Consultorios y hospitales"> Consultorios y hospitales (M&eacute;dicos)<br>
+          <input type="checkbox" name="canales[]" value="punto de venta(Cadena, Autoservicios e independientes)"> Punto de venta(Farmacias de Cadena, Autoservicios e independientes)<br>
           <input type="checkbox" name="canales[]" value="Cuentas Clave Públicas"> Cuentas Clave Públicas<br>
           <input type="checkbox" name="canales[]" value=" Cuentas Clave Privadas"> Cuentas Clave Privadas<br>
           <input type="checkbox" name="canales[]" value=" Tiendas Departamentales"> Tiendas Departamentales<br>
@@ -153,18 +153,18 @@
 
            <br><samp class="menu02"> Habilidades </samp><br><br>
 		   <input type="checkbox" name="area_exp[]" value="sin_exp"> Sin experiencia<br>	
-          <input type="checkbox" name="area_exp[]" value="Visita de Farmacia">Visita de Farmacia<br>
+          <input type="checkbox" name="area_exp[]" value="Visita de Farmacia"> Visita de Farmacia<br>
           <input type="checkbox" name="area_exp[]" value="Negociaciones con Farmacia"> Negociaciones con Farmacia<br>
           <input type="checkbox" name="area_exp[]" value="Promocion y punto de venta"> Promocion y punto de venta<br>
-          <input type="checkbox" name="area_exp[]" value="Realizacion de trasnfers">Realizacion de trasnfers<br>
-          <input type="checkbox" name="area_exp[]" value="Actividades de mercadeo (merchandising)">Actividades de mercadeo (merchandising)<br>
+          <input type="checkbox" name="area_exp[]" value="Realizacion de trasnfers"> Realizacion de trasnfers<br>
+          <input type="checkbox" name="area_exp[]" value="Actividades de mercadeo (merchandising)"> Actividades de mercadeo (merchandising)<br>
           <input type="checkbox" name="area_exp[]" value=" Negociacion de espacios en punto de venta"> Negociacion de espacios en punto de venta<br>
 		 		
-           <br><samp class="menu02">Interpretación de auditorias</samp><br><br>
-		    <input type="checkbox" name="auditoria[]" value="sin_exp">Sin Experiencia<br>
-   		    <input type="checkbox" name="auditoria[]" value="ATV">ATV<br>
+           <br><samp class="menu02"> Interpretación de auditorias</samp><br><br>
+		    <input type="checkbox" name="auditoria[]" value="sin_exp"> Sin Experiencia<br>
+   		    <input type="checkbox" name="auditoria[]" value="ATV"> ATV<br>
             <input type="checkbox" name="auditoria[]" value="DDD"> DDD<br>
-		    <input type="checkbox" name="auditoria[]" value="INTE">INTE<br>
+		    <input type="checkbox" name="auditoria[]" value="INTE"> INTE<br>
             <input type="checkbox" name="auditoria[]" value="Auditpharma"> Auditpharma (Close Up)<br>  
 				
 		  

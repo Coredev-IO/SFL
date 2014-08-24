@@ -42,15 +42,14 @@
 ?>
 
   <link type="text/css" href="css/bootstrap.css" rel="stylesheet"/>
-  <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+  <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/Tooltips.js"></script>
 
 
 
 <link type="text/css" href="css/sfl_style.css" rel="stylesheet"/>
 <link type="text/css" href="css/menu.css" rel="stylesheet"/>
-<script type="text/javascript" src="controller.js"></script>
-<script type="text/javascript" src="css/jquery.js"></script>
 <script type="text/javascript" src="css/menu.js"></script>
 
 <?php
@@ -305,7 +304,7 @@
                   <!-- <td class=""><?php echo $qry_refer['ref_dom']; ?></td> -->
                   <td class=""><?php echo $qry_refer['ref_tel']; ?></td>
                   <td class="" align="center"><a href="sfl_cv_04.php?id_ref=<?php echo $qry_refer['id_ref']?> id_cuenta=<?php echo $id_cuenta?>" class="">
-                  <img class="right" src="images/editar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                  <img class="right" src="images/editar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="right" title="Para editar volver a entrar al cuadro de NUEVA REFERENCIA PERSONAL">
                   </a></td>
                  <?php
 			$i ++;
@@ -367,6 +366,5 @@
 <?php
 	//require_once('sfl_footer.php');
 ?>
-
 </body>
 </html>

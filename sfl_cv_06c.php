@@ -146,7 +146,7 @@
 		$query_especialidad= mysql_query("SELECT * FROM app_especialidad, cat_especialidad WHERE app_especialidad.id_cat_especialidad = cat_especialidad.id_cat_especialidad and  id_cuenta ='" . $id_cuenta. "'");
         $qry_especialidad = mysql_fetch_assoc($query_especialidad);		   
 		do {   ?> <br>&nbsp;&bull;&nbsp;&nbsp;
-        <a href="sfl_cv_06c_.php?accion=<?php echo"borrar";?> & id_cuenta=<?php echo "$id_cuenta";?> & id_cat_especialidad=<?php echo $qry_especialidad['id_cat_especialidad'];?>" class="txt06c"> <?php echo $qry_especialidad['especialidad']; ?><img class="right" src="images/eliminar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"> </a>                  
+        <a href="sfl_cv_06c_.php?accion=<?php echo"borrar";?> & id_cuenta=<?php echo "$id_cuenta";?> & id_cat_especialidad=<?php echo $qry_especialidad['id_cat_especialidad'];?>" class="txt06c"><img class="right" src="images/eliminar.png" alt="ayuda", height="20px"> </a> <?php echo $qry_especialidad['especialidad']; ?>                 
     <?php
         } while ($qry_especialidad = mysql_fetch_assoc($query_especialidad)); ?>
          
@@ -167,7 +167,7 @@
              $qry_producto = mysql_fetch_assoc($query_producto);
              $id_cat_producto = $qry_producto['id_cat_producto'];
              do {	?> <br> &nbsp;&bull;&nbsp;&nbsp;
-             <a href="sfl_cv_06c_.php?accion=<?php echo"borrar";?> & id_cuenta=<?php echo "$id_cuenta";?> & id_cat_producto=<?php echo $qry_producto['id_cat_producto']; ?>" class="txt06c"> <?php echo $qry_producto['producto']; ?> <img class="right" src="images/eliminar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"> </a>                                 
+             <a href="sfl_cv_06c_.php?accion=<?php echo"borrar";?> & id_cuenta=<?php echo "$id_cuenta";?> & id_cat_producto=<?php echo $qry_producto['id_cat_producto']; ?>" class="txt06c">  <img class="right" src="images/eliminar.png" alt="ayuda", height="20px" > </a><?php echo $qry_producto['producto']; ?>                                 
      <?php   } while ($qry_producto = mysql_fetch_assoc($query_producto));   ?></td>
         
 		 <!--****************************** estados trabajados ************************************************** --> 
@@ -204,7 +204,7 @@
              $qry_zona = mysql_fetch_assoc($query_zona);
          
              do {	?> <br> &nbsp;&bull;&nbsp;&nbsp;
-             <a href="sfl_cv_06c_.php?accion=<?php echo"borrar";?> & id_cuenta=<?php echo "$id_cuenta";?> & id_cat_zona=<?php echo $qry_zona['id_cat_zonas']; ?>" class="txt06c"> <?php echo $qry_zona['zonas']; ?> <img class="right" src="images/eliminar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"> </a>                                 
+             <a href="sfl_cv_06c_.php?accion=<?php echo"borrar";?> & id_cuenta=<?php echo "$id_cuenta";?> & id_cat_zona=<?php echo $qry_zona['id_cat_zonas']; ?>" class="txt06c">  <img class="right" src="images/eliminar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"> </a><?php echo $qry_zona['zonas']; ?>                           
      <?php   } while ($qry_zona = mysql_fetch_assoc($query_zona));   ?></td><tr></tr>
 	
       
@@ -223,7 +223,7 @@
              $qry_cd= mysql_fetch_assoc($query_cd);
              
              do {	?> <br> &nbsp;&bull;&nbsp;&nbsp;
-             <a href="sfl_cv_06c_.php?accion=<?php echo"borrar";?> id_cuenta=<?php echo "$id_cuenta";?> id_cat_ciudades=<?php echo $qry_cd['id_cat_ciudades']; ?>" class="txt06c"> <?php echo $qry_cd['ciudades']; ?> <img class="right" src="images/eliminar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"> </a>                                 
+             <a href="sfl_cv_06c_.php?accion=<?php echo"borrar";?> id_cuenta=<?php echo "$id_cuenta";?> id_cat_ciudades=<?php echo $qry_cd['id_cat_ciudades']; ?>" class="txt06c">  <img class="right" src="images/eliminar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"> </a> <?php echo $qry_cd['ciudades']; ?>                                
      <?php   } while ($qry_cd = mysql_fetch_assoc($query_cd));   ?></td><tr></tr>
 
 	        

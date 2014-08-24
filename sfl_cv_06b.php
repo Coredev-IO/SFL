@@ -175,7 +175,7 @@
      ?> 
         <!-- query a BD referencia -->
              <td> <table width="200" border="0" cellspacing="1" cellpadding="4" align="center" class=" txt03"> 
-                <td height="20" class="txt06a" align="center" valign="middle">&nbsp;</td>
+                <td height="20" class="txt06a" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</td>
                 <td class="txt06a" valign="middle" >Experiencia</td>
                 <td class="txt06a" valign="middle" align="center"></td>
               
@@ -189,7 +189,7 @@
 			do {
 
  				?>
-                  <tr></tr><td height="20" class="txt06c"align="right">&bull;&nbsp;</td>
+                  <tr></tr><td height="20" class="txt06c"align="right">&nbsp;&nbsp;&nbsp;</td>
                   <td width="450" class="txt06c"><?php
 				    $cat_line = $qry_indus['id_cat_line'];
 					$id_line = $qry_indus['id_line'];
@@ -215,7 +215,7 @@
              <option value="sfl_cv_06b_.php?time_expe_line=<?php echo "5-10 años";?>& id_line=<?php echo $qry_indus['id_line'];?>& id_cuenta=<?php echo $id_cuenta;?>">5-10 años</option>
              <option value="sfl_cv_06b_.php?time_expe_line=<?php echo "10 años";?>& id_line=<?php echo $qry_indus['id_line'];?>& id_cuenta=<?php echo $id_cuenta;?>">10 años</option>
  
-		     </option> </select></td></td>
+		     </option> </select><br></td></td>
                   <td class="txt06c" align="center"><a href="sfl_cv_06b_.php?accion=<?php echo"borrar"?>& id_cuenta=<?php echo "$id_cuenta"?> & id_cat_line=<?php echo $cat_line?>" class="txt06c"><img class="right" src="images/eliminar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"></a></td>
                  <?php
 			$i ++;

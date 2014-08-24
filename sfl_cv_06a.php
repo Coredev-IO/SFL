@@ -183,7 +183,7 @@
 			do {
 
  				?>
-                  <tr></tr><td height="20" class="txt06c"align="right">&bull;&nbsp;</td>
+                  <tr></tr><td height="20" class="txt06c"align="right">&nbsp;</td>
                   <td width="450" class="txt06c"><?php
 				    $cat_posicion = $qry_indus['id_cat_posicion'];
 					$id_posicion = $qry_indus['id_posicion'];

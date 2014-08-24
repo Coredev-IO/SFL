@@ -279,6 +279,32 @@
 
 
 
+
+          <div class="form-group">
+            <label for="Ciudades" class="col-sm-4 control-label">Ciudad: </label>
+            <div class="col-sm-8">
+              <?php
+              $query_ciudades = mysql_query("SELECT * FROM cat_ciudades");
+                    $qry_ciudades = mysql_fetch_assoc($query_ciudades);
+
+              $query_ciudades_s = mysql_query("SELECT * FROM cat_ciudades");
+              $qry_ciudades_s = mysql_fetch_assoc($query_ciudades_s);
+              ?>
+              <select name="id_cat_ciudades"  class="form03">
+
+                     <?php
+                     while ($row = mysql_fetch_array($query_ciudades_s))
+                      {
+                        echo "<option id =".$row['id_cat_ciudades']."> ".$row['ciudades']." </option>";
+                      }
+                     ?>
+                    
+               </select>
+            </div>
+          </div>
+
+
+
           
           <div class="form-group">
             <label for="Municipio" class="col-sm-4 control-label">Municipio/Delegaci&oacute;n: *</label>

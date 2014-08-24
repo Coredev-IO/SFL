@@ -140,7 +140,7 @@
             </div>
                               
           <?php } ?>
-      <div class="box-formulario">
+      <div class="box-formulario2">
         <form class="form-horizontal" role="form" name="new_cv" action="sfl_cv_03_.php" method="post" enctype="multipart/form-data" >
           <!-- Termina Errores -->
 
@@ -188,8 +188,15 @@
             </div>
           </div>
 
+    </form>
+   </div>
 
-           <div class="box-title"> Datos de Contacto </div>
+
+
+        <div class="box-title"> Datos de Contacto </div>
+      <div class="box-formulario">
+        <form class="form-horizontal" role="form" name="new_cv" action="sfl_cv_03_.php" method="post" enctype="multipart/form-data" >
+
 
 
           <div class="form-group">
@@ -290,7 +297,13 @@
           </div>
 
 
+    </form>
    </div>
+
+
+
+
+
     
   </div>
   

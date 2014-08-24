@@ -97,93 +97,105 @@
           </div>
           <div class="col-md-6"> -->
 
-                  <table> <br> <br> <br> <br> </table>
+                  
+                  <br><br><br><br>
                   <div class="container">
                       <div class="row">
-                               <div class="col-md-8 "><img src="images/talent.jpg", height="60px"></div>
-                               <div class="col-md-4 "><img src="images/leasing.jpg", height="60px"></div>
-
-
+                               <div class="col-sm-6 "><center><img src="images/talent.jpg", height="60px"></center></div>
+                               <div class="col-sm-6 "><center><img src="images/leasing.jpg", height="60px"></center></div>
                       </div>
                   </div>
-                  <br><br>
-                  <table width="500" border="0" cellspacing="0" cellpadding="0" align="center" class="box-formulario col-md-4">
+
+
+
+
+
+                  
+                  <!-- <table width="50%" border="0" cellspacing="0" cellpadding="0" align="center" class=" col-md-6">
                     <tr>
-                      <td width="100%" class="padd_02" valign="top">
+                      <td width="50%" class="padd_02" valign="top">
+ -->
+        <br><br><br><br>
+        <div class="container">
+          <div class="row">
+             <div class="col-md-6 col-md-offset-3">
+                              
 
-                    <form name="new_cv" action="sfl_cv_01_.php" method="post" enctype="multipart/form-data" >
+                <form name="new_cv" action="sfl_cv_01_.php" method="post" enctype="multipart/form-data" >
 
-                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="box-formulario col-sm-4">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="box-formulario">
 
-                    <!--accion-->
-
+                    
+                    <!--**************************** accion***********************-->
                         <?php if ($accion == 1) { ?>
                         <tr>
                           <td colspan="2"><span class="txt08"><b>( * ) Alg&uacute;n campo obligatorio se encuentra vaci&oacute; o contrase&ntilde;as no coinciden.</b></span></td>
                           </tr>
                         <?php } ?>
-
                         <?php if ($accion == 2) { ?>
-
                        <tr>
                         <td colspan="2"><span class="txt08"><b>El email que desea dar de alta ya se encuentra en la base de datos.</b></span></td>
                         </tr>
                        <?php } ?>
-
                          <tr></tr>
                         <td colspan="2">&nbsp;</td>
                        <tr></tr>
                         <td  align="center"colspan="2" ><span   class="menu02"><b>Para poder registrar tus datos, se requiere dar de alta una cuenta.</b></span></td>
                         </tr><td colspan="2">&nbsp;</td>
+                    
+                        <th colspan="2"><span class="txt08 "><b> <?php echo $fin?> </b></span></th>
+                        <!--********************** Termina condiciones ***********-->
 
-                       <!--Campos-->
 
-
-
-
-                   <th colspan="2"><span class="txt08 "><b> <?php echo $fin?> </b></span></th>
+                        <!-- Correo Electronico -->
                         <tr>
-
-                          <td><label class="col-sm-4 control-label">Correo electronico:*</td>
-                          <td><div class="col-md-8"> <input type="text" name="email" size="50" maxlength="40" <?php if ($email != "") { ?>value="<?php echo $email; ?>"<?php } ?> class="form-control" placeholder="Correo electronico" autofocus></div>
+                          <td><label class="col-sm-2 control-label">Correo electronico:*</td>
+                          <td><div class="col-md-10"> <input type="text" name="email" size="50" maxlength="40" <?php if ($email != "") { ?>value="<?php echo $email; ?>"<?php } ?> class="form-control" placeholder="Correo electronico" autofocus></div>
                         </tr>
+                        <!-- ************************************************ -->
+
+                        
+
+                        <!-- Contraseña -->
                         <tr>
-                          <td><label class="col-sm-4 control-label">Contrase&ntilde;a:*</td>
-                          <td><div class="col-md-8"><input type="password" name="passw" size="10" maxlength="20" class="form-control" placeholder="Contrase&ntilde;a"/></div></td>
+                          <td><label class="col-md-2 control-label">Contrase&ntilde;a:*</td>
+                          <td><div class="col-md-10"><input type="password" name="passw" size="10" maxlength="20" class="form-control" placeholder="Contrase&ntilde;a"/></div></td>
                         </tr>
+                        <!-- ************************************************** -->
+
+
+
+                        <!-- Confirmar Contraseña********************************* -->
                         <tr>
-                          <td><label class="col-sm-4 control-label">Confirmar contrase&ntilde;a*</td>
-                          <td><div class="col-md-8"><input type="password" name="conf_passw" size="10" maxlength="20" class="form-control"placeholder="Confirma Contrase&ntilde;a" /></div></td>
+                          <td><label class="col-sm-2 control-label">Confirmar contrase&ntilde;a*</td>
+                          <td><div class="col-md-10"><input type="password" name="conf_passw" size="10" maxlength="20" class="form-control"placeholder="Confirma Contrase&ntilde;a" /></div></td>
                         </tr>
-                        <tr>
+
+                        <!-- ***************************************************** -->
+
+
+                                                     
                         <tr>
                           <td colspan="2">&nbsp;</td>
-
                         </tr>
 
-                          <td colspan="2" align="center">
-                                    <input type="submit" name="submit" value="Continuar" class="btn btn-primary" />&nbsp;
-                                    <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default">
-                                    <input type="hidden" name="id_aduana" value="<?php echo $id_cuenta; ?>">
-                         </td>
+                        
 
 
-                           </form>
-                          </table>
-                          <td>
-                              </td>
-                          </tr>
+                        <td colspan="2" align="center">
+                                  <input type="submit" name="submit" value="Continuar" class="btn btn-primary" />&nbsp;
+                                  <input type="reset" name="limpiar" value="&nbsp;limpiar&nbsp;" class="btn btn-default">
+                                  <input type="hidden" name="id_aduana" value="<?php echo $id_cuenta; ?>">
+                       </td>
 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="padd_02" valign="top">&nbsp;</td>
-                    </tr>
-                  </table>
 
-          </div>
-        </div>
+
+                </table>                                         
+              </form>
+          </div>      
+        </div>                                                  
       </div>
+
 
 
 <!-- <?php

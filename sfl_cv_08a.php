@@ -37,11 +37,16 @@
 <?php
 	require_once('sfl_tit.php');
 ?>
+<link type="text/css" href="css/bootstrap.css" rel="stylesheet"/>
+<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/Tooltips.js"></script>
+
+
 
 <link type="text/css" href="css/sfl_style.css" rel="stylesheet" />
 <link type="text/css" href="css/menu.css" rel="stylesheet" />
 <script type="text/javascript" src="controller.js"></script>
-<script type="text/javascript" src="css/jquery.js"></script>
 <script type="text/javascript" src="css/menu.js"></script>
 
 <?php
@@ -120,88 +125,103 @@
        <div class="box-formulario">
 
 
+                        <!-- Large modal -->
+                <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Agregar Nuevo Estudio</button>
 
-                  <table width="600" border="0" cellspacing="1" cellpadding="0" align="center" class=" txt03">
-                    <th class="txt09" align="left"></th>
-                      <form name="new_cv" action="sfl_cv_08a_.php" method="post" enctype="multipart/form-data">
-                        <?php if ($accion == 1) { ?>
-                          <tr>
-                          <td colspan="2"><span class="txt08"><b>(*) Algun campo esta vacio .</b></span></td>
-                          </tr>
-                        <?php } ?>
-                         <tr>
-                          <br>
-                   <td colspan="5"><span  class="menu02"><b>( * ) Ingrese uno o mas  estudios que haya cursado.</b></span></td><tr></tr>
-                   	
-                   <th>Nombre</th> <th>Status</th><th>De:(Año)</th><th>A:(Año)</th><tr></tr>
+                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="box-formulario">
+                      
 
-                   
-                          <td width="80"><br><input type="text" name="estudios" <?php if ($estudios !="") { ?>value="<?php echo $estudios;?>"<?php } ?>  size="70" maxlength="60" class="form-control" /></td>
-                    	  
-                  	    
-                        <td><br><select name="status_est" class="form-control">
-                              <option value="<?php echo $status_est;?>"><?php echo $status_est; ?> &nbsp;</option>
-                              <option value="Pasante">Pasante</option>
-                              <option value="Titulado">Titulado</option>
-                              <option value="Trunco">Trunco</option>
-                              <option value="Constancia">Constancia</option>
-                  			      <option value="Diploma">Diplomado</option>
-                              <option value="Estudiante">Estudiante</option>
-                        </select></td>
+                      <table width="600" border="0" cellspacing="1" cellpadding="0" align="center" class=" txt03">
+                                  
+                                  <th class="txt09" align="left"></th>
+                                  <form name="new_cv" action="sfl_cv_08a_.php" method="post" enctype="multipart/form-data">
+                                    <?php if ($accion == 1) { ?>
+                                      <tr>
+                                      <td colspan="2"><span class="txt08"><b>(*) Algun campo esta vacio .</b></span></td>
+                                      </tr>
+                                    <?php } ?>
+                                     <tr>
+                                      <br>
+                                   <td colspan="5"><span  class="menu02"><b>( * ) Ingrese uno o mas  estudios que haya cursado.</b></span></td><tr></tr>
+                                    
+                                   <th>Nombre</th> <th>Status</th><th>De:(Año)</th><th>A:(Año)</th><tr></tr>
 
-                   		
-                  		<td><br><input type="text" name="de_estudios" size="5" maxlength="4" class="form-control"   <?php if ($de_estudios != "") { ?>value="<?php echo $de_estudios; ?>"<?php } ?>  /></td>
-                          <td><br><input type="text" name="a_estudios" size="5" maxlength="4" class="form-control"  <?php if ($a_estudios != "") { ?>value="<?php echo $a_estudios; ?>"<?php } ?> /></td>
+                                   <td width="80"><br><input type="text" name="estudios" <?php if ($estudios !="") { ?>value="<?php echo $estudios;?>"<?php } ?>  size="70" maxlength="60" class="form-control" /></td>
+                                        
+                                    
+                                    <td><br><select name="status_est" class="form-control">
+                                          <option value="<?php echo $status_est;?>"><?php echo $status_est; ?> &nbsp;</option>
+                                          <option value="Pasante">Pasante</option>
+                                          <option value="Titulado">Titulado</option>
+                                          <option value="Trunco">Trunco</option>
+                                          <option value="Constancia">Constancia</option>
+                                          <option value="Diploma">Diplomado</option>
+                                          <option value="Estudiante">Estudiante</option>
+                                    </select></td>
+                                    <td><br><input type="text" name="de_estudios" size="5" maxlength="4" class="form-control"   <?php if ($de_estudios != "") { ?>value="<?php echo $de_estudios; ?>"<?php } ?>  /></td>
+                                      <td><br><input type="text" name="a_estudios" size="5" maxlength="4" class="form-control"  <?php if ($a_estudios != "") { ?>value="<?php echo $a_estudios; ?>"<?php } ?> /></td>
+                                      <tr>
+                                      <td><br><button type="submit"  name="submit"  value="&nbsp;&nbsp;<?php if (!$id_estudios) { ?>+ Nuevo Estudio<?php }else{ ?>Actualizar Estudio <?php } ?>&nbsp;&nbsp;" class="btn btn-default fa fa-plus"> Nuevo Estudio</button></td>
+                                      </tr>
+                        </table>
 
-                      <tr></tr>
-                    
+
+                    </div>
+                  </div>
+                </div>
+
+
+
                    <?php
                   	$query_estudios = mysql_query("SELECT * FROM estudios where id_cuenta ='" . $id_cuenta . "'");
                   	$exist_estudios = mysql_num_rows($query_estudios);
                        ?>
                           <!-- query a BD estudios-->
-                                  <tr>
-                     <td><br><button type="submit"  name="submit"  value="&nbsp;&nbsp;<?php if (!$id_estudios) { ?>+ Nuevo Estudio<?php }else{ ?>Actualizar Estudio <?php } ?>&nbsp;&nbsp;" class="btn btn-default fa fa-plus"> Nuevo Estudio</button></td>
+                                  <tr><br>
                      <table width="500" align="center" border="0" cellspacing="1" cellpadding="4" class=" CSSTableGenerator">
-                     <tr>
-                     <td  class="txt06a"valign="middle">Institucion</td>
-                     <td  class="txt06a" valign="middle" >Estatus</td>
-                     <td   class="txt06a" valign="middle" >Período</td>
-                     <td   class="txt06a" valign="middle" >Modificar</td></tr>
-                                </tr>
-                  <?php
-                  	if ($exist_estudios > 0) {
-                  		$qry_estudios = mysql_fetch_assoc($query_estudios);
+                                 <tr>
+                                  <br>
+                                 <td  class="txt06a"valign="middle">Institucion</td>
+                                 <td  class="txt06a" valign="middle" >Estatus</td>
+                                 <td   class="txt06a" valign="middle" >Período</td>
+                                 <td   class="txt06a" valign="middle" >Modificar</td></tr>
+                                            </tr>
+                              <?php
+                              	if ($exist_estudios > 0) {
+                              		$qry_estudios = mysql_fetch_assoc($query_estudios);
 
-                              $i = 0;
-                  			$x = 0;
+                                          $i = 0;
+                              			$x = 0;
 
-                  			do {
+                              			do {
 
-                   				?>
-                                  <tr></tr>
-                                  
-                                    <td class="txt06b"><?php echo $qry_estudios['estudios']; ?></td>
-                                    <td class="txt06b"><?php echo $qry_estudios['status']; ?></td>
-                                    <td class="txt06b"><?php echo $qry_estudios['de']?> -  <?php echo $qry_estudios['a']; ?></td>
-                                    <td class="txt06b" align="center"><a href="sfl_cv_08a.php?id_estudios=<?php echo $qry_estudios['id_estudios']?> id_cuenta=<?php echo $id_cuenta?>" class="txt06c"><img class="right" src="images/editar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"></a></td>
-                                   <?php
-                  			$i ++;
-                  			$x ++;
+                               				?>
+                                              <tr></tr>
+                                              
+                                                <td class="txt06b"><?php echo $qry_estudios['estudios']; ?></td>
+                                                <td class="txt06b"><?php echo $qry_estudios['status']; ?></td>
+                                                <td class="txt06b"><?php echo $qry_estudios['de']?> -  <?php echo $qry_estudios['a']; ?></td>
+                                                <td class="txt06b" align="center"><a href="sfl_cv_08a.php?id_estudios=<?php echo $qry_estudios['id_estudios']?> id_cuenta=<?php echo $id_cuenta?>" class="txt06c"><img class="right" src="images/editar.png" alt="ayuda", height="20px" data-toggle="tooltip" data-placement="right" title="Para editar volver a entrar al cuadro de AGREGAR NUEVO ESTUDIO"></a></td>
+                                               <?php
+                              			$i ++;
+                              			$x ++;
 
-                  			} while ($qry_estudios = mysql_fetch_assoc($query_estudios));
-                  			  $rows = mysql_num_rows($query_estudios);
-                  			  if($rows > 0) {
-                  				  mysql_data_seek($query_estudios, 0);
-                  				  $qry_estudios = mysql_fetch_assoc($query_estudios);
-                  			  }
+                              			} while ($qry_estudios = mysql_fetch_assoc($query_estudios));
+                              			  $rows = mysql_num_rows($query_estudios);
+                              			  if($rows > 0) {
+                              				  mysql_data_seek($query_estudios, 0);
+                              				  $qry_estudios = mysql_fetch_assoc($query_estudios);
+                              			  }
 
-                  	}else{
-                  ?>
-                                <tr></tr>
-                  <?php
-                  	} 
-                    ?>
+                              	}else{
+                              ?>
+                                            <tr></tr>
+                              <?php
+                              	} 
+                                ?>
+                                </table>
                      </table>
                      <br>
                      <tr></tr>
